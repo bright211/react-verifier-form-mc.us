@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 930px) {
+    height: fit-content;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -14,14 +18,14 @@ export const ContentContainer = styled.div`
   width: 100%;
 
   @media (max-width: 930px) {
-    min-height: 350px;
+    // min-height: 350px;
     overflow: scroll;
     padding-bottom: 60px;
   }
 
   @media (max-width: 700px) {
     padding-top: 60px;
-    padding-bottom: 120px;
+    padding-bottom: 77px;
   }
 `;
 
@@ -38,6 +42,7 @@ export const TitleContainer = styled.div`
     width: 40%;
     font-family: 'AvenirNext Regular' !important;
   }
+
   @media (max-width: 930px) {
     padding: 64px 20px 0 20px;
     display: flex;
