@@ -1,0 +1,50 @@
+
+
+* {
+  margin: 0;
+  
+  box-sizing: border-box;
+  font-family: "AvenirNext Regular" ;
+}
+
+.btn {
+  font-family: "AvenirNext Regular" !important;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  background-color: #EFF7F9 !important;
+  font-family: "AvenirNext-Medium";
+}
+
+.error {
+  border-color: #F61067 !important;
+  border-width: 1px;
+}
+
+.error-text {
+  color:#F61067;
+}
+
+.btn {
+  border-color: #b7b7b7 !important;
+  color: black
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+
+.btn:hover {
+  background-color: #00556A !important;
+}
+
+.active {
+  background-color: #00556A !important;
+}
+
+
+
