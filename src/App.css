@@ -20,12 +20,13 @@ body {
 }
 
 .error {
-  border-color: #F61067 !important;
-  border-width: 1px;
+  color: #EC0011 !important;
+  font-family: 'AvenirNext Regular' !important;
+  margin-bottom: 0;
 }
 
 .error-text {
-  color:#F61067;
+  color:#EC0011;
 }
 
 .btn {

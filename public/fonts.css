@@ -1,13 +1,20 @@
 @font-face {
     font-family: 'AvenirNext Regular';
-    src: url('./assets/fonts/Karu-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/AvenirNextCyr-Regular.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AvenirNext Medium';
-    src: url('./assets/fonts/Karu-Medium.ttf') format('truetype');
+    src: url('./assets/fonts/AvenirNextCyr-Medium.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext LightItalic';
+    src: url('./assets/fonts/AvenirNextCyr-MediumItalic.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }

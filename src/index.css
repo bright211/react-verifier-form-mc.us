@@ -34,7 +34,6 @@ code {
   align-items: center;
 }
 
-
 .form-check-label {
   text-align: left;
   padding-left: 5px;
@@ -46,13 +45,10 @@ code {
   color:black !important;
 }
 
-
-
 .form-control:focus {
-  border-color: #00566B !important;
-  box-shadow: 0 0 0 0.1rem #00566B !important;
-  background-color: #e6e6e6 !important;
-  border-color: #b7b7b7 !important;
+  box-shadow: 0 0 0 0.1rem #EFF7F9 !important;
+  background-color: #FCFCFC !important;
+  border:1px solid #00566B !important;
 }
 
 .form-control {
@@ -118,6 +114,7 @@ code {
 .success_text {
   color: #37383C;
   font-size: 36px;
+  font-family: 'AvenirNext Medium';
 }
 
 .logo {

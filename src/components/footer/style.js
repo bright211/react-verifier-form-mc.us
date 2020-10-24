@@ -26,4 +26,10 @@ export const FooterContainer = styled.div`
   @media (max-width: 930px) {
     padding: 0px 20px;
   }
+
+  @media (max-width: 700px) {
+    padding: 0px 20px;
+    position: fixed;
+    bottom:0;
+  }
 `;

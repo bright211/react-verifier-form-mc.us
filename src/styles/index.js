@@ -16,6 +16,12 @@ export const ContentContainer = styled.div`
   @media (max-width: 930px) {
     min-height: 350px;
     overflow: scroll;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 700px) {
+    padding-top: 60px;
+    padding-bottom: 120px;
   }
 `;
 
@@ -30,6 +36,7 @@ export const TitleContainer = styled.div`
     font-size: 38px;
     text-align: left;
     width: 40%;
+    font-family: 'AvenirNext Regular' !important;
   }
   @media (max-width: 930px) {
     padding: 64px 20px 0 20px;
