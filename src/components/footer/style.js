@@ -10,6 +10,8 @@ export const FooterContainer = styled.div`
   min-height: 77px;
   width: 100%;  
   border-top: 1px solid #36383B;
+  position: fixed;
+    bottom:0;
 
   & .exit-btn,
   .next-btn {

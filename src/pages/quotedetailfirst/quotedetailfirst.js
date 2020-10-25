@@ -9,7 +9,9 @@ import { useHistory } from "react-router-dom";
 import * as Types from "../../state/types";
 import { db } from "../../api";
 import { Container, ContentContainer,TitleContainer } from "../../styles";
-import {BlockContainer} from './style'
+import {BlockContainer} from './style';
+import {Apis} from '../../api'
+import {toUserEmailTemplate} from '../../utils'
 
 function QuoteDetailFirst() {
   const storeData = useSelector((store) => store.data);
@@ -21,6 +23,7 @@ function QuoteDetailFirst() {
 
   useEffect(() => {
     setValue({ ...storeData });
+    
   }, [storeData]);
 
   //save data to the redux store from each form field
@@ -73,9 +76,15 @@ function QuoteDetailFirst() {
           State: value.State,
           City: value.City,
         })
-        .then(function (docRef) {
+        .then(async function (docRef) {
           dispatch({ type: Types.SET_DOC_ID, payload: { docId: docRef.id } });
           console.log("Document written with ID: ", docRef.id);
+          const res = await Apis.sendEmail({
+            email:value.Email,
+            emailBody:toUserEmailTemplate,
+            subject:'Welcome to Mortgage Calculator Us.'
+          })
+          console.log(res)
           history.push("/quotedetailsecond");
         })
         .catch(function (error) {

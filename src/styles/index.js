@@ -16,14 +16,18 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   font-size: 16px;
   width: 100%;
+  
+  padding-bottom: 77px;
 
   @media (max-width: 930px) {
     // min-height: 350px;
     overflow: scroll;
-    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 77px;
   }
 
   @media (max-width: 700px) {
+    // display: block;
     padding-top: 60px;
     padding-bottom: 77px;
   }

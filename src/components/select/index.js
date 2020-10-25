@@ -25,10 +25,8 @@ function Select(props) {
         <option selected value={0}>
           {props.option}
         </option>{" "}
-        //props.option must be Array.
-        <option value={1}>state 1</option>
-        <option value={2}>state 2</option>
-        <option value={3}>state 3</option>
+        <option value={ "California, CA"}> California, CA</option>      
+        <option value={ "Los Angeles"}> Los Angeles</option> 
       </select>
     </div>
   );

@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import QuoteDetailFirst from "../pages/quotedetailfirst/quotedetailfirst";
 import QuoteDetailSecond from "../pages/quotedetailsecond/quotedetailsecond";
 import ProcessBar from "../pages/processbar/processbar";
+import HomePage from "../pages/homepage.js";
 function Routes() {
   return (
       <Switch>
@@ -20,6 +21,11 @@ function Routes() {
           exact
           path={`/processbar`}
           component={ProcessBar}
+        />
+        <Route
+          exact
+          path={`/homepage`}
+          component={HomePage}
         />
         <Redirect from="/" to='quotedetailfirst' />
       </Switch>

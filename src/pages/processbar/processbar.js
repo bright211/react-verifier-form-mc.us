@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BarLoader from "react-spinners/BarLoader";
 import {css} from '@emotion/core'
-import {ReactComponent as Logo} from '../../assets/images/MCUS-LOGO.svg'
+import {useHistory} from 'react-router-dom'
 /*
 * fill color body background
 */
@@ -16,6 +16,14 @@ const override = css`
 `;
 function ProcessBar() {
   fillbodypaint();
+  const history = useHistory()
+
+  useEffect(()=>{
+    const timer = setTimeout(() => {
+      history.push('/homepage')
+    }, 10000);
+    return () => clearTimeout(timer);
+  },[])
 
   return (    
     <div className='processbarcontainer'>

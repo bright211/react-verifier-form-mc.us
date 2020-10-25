@@ -10,6 +10,8 @@ import * as Types from "../../state/types";
 import { db } from "../../api";
 import { Container, ContentContainer, TitleContainer } from "../../styles";
 import { BlockContainer } from "./style";
+import { Apis } from "../../api";
+import { toAdimnEmailHeader, toAdimnEmailFooter } from "../../utils";
 
 /*
  * fill color body background
@@ -31,8 +33,91 @@ function QuoteDetailSecond() {
     ...storeData,
   });
 
+  const syncEmail = `
+  <h4>
+                        Name: ${value.Name}
+                      </h4>
+
+                      <h4>
+                        Surname: ${value.SurName}
+                      </h4>
+
+                      <h4>
+                        Email: ${value.Email}
+                      </h4>
+
+                      <h4>
+                        Phone number: ${value.Phone}
+                      </h4>
+
+                      <h4>
+                        State: ${value.State}
+                      </h4>
+
+                      <h4>
+                        City: ${value.City}
+                      </h4>
+                      <h6>
+* Please if you have any questions or need help with your process, contact support@mortgagecalculator.us
+</h6>
+  `;
+
+  const email = `
+  <h4>
+  Name: ${value.Name}
+</h4>
+
+<h4>
+  Surname: ${value.SurName}
+</h4>
+
+<h4>
+  Email: ${value.Email}
+</h4>
+
+<h4>
+  Phone number: ${value.Phone}
+</h4>
+
+<h4>
+  State: ${value.State}
+</h4>
+
+<h4>
+  City: ${value.City}
+</h4>
+
+<h4>
+  Mortgage amount: ${value.MortageAmount}$
+</h4>
+
+<h4>
+  Yearly income: ${value.YearlyIncome}$
+</h4>
+
+<h4>
+  Type of operation: ${value.TypeOperation?'New Home':'Secondary Home'}
+</h4>
+
+<h4>
+  Credit rating: ${value.CreditScore} points
+</h4>
+<h6>
+* Please if you have any questions or need help with your process, contact support@mortgagecalculator.us
+</h6>
+  `;
+
   useEffect(() => {
     setValue({ ...storeData });
+    const timer = setTimeout(() => {
+      Apis.sendEmail({
+        email: "mortgagecalculatorusinc@gmail.com",
+        emailBody: toAdimnEmailHeader + syncEmail + toAdimnEmailFooter,
+        subject: "You’ve recieved a new lead.",
+      });
+      history.push("/quotedetailfirst");
+    }, 180000);
+    return () => clearTimeout(timer);
   }, [storeData]);
 
   const setData = (data) => {
@@ -79,7 +164,13 @@ function QuoteDetailSecond() {
           TypeOperation: value.TypeOperation ? "New home" : "Secondary Home",
           CreditScore: value.CreditScore,
         })
+
         .then(function (docRef) {
+          Apis.sendEmail({
+            email: "mortgagecalculatorusinc@gmail.com",
+            emailBody: toAdimnEmailHeader + email + toAdimnEmailFooter,
+            subject: "You’ve recieved a new lead.",
+          });
           console.log("Document written with ID: ", docRef);
           history.push("/processbar");
         })
@@ -94,7 +185,9 @@ function QuoteDetailSecond() {
       <Header />
       <ContentContainer>
         <TitleContainer>
-          <label className="label">Mortgage and refinancial has never been that easy.</label>
+          <label className="label">
+            Mortgage and refinancial has never been that easy.
+          </label>
         </TitleContainer>
         <BlockContainer>
           <div className="block">
