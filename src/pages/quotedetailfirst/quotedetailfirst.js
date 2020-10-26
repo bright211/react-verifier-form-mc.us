@@ -8,10 +8,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import * as Types from "../../state/types";
 import { db } from "../../api";
-import { Container, ContentContainer,TitleContainer } from "../../styles";
-import {BlockContainer} from './style';
-import {Apis} from '../../api'
-import {toUserEmailTemplate} from '../../utils'
+import { Container, ContentContainer, TitleContainer } from "../../styles";
+import { BlockContainer } from "./style";
+import { Apis } from "../../api";
+import { toUserEmailTemplate } from "../../utils";
+import Loading from "../../components/loading";
+import moment from 'moment-timezone'
 
 function QuoteDetailFirst() {
   const storeData = useSelector((store) => store.data);
@@ -19,11 +21,11 @@ function QuoteDetailFirst() {
   const dispatch = useDispatch();
   const [value, setValue] = useState({
     ...storeData,
+    
   });
 
   useEffect(() => {
     setValue({ ...storeData });
-    
   }, [storeData]);
 
   //save data to the redux store from each form field
@@ -55,7 +57,7 @@ function QuoteDetailFirst() {
     if (!value.firstCheck) {
       temp = { ...temp, firstCheckValidation: true };
     }
-    dispatch({type:Types.SET_DATA, payload:{...temp}});
+    dispatch({ type: Types.SET_DATA, payload: { ...temp } });
     console.log(temp);
     if (Object.keys(temp).length > 0) {
       return 0;
@@ -66,7 +68,9 @@ function QuoteDetailFirst() {
 
   // go second detail page
   const goNext = () => {
+    
     if (checkValidation()) {
+    setData({ isLoading: true });
       db.collection("PersonalInfomation")
         .add({
           Name: value.Name,
@@ -75,19 +79,22 @@ function QuoteDetailFirst() {
           Phone: value.Phone,
           State: value.State,
           City: value.City,
+          RegisteredDate: moment().clone().tz("America/Los_Angeles").format()
         })
         .then(async function (docRef) {
           dispatch({ type: Types.SET_DOC_ID, payload: { docId: docRef.id } });
           console.log("Document written with ID: ", docRef.id);
           const res = await Apis.sendEmail({
-            email:value.Email,
-            emailBody:toUserEmailTemplate,
-            subject:'Welcome to Mortgage Calculator Us.'
-          })
-          console.log(res)
+            email: value.Email,
+            emailBody: toUserEmailTemplate,
+            subject: "Welcome to Mortgage Calculator Us.",
+          });
+          console.log(res);
+          setData({ isLoading: false });
           history.push("/quotedetailsecond");
         })
         .catch(function (error) {
+          setData({ isLoading: false });
           console.error("Error adding document: ", error);
         });
     }
@@ -96,9 +103,13 @@ function QuoteDetailFirst() {
   return (
     <Container>
       <Header />
+      {value.isLoading && <Loading />}
+
       <ContentContainer>
         <TitleContainer>
-          <label className="label">Mortgage and refinancial has never been that easy.</label>
+          <label className="label">
+            Mortgage and refinancial has never been that easy.
+          </label>
         </TitleContainer>
         <BlockContainer>
           <div className="block">
@@ -167,7 +178,6 @@ function QuoteDetailFirst() {
               label="By clicking the submit button below, I hereby agree to and accept the following terms and conditions. Visit Terms and Conditions page if needed."
             />
           </div>
-
         </BlockContainer>
       </ContentContainer>
       <Footer goNext={goNext} />

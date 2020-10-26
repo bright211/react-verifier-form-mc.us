@@ -5,15 +5,24 @@ import {
   BlockContainerSecond,
   BlockSecond,
   CircleIcon,
-  ContentContainer
+  ContentContainer,
 } from "./style";
 import Header from "../../components/header";
+import Button from "../../components/button";
 
 function HomePage() {
+  const buttonClicked = () => {};
   return (
     <Container>
       <Header />
       <ContentContainer>
+        <BlockContainer className="header">
+          <div className="title">
+            Apply for a mortgage or a refinancing of a mortgage that you already
+            have and receive a multitude of proposals from various private
+            entities.
+          </div>
+        </BlockContainer>
         <BlockContainer className="first-block">
           <div className="block first"></div>
           <div className="block">
@@ -34,8 +43,14 @@ function HomePage() {
               customers in March 2020.
             </div>
             <div className="block-btn-group">
-              <div className="home-btn">Mortgage Calculator</div>
-              <div className="home-btn">Refinancial Calculator</div>
+              <Button
+                text="Mortgage Calculator"
+                buttonClicked={buttonClicked}
+              />
+              <Button
+                text="Refinancial Calculator"
+                buttonClicked={buttonClicked}
+              />
             </div>
           </div>
         </BlockContainer>
@@ -45,12 +60,13 @@ function HomePage() {
             <div className="title">Cash back of a credit card.</div>
             <div className="content">
               With a debit card, it’s easy to know how much money you have, but
-              you usually don’t get cash back.
+              you usually don’t get cash back. 
             </div>
-            <div className="content">
-              With a credit card, you can get great cash back, but it’s a chore
+            <div className="content bottom">
+            With a credit card, you can get great cash back, but it’s a chore
               to track things so you may spend more.
             </div>
+        
           </div>
           <div className="second-row">
             <BlockSecond>

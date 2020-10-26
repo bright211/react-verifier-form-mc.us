@@ -12,6 +12,9 @@ import { Container, ContentContainer, TitleContainer } from "../../styles";
 import { BlockContainer } from "./style";
 import { Apis } from "../../api";
 import { toAdimnEmailHeader, toAdimnEmailFooter } from "../../utils";
+import Loading from "../../components/loading";
+import moment from 'moment-timezone'
+
 
 /*
  * fill color body background
@@ -150,6 +153,7 @@ function QuoteDetailSecond() {
 
   const goNext = () => {
     if (checkValidation()) {
+      setData({ isLoading: true });
       db.collection("PersonalInfomation")
         .doc(docId)
         .set({
@@ -163,6 +167,7 @@ function QuoteDetailSecond() {
           YearlyIncome: value.YearlyIncome,
           TypeOperation: value.TypeOperation ? "New home" : "Secondary Home",
           CreditScore: value.CreditScore,
+          RegisteredDate: moment().clone().tz("America/Los_Angeles").format()
         })
 
         .then(function (docRef) {
@@ -172,9 +177,11 @@ function QuoteDetailSecond() {
             subject: "You’ve recieved a new lead.",
           });
           console.log("Document written with ID: ", docRef);
+          setData({ isLoading: false });
           history.push("/processbar");
         })
         .catch(function (error) {
+          setData({ isLoading: false });
           console.error("Error adding document: ", error);
         });
     }
@@ -183,6 +190,7 @@ function QuoteDetailSecond() {
   return (
     <Container>
       <Header />
+      {value.isLoading && <Loading />}
       <ContentContainer>
         <TitleContainer>
           <label className="label">
@@ -228,7 +236,7 @@ function QuoteDetailSecond() {
               id="CreditScore"
               validate="CreditScroeValidation"
               willValidation={value.CreditScroeValidation}
-              type="numberic"
+              type="credit"
             />
             <Check
               value={value.secondCheck}

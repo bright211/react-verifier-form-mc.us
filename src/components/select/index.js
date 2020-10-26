@@ -16,6 +16,7 @@ function Select(props) {
   return (
     <div className="select">
       <label>{`${label} ` } {willValidation&&<label className="error">{`(Please complete this field)`}</label>}</label> 
+      <div className="select-box">
       <select
         className={`form-control`}
         id="sel1"
@@ -28,7 +29,9 @@ function Select(props) {
         <option value={ "California, CA"}> California, CA</option>      
         <option value={ "Los Angeles"}> Los Angeles</option> 
       </select>
+      </div>
     </div>
+    
   );
 }
 

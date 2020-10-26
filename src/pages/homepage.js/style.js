@@ -7,17 +7,28 @@ export const ContentContainer = styled.div`
   font-size: 16px;
   width: 100%;
 
+  & .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 160px;
+  }
+
   @media (max-width: 930px) {
     overflow: scroll;
   }
 
   @media (max-width: 700px) {
     padding-top: 60px;
+    & .header {
+      display: none;
+      
+    }
   }
 `;
 
 export const BlockContainer = styled.div.attrs((props) => ({
-  className: props.className,
+  
 }))`
   padding: 60px 160px 120px 160px;
   display: flex;
@@ -25,9 +36,16 @@ export const BlockContainer = styled.div.attrs((props) => ({
   justify-content: space-between;
   background-color: #fcfcfc;
 
+  
+
+  & .title {
+    max-width: 920px;
+    font-size: 38px;
+  }
+
   & .block {
     width: 35vw;
-    height: 35vw;
+    // height: 35vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,6 +57,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
       font-family: "AvenirNext Regular";
       display: flex;
       text-align: left;
+      padding:0;
     }
 
     & .block-title {
@@ -48,14 +67,17 @@ export const BlockContainer = styled.div.attrs((props) => ({
     & .block-content {
       font-size: 18px;
       line-height: 2rem;
+      margin-top: 47px;
     }
 
     & .block-sub-content {
       font-size: 10px;
+      margin-top: 42px;
     }
 
     & .block-btn-group {
       display: flex;
+      margin-top: 66px;
 
       & .home-btn {
         width: 198px;
@@ -83,19 +105,17 @@ export const BlockContainer = styled.div.attrs((props) => ({
 
     & .block {
       width: 37vw;
-      height: 100%;
+      // height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       & .block-title {
-        padding: 20px 0;
         font-size: 24px;
       }
 
       & .block-sub-content {
         font-size: 10px;
-        padding: 20px 0;
       }
 
       & .block-btn-group {
@@ -110,7 +130,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
   }
 
-  @media (max-width: 930px) {
+  @media (max-width: 990px) {
     padding: 0px 20px 120px 20px;
     display: flex;
     flex-wrap: wrap;
@@ -125,23 +145,23 @@ export const BlockContainer = styled.div.attrs((props) => ({
       padding-bottom: 0px;
 
       & .block-title {
-        padding: 20px 0;
+        padding: 30px 0 0 0;
         font-size: 24px;
       }
 
       & .block-content {
         font-size: 16px;
-        padding-bottom: 20px;
+        // padding-bottom: 20px;
       }
 
       & .block-sub-content {
         font-size: 10px;
-        padding: 30px 0;
       }
 
       & .block-btn-group {
+        height: 140px;
         flex-direction: column;
-        padding: 30px 0 0 0;
+        justify-content: space-between;
 
         & .home-btn {
           margin-bottom: 10px;
@@ -162,11 +182,11 @@ export const BlockContainer = styled.div.attrs((props) => ({
 `;
 
 export const BlockContainerSecond = styled.div`
-  padding: 100px;
+  padding: 94px 100px;
   background-color: #E6E6E6;
 
   .first-row {
-      width: 55vw;
+      width: 60vw;
 
       & .title, .content {
           text-align: left;
@@ -179,12 +199,14 @@ export const BlockContainerSecond = styled.div`
       }
       & .content{
           font-size: 18px;
-          padding 20px 0;
+          padding 44px 0 0 0;
+      }
+      & .bottom {
+        padding-top:5px;
       }
 
       @media (max-width: 930px) {
         width: 100%;
-        padding-bottom: 100px;
 
         & .title {
             font-size: 22px;
@@ -193,7 +215,10 @@ export const BlockContainerSecond = styled.div`
 
           & .content{
             font-size: 16px;
-            padding 15px 0;
+            padding: 45px 0 0 0;
+        }
+        & .bottom {
+          padding-top:30px;
         }
     }
   }
@@ -208,7 +233,7 @@ export const BlockContainerSecond = styled.div`
   }
 
   @media (max-width: 930px) {
-    padding: 100px 20px;
+    padding: 93px 20px;
 }
 `;
 
@@ -216,11 +241,11 @@ export const BlockSecond = styled.div`
   width: 38vw;
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 67px;
 
   & .content-container {
     width: 33vw;
-    padding-left: 20px;
+    padding-left: 40px;
 
     & .title,
     .content {
@@ -230,13 +255,15 @@ export const BlockSecond = styled.div`
     & .title {
       font-size: 24px;
       font-family: "AvenirNext Medium";
-      padding-bottom: 20px;
+      padding-bottom: 38px;
     }
 
     & .content {
       font-size: 18px;
       line-height: 2rem;
     }
+
+    
   }
 
   @media (max-width: 930px) {
@@ -246,7 +273,7 @@ export const BlockSecond = styled.div`
     & .content-container {
       width: 100%;
       padding-left: 0;
-      padding-top: 20px;
+      padding-top: 33px;
 
       & .title {
         font-size: 20px;
@@ -257,6 +284,7 @@ export const BlockSecond = styled.div`
       & .content {
         font-size: 16px;
       }
+
     }
   }
 `;

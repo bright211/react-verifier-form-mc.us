@@ -6,9 +6,13 @@ header {
   top:0;
   background-color: #FCFCFC;
   display: flex !important;
-  justify-content: flex-start;
   align-items: center;
   padding: 0 100px;
+  
+}
+
+.my-dropdown-toggle::after {
+  content: none;
 }
 
 
@@ -55,7 +59,33 @@ code {
 
 .form-control {
   background-color: #FCFCFC !important;
-  border-color: #b7b7b7 !important;
+  border-color: #b7b7b7 !important;  
+}
+
+select { 
+  /* for Firefox */ 
+  -moz-appearance: none; 
+  /* for Safari, Chrome, Opera */ 
+  -webkit-appearance: none; 
+} 
+
+.select-box {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+
+.select-box::before {
+  content:"";
+  position: absolute;
+  margin:auto;
+  top:0;
+  bottom:0;
+  right: 22px;
+  width: 14px;
+  height: 8px;
+  background-image: url('../src/assets/images/arrow.png');
+  /* background-color: red; */
 }
 
 .exitbutton {
@@ -162,9 +192,9 @@ label {
     height: 60px;
     width: 100%;
     display: flex !important;
-    justify-content: flex-start;
     align-items: center;
     padding: 0 20px;
+    justify-content: space-between;
   }
 
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Dinero from "dinero.js";
 
 function LabelInput(props) {
   const {
@@ -12,11 +13,28 @@ function LabelInput(props) {
     type,
   } = props;
 
+
   const setValue = (val) => {
+    console.log(val);
     if (type === "numberic") {
+      const re = /^[0-9.,\b]+$/;
+      let value = val
+          .replace(",", "")
+          .replace(",", "")
+          .replace(",", "")
+          .replace(",", "")
+          .replace(".", "");
+        console.log(value);
+
+      if (re.test(val)) {        
+        setData({ [validate]: false, [id]: parseInt(value) });
+      } else if (!parseInt(value)) {
+        setData({ [validate]: false, [id]: 0 });
+      }
+    } else if (type === "credit") {
       const re = /^[0-9\b]+$/;
-      if (re.test(val)) {
-        setData({ [validate]: false, [id]: val });
+      if (re.test(val)&&val.length<=3) {        
+        setData({ [validate]: false, [id]: parseInt(val) });
       } else if (!val) {
         setData({ [validate]: false, [id]: "" });
       }
@@ -38,12 +56,21 @@ function LabelInput(props) {
         )}
       </label>
 
-      <input
-        value={value}
-        placeholder={placeHolder}
-        className={`input-box form-control`}
-        onChange={(e) => setValue(e.target.value)}
-      ></input>
+      {type === "numberic" ? (
+        <input
+          value={value?Dinero({ amount: parseInt(value) }).toFormat("0,0.00"):''}
+          placeholder={placeHolder}
+          className={`input-box form-control`}
+          onChange={(e) => setValue(e.target.value)}
+        ></input>
+      ) : (
+        <input
+          value={value}
+          placeholder={placeHolder}
+          className={`input-box form-control`}
+          onChange={(e) => setValue(e.target.value)}
+        ></input>
+      )}
     </div>
   );
 }

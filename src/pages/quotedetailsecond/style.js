@@ -1,10 +1,11 @@
-import styled from "styled-components";
+ import styled from "styled-components";
 
 export const BlockContainer = styled.div`
   padding: 0 100px 30px 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;   
+ 
 
   & .block {
     width: 47%;

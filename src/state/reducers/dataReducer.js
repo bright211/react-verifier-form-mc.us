@@ -25,8 +25,8 @@ const INITIAL_STATE = {
   firstCheckValidation:false,
   secondCheck:false,
   secondCheckValidation:false,
-  docId:''
-
+  docId:'',
+  isLoading: false
 };
 
 export default (state = INITIAL_STATE, action) => {

@@ -308,9 +308,7 @@ export const toUserEmailTemplate = `
       margin: 0;
       padding: 0 !important;
       mso-line-height-rule: exactly;
-	  background-color: #f1f1f1;
-	  margin-top: 100px;
-    margin-bottom: 100px;
+      background-color: #f1f1f1;
     "
   >
     <center style="width: 100%; background-color: #f1f1f1">
@@ -326,7 +324,7 @@ export const toUserEmailTemplate = `
           font-family: sans-serif;
         "
       >
-        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+
       </div>
       <div style="max-width: 800px; margin: 0 auto" class="email-container">
         <!-- BEGIN BODY -->
@@ -733,7 +731,7 @@ export const toAdimnEmailHeader = `
           font-family: sans-serif;
         "
       >
-        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+        
       </div>
       <div style="max-width: 800px; margin: 0 auto" class="email-container">
         <!-- BEGIN BODY -->
