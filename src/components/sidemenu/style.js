@@ -6,6 +6,11 @@ export const SiderBarHeader = styled.div`
         padding: 11px 10px;
         display: flex;
         justify-content: space-between;
+
+        & .closeBtn{
+            width: 13px;
+            height: 13px;
+        }
     }
 
     @media (min-width: 930px){
@@ -16,6 +21,8 @@ export const SiderBarHeader = styled.div`
         }
 
         & .closeBtn{
+            width: 13px;
+            height: 13px;
             cursor: pointer;
             float: right;
         }
