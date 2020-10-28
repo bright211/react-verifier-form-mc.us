@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Container } from "../../styles";
 import {
   BlockContainer,
@@ -9,12 +10,27 @@ import {
 } from "./style";
 import Header from "../../components/header";
 import Button from "../../components/button";
+import SideMenu from "../../components/sidemenu";
+import * as Types from "../../state/types";
 
 function HomePage() {
+  const dispatch = useDispatch();
+  const storeData = useSelector((store) => store.data);
+  const [value, setValue] = useState({
+    ...storeData,
+  });
+
+  useEffect(()=>{
+    setValue({...storeData})
+  },[storeData])
   const buttonClicked = () => {};
+  const toggleMenu = (data) => {
+    dispatch({ type: Types.SET_DATA, payload: { ...data } });
+  };
   return (
     <Container>
-      <Header />
+      <Header toggleMenu={toggleMenu} />
+      <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
       <ContentContainer>
         <BlockContainer className="header">
           <div className="title">
@@ -60,13 +76,12 @@ function HomePage() {
             <div className="title">Cash back of a credit card.</div>
             <div className="content">
               With a debit card, it’s easy to know how much money you have, but
-              you usually don’t get cash back. 
+              you usually don’t get cash back.
             </div>
             <div className="content bottom">
-            With a credit card, you can get great cash back, but it’s a chore
+              With a credit card, you can get great cash back, but it’s a chore
               to track things so you may spend more.
             </div>
-        
           </div>
           <div className="second-row">
             <BlockSecond>

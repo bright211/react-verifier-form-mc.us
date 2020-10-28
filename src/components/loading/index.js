@@ -1,26 +1,25 @@
 import React from "react";
-import PuffLoader from "react-spinners/PuffLoader";
+import BarLoader from "react-spinners/BarLoader";
 import { css } from "@emotion/core";
+import {LoadingContainer} from './style'
 
 const override = css`
   border-radius: 5px;
-  position: fixed;
-  margin: auto;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  z-index:1000;
+  
 `;
 
 function Loading() {
   return (
-    <PuffLoader
+    <LoadingContainer>
+      <div className='title'>Loading...</div>
+    <BarLoader
       css={override}
-      size={200}
+      height="5px"
+      width={250}
       color={"#37383C"}
       loading={true}
     />
+    </LoadingContainer>
   );
 }
 

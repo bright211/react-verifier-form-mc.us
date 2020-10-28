@@ -33,7 +33,7 @@ export const toUserEmailTemplate = `
         padding: 0 !important;
         height: 100% !important;
         width: 100% !important;
-        background: #f1f1f1;
+
       }
 
       /* What it does: Stops email clients resizing small text. */
@@ -308,10 +308,10 @@ export const toUserEmailTemplate = `
       margin: 0;
       padding: 0 !important;
       mso-line-height-rule: exactly;
-      background-color: #f1f1f1;
+     
     "
   >
-    <center style="width: 100%; background-color: #f1f1f1">
+    <center style="width: 100%;">
       <div
         style="
           display: none;
@@ -438,7 +438,7 @@ export const toAdimnEmailHeader = `
         padding: 0 !important;
         height: 100% !important;
         width: 100% !important;
-        background: #f1f1f1;
+
       }
 
       /* What it does: Stops email clients resizing small text. */
@@ -713,12 +713,10 @@ export const toAdimnEmailHeader = `
       margin: 0;
       padding: 0 !important;
       mso-line-height-rule: exactly;
-      background-color: #f1f1f1;
-      margin-top: 100px;
-      margin-bottom: 100px;
+     
     "
   >
-    <center style="width: 100%; background-color: #f1f1f1">
+    <center style="width: 100%;">
       <div
         style="
           display: none;

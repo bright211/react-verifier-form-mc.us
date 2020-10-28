@@ -17,7 +17,8 @@ const INITIAL_STATE = {
   MortageAmountValidation:false,
   YearlyIncome: "",
   YearlyIncomeValidation:false,
-  TypeOperation: true,
+  TypeOperation: false,
+  TypeOperationSecond: false,
   TypeOperationValidation:false,
   CreditScore: "",
   CreditScroeValidation:false,
@@ -26,7 +27,8 @@ const INITIAL_STATE = {
   secondCheck:false,
   secondCheckValidation:false,
   docId:'',
-  isLoading: false
+  isLoading: false,
+  drawMenu: false
 };
 
 export default (state = INITIAL_STATE, action) => {

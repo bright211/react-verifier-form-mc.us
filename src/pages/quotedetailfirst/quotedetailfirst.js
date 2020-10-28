@@ -13,7 +13,8 @@ import { BlockContainer } from "./style";
 import { Apis } from "../../api";
 import { toUserEmailTemplate } from "../../utils";
 import Loading from "../../components/loading";
-import moment from 'moment-timezone'
+import moment from "moment-timezone";
+import SideMenu from "../../components/sidemenu"
 
 function QuoteDetailFirst() {
   const storeData = useSelector((store) => store.data);
@@ -21,7 +22,6 @@ function QuoteDetailFirst() {
   const dispatch = useDispatch();
   const [value, setValue] = useState({
     ...storeData,
-    
   });
 
   useEffect(() => {
@@ -58,7 +58,7 @@ function QuoteDetailFirst() {
       temp = { ...temp, firstCheckValidation: true };
     }
     dispatch({ type: Types.SET_DATA, payload: { ...temp } });
-    console.log(temp);
+
     if (Object.keys(temp).length > 0) {
       return 0;
     } else {
@@ -68,9 +68,8 @@ function QuoteDetailFirst() {
 
   // go second detail page
   const goNext = () => {
-    
     if (checkValidation()) {
-    setData({ isLoading: true });
+      setData({ isLoading: true });
       db.collection("PersonalInfomation")
         .add({
           Name: value.Name,
@@ -79,7 +78,14 @@ function QuoteDetailFirst() {
           Phone: value.Phone,
           State: value.State,
           City: value.City,
-          RegisteredDate: moment().clone().tz("America/Los_Angeles").format()
+          RegisteredDate: moment()
+            .clone()
+            .tz("America/Los_Angeles")
+            .format("DD/MM/YYYY"),
+          RegisteredTime: moment()
+            .clone()
+            .tz("America/Los_Angeles")
+            .format("HH:mm"),
         })
         .then(async function (docRef) {
           dispatch({ type: Types.SET_DOC_ID, payload: { docId: docRef.id } });
@@ -100,87 +106,96 @@ function QuoteDetailFirst() {
     }
   };
 
+  const toggleMenu = (data) => {
+    dispatch({ type: Types.SET_DATA, payload: { ...data } });
+  }
+
   return (
     <Container>
-      <Header />
-      {value.isLoading && <Loading />}
-
-      <ContentContainer>
-        <TitleContainer>
-          <label className="label">
-            Mortgage and refinancial has never been that easy.
-          </label>
-        </TitleContainer>
-        <BlockContainer>
-          <div className="block">
-            <LabelInput
-              label="Name*"
-              placeHolder="Your Name…"
-              setData={setData}
-              value={value.Name}
-              id="Name"
-              validate="NameValidation"
-              willValidation={value.NameValidation}
-            />
-            <LabelInput
-              label="Surname*"
-              placeHolder="Your surname…"
-              setData={setData}
-              value={value.SurName}
-              id="SurName"
-              validate="SurNameValidation"
-              willValidation={value.SurNameValidation}
-            />
-            <LabelInput
-              label="Your email*"
-              placeHolder="Your email…"
-              setData={setData}
-              value={value.Email}
-              id="Email"
-              validate="EmailValidation"
-              willValidation={value.EmailValidation}
-            />
-            <LabelInput
-              label="Phone number*"
-              placeHolder="Your phone number…"
-              setData={setData}
-              value={value.Phone}
-              id="Phone"
-              validate="PhoneValidation"
-              willValidation={value.PhoneValidation}
-            />
-          </div>
-          <div className="block">
-            <Select
-              label="State*"
-              option="Select your state"
-              setData={setData}
-              value={value.State}
-              id="State"
-              validate="StateValidation"
-              willValidation={value.StateValidation}
-            />
-            <Select
-              label="City*"
-              option="Select your city"
-              setData={setData}
-              value={value.City}
-              id="City"
-              validate="CityValidation"
-              willValidation={value.CityValidation}
-            />
-            <Check
-              value={value.firstCheck}
-              id="firstCheck"
-              validate="firstCheckValidation"
-              setData={setData}
-              willValidation={value.firstCheckValidation}
-              label="By clicking the submit button below, I hereby agree to and accept the following terms and conditions. Visit Terms and Conditions page if needed."
-            />
-          </div>
-        </BlockContainer>
-      </ContentContainer>
-      <Footer goNext={goNext} />
+      {value.isLoading ? (
+        <Loading />
+      ) : (
+        <>
+          <Header toggleMenu={toggleMenu}/>
+          <SideMenu value={value.drawMenu} toggleMenu={toggleMenu}/>
+          <ContentContainer>
+            <TitleContainer>
+              <label className="label">
+                Mortgage and refinancial has never been that easy.
+              </label>
+            </TitleContainer>
+            <BlockContainer>
+              <div className="block">
+                <LabelInput
+                  label="Name*"
+                  placeHolder="Your Name…"
+                  setData={setData}
+                  value={value.Name}
+                  id="Name"
+                  validate="NameValidation"
+                  willValidation={value.NameValidation}
+                />
+                <LabelInput
+                  label="Surname*"
+                  placeHolder="Your surname…"
+                  setData={setData}
+                  value={value.SurName}
+                  id="SurName"
+                  validate="SurNameValidation"
+                  willValidation={value.SurNameValidation}
+                />
+                <LabelInput
+                  label="Your email*"
+                  placeHolder="Your email…"
+                  setData={setData}
+                  value={value.Email}
+                  id="Email"
+                  validate="EmailValidation"
+                  willValidation={value.EmailValidation}
+                />
+                <LabelInput
+                  label="Phone number*"
+                  placeHolder="Your phone number…"
+                  setData={setData}
+                  value={value.Phone}
+                  id="Phone"
+                  validate="PhoneValidation"
+                  willValidation={value.PhoneValidation}
+                />
+              </div>
+              <div className="block">
+                <Select
+                  label="State*"
+                  option="Select your state"
+                  setData={setData}
+                  value={value.State}
+                  id="State"
+                  validate="StateValidation"
+                  willValidation={value.StateValidation}
+                />
+                <Select
+                  label="City*"
+                  option="Select your city"
+                  setData={setData}
+                  value={value.City}
+                  id="City"
+                  validate="CityValidation"
+                  willValidation={value.CityValidation}
+                />
+                <Check
+                  value={value.firstCheck}
+                  id="firstCheck"
+                  validate="firstCheckValidation"
+                  setData={setData}
+                  willValidation={value.firstCheckValidation}
+                  label="By clicking the submit button below, I hereby agree to and accept the following terms and conditions. Visit Terms and Conditions page if needed."
+                />
+              </div>
+            </BlockContainer>
+          </ContentContainer>
+          <Footer goNext={goNext} />
+        </>
+      )}
     </Container>
   );
 }

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ea3e5975.chunk.css",
+    "main.js": "/static/js/main.c5046bf4.chunk.js",
+    "main.js.map": "/static/js/main.c5046bf4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
+    "static/css/2.2a86faee.chunk.css": "/static/css/2.2a86faee.chunk.css",
+    "static/js/2.77c46a69.chunk.js": "/static/js/2.77c46a69.chunk.js",
+    "static/js/2.77c46a69.chunk.js.map": "/static/js/2.77c46a69.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b00a21ab59163b2f257723646bf20a89.js": "/precache-manifest.b00a21ab59163b2f257723646bf20a89.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2a86faee.chunk.css.map": "/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.ea3e5975.chunk.css.map": "/static/css/main.ea3e5975.chunk.css.map",
+    "static/js/2.77c46a69.chunk.js.LICENSE.txt": "/static/js/2.77c46a69.chunk.js.LICENSE.txt",
+    "static/media/MCUS-LOGO.57af1f6f.svg": "/static/media/MCUS-LOGO.57af1f6f.svg",
+    "static/media/index.css": "/static/media/chevron-down.450bfd01.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83c3e0c4.js",
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.77c46a69.chunk.js",
+    "static/css/main.ea3e5975.chunk.css",
+    "static/js/main.c5046bf4.chunk.js"
+  ]
+}

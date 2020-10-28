@@ -84,8 +84,12 @@ select {
   right: 22px;
   width: 14px;
   height: 8px;
-  background-image: url('../src/assets/images/arrow.png');
+  background-image: url('../src/assets/images/chevron-down.svg');
   /* background-color: red; */
+}
+
+.MuiDrawer-paperAnchorLeft {
+  z-index: 6000 !important;
 }
 
 .exitbutton {

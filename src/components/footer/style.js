@@ -11,6 +11,7 @@ export const FooterContainer = styled.div`
   width: 100%;  
   border-top: 1px solid #36383B;
   position: fixed;
+  z-index:1000;
     bottom:0;
 
   & .exit-btn,

@@ -12,9 +12,8 @@ import { Container, ContentContainer, TitleContainer } from "../../styles";
 import { BlockContainer } from "./style";
 import { Apis } from "../../api";
 import { toAdimnEmailHeader, toAdimnEmailFooter } from "../../utils";
-import Loading from "../../components/loading";
-import moment from 'moment-timezone'
-
+import moment from "moment-timezone";
+import SideMenu from "../../components/sidemenu"
 
 /*
  * fill color body background
@@ -99,7 +98,7 @@ function QuoteDetailSecond() {
 </h4>
 
 <h4>
-  Type of operation: ${value.TypeOperation?'New Home':'Secondary Home'}
+  Type of operation: ${value.TypeOperation ? "New Home" : "Secondary Home"}
 </h4>
 
 <h4>
@@ -141,6 +140,9 @@ function QuoteDetailSecond() {
     if (!value.secondCheck) {
       temp = { ...temp, secondCheckValidation: true };
     }
+    if (!value.TypeOperation && !value.TypeOperationSecond) {
+      temp = { ...temp, TypeOperationValidation: true };
+    }
 
     setValue({ ...value, ...temp });
     console.log(temp);
@@ -167,7 +169,14 @@ function QuoteDetailSecond() {
           YearlyIncome: value.YearlyIncome,
           TypeOperation: value.TypeOperation ? "New home" : "Secondary Home",
           CreditScore: value.CreditScore,
-          RegisteredDate: moment().clone().tz("America/Los_Angeles").format()
+          RegisteredDate: moment()
+            .clone()
+            .tz("America/Los_Angeles")
+            .format("DD/MM/YYYY"),
+          RegisteredTime: moment()
+            .clone()
+            .tz("America/Los_Angeles")
+            .format("HH:mm"),
         })
 
         .then(function (docRef) {
@@ -187,69 +196,80 @@ function QuoteDetailSecond() {
     }
   };
 
+  const toggleMenu = (data) => {
+    dispatch({ type: Types.SET_DATA, payload: { ...data } });
+  }
+
   return (
     <Container>
-      <Header />
-      {value.isLoading && <Loading />}
-      <ContentContainer>
-        <TitleContainer>
-          <label className="label">
-            Mortgage and refinancial has never been that easy.
-          </label>
-        </TitleContainer>
-        <BlockContainer>
-          <div className="block">
-            <LabelInput
-              label="Mortgage amount*"
-              placeHolder="Mortgage amount…"
-              setData={setData}
-              value={value.MortageAmount}
-              id="MortageAmount"
-              validate="MortageAmountValidation"
-              willValidation={value.MortageAmountValidation}
-              type="numberic"
-            />
-            <LabelInput
-              label="Yearly income*"
-              placeHolder="Yearly income…"
-              setData={setData}
-              value={value.YearlyIncome}
-              id="YearlyIncome"
-              validate="YearlyIncomeValidation"
-              willValidation={value.YearlyIncomeValidation}
-              type="numberic"
-            />
-          </div>
-          <div className="block">
-            <BtnGroup
-              value={value.TypeOperation}
-              setData={setData}
-              id="TypeOperation"
-              validate="TypeOperationValidation"
-              willValidation={value.TypeOperationValidation}
-            />
-            <LabelInput
-              label="Creadit rating*"
-              placeHolder="Your credit score…"
-              setData={setData}
-              value={value.CreditScore}
-              id="CreditScore"
-              validate="CreditScroeValidation"
-              willValidation={value.CreditScroeValidation}
-              type="credit"
-            />
-            <Check
-              value={value.secondCheck}
-              id="secondCheck"
-              validate="secondCheckValidation"
-              setData={setData}
-              willValidation={value.secondCheckValidation}
-              label="By clicking the submit button below, I hereby agree to and accept the following terms and conditions. Visit Terms and Conditions page if needed."
-            />
-          </div>
-        </BlockContainer>
-      </ContentContainer>
-      <Footer navigation={"second"} goNext={goNext} />
+      {/* {value.isLoading ? (
+        <Loading />
+      ) : ( */}
+        <>
+          <Header toggleMenu={toggleMenu}/>
+          <SideMenu value={value.drawMenu} toggleMenu={toggleMenu}/>
+          <ContentContainer>
+            <TitleContainer>
+              <label className="label">
+                Mortgage and refinancial has never been that easy.
+              </label>
+            </TitleContainer>
+            <BlockContainer>
+              <div className="block">
+                <LabelInput
+                  label="Mortgage amount*"
+                  placeHolder="Mortgage amount…"
+                  setData={setData}
+                  value={value.MortageAmount}
+                  id="MortageAmount"
+                  validate="MortageAmountValidation"
+                  willValidation={value.MortageAmountValidation}
+                  type="numberic"
+                />
+                <LabelInput
+                  label="Yearly income*"
+                  placeHolder="Yearly income…"
+                  setData={setData}
+                  value={value.YearlyIncome}
+                  id="YearlyIncome"
+                  validate="YearlyIncomeValidation"
+                  willValidation={value.YearlyIncomeValidation}
+                  type="numberic"
+                />
+              </div>
+              <div className="block">
+                <BtnGroup
+                  val={value.TypeOperation}
+                  valueSeond={value.TypeOperationSecond}
+                  setData={setData}
+                  id="TypeOperation"
+                  validate="TypeOperationValidation"
+                  willValidation={value.TypeOperationValidation}
+                />
+                <LabelInput
+                  label="Creadit rating*"
+                  placeHolder="Your credit score…"
+                  setData={setData}
+                  value={value.CreditScore}
+                  id="CreditScore"
+                  validate="CreditScroeValidation"
+                  willValidation={value.CreditScroeValidation}
+                  type="credit"
+                />
+                <Check
+                  value={value.secondCheck}
+                  id="secondCheck"
+                  validate="secondCheckValidation"
+                  setData={setData}
+                  willValidation={value.secondCheckValidation}
+                  label="By clicking the submit button below, I hereby agree to and accept the following terms and conditions. Visit Terms and Conditions page if needed."
+                />
+              </div>
+            </BlockContainer>
+          </ContentContainer>
+          <Footer navigation={"second"} goNext={goNext} />
+        </>
+      {/* )} */}
     </Container>
   );
 }
