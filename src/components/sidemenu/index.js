@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
-import { closeBtn } from "../../assets";
+import { closeBtn, siderImg1, siderImg3} from "../../assets";
 // import Button from "@material-ui/core/Button";
 // import List from "@material-ui/core/List";
 // import Divider from "@material-ui/core/Divider";
@@ -61,20 +61,19 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
         [classes.fullList]: anchor === "top" || anchor === "bottom",
       })}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <SiderBarHeader>
         <Logo className="logoImg" />
-        <img className="closeBtn" src={closeBtn} alt="menu icon"/>
+        <img className="closeBtn" src={closeBtn} alt="menu icon" onClick={toggleDrawer(anchor, false)}/>
       </SiderBarHeader>
       <SiderBarBody>
         <div className="title">
           Welcome to Mortgage Calculator.   A new way to get a Mortgage & Refinancing.
         </div>
-        <div className="group1">
+        <div className="group">
           <div className="bannerImg">
-            <img className="banner"/>
+            <img src={siderImg1} onClick={toggleDrawer(anchor, false)} className="banner"/>
           </div>
           <div className="text">
             <div className="subscribe1">
@@ -85,9 +84,9 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
             </div>
           </div>
         </div>
-        <div className="group2">
+        <div className="group">
           <div className="bannerImg">
-            <img className="banner"/>
+            <img src={siderImg3} onClick={toggleDrawer(anchor, false)} className="banner"/>
           </div>
           <div className="text">
           <div className="subscribe1">

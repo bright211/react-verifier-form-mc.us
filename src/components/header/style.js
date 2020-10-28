@@ -4,3 +4,6 @@ export const Logo = styled.image`
     height: 17px;
     width: 67px;
 ` 
+export const MenuIconBtn = styled.div`
+    cursor: pointer;
+`;
