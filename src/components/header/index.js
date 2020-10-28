@@ -26,7 +26,7 @@ function Header({toggleMenu}) {
     window.addEventListener("resize", handleResize);
   },[]);
   return (
-    <header>
+    <header>  
       <Logo />
       {(value.show || location.pathname==='/homepage') && (
         <img src={menuIcon} alt="menu icon" onClick={()=>toggleMenu({drawMenu:true})}/>
