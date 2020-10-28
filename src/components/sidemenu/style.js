@@ -11,6 +11,9 @@ export const SiderBarHeader = styled.div`
             width: 30px;
             height: 30px;
         }
+        & .logoImg{
+            margin-top: 10px;
+        }
     }
 
     @media (min-width: 930px){
