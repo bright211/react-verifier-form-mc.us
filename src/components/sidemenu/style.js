@@ -12,7 +12,7 @@ export const SiderBarHeader = styled.div`
             height: 20px;
         }
         & .logoImg{
-            margin-top: 10px;
+            margin-top: 5px;
         }
     }
 
