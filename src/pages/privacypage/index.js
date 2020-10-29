@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container } from "../../styles";
 import * as Types from "../../state/types";
 import SideMenu from "../../components/sidemenu";
-import { ContentContainer,BlockContainer } from "./style";
+import { ContentContainer, BlockContainer } from "./style";
 import Header from "../../components/header";
-import HeaderBottom from '../../components/HeaderBottom'
+import HeaderBottom from "../../components/HeaderBottom";
 
 function PrivacyPage() {
   const dispatch = useDispatch();
@@ -25,7 +25,9 @@ function PrivacyPage() {
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
       <HeaderBottom />
       <ContentContainer>
-        
+        <BlockContainer>
+          <div className="title">Mortgage Calculator Privacy Policy.</div>
+        </BlockContainer>
       </ContentContainer>
     </Container>
   );

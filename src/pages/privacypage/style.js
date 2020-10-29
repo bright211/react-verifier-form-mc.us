@@ -34,6 +34,11 @@ export const BlockContainer = styled.div`
   justify-content: space-between;
   background-color: #fcfcfc;
 
+  & .title {
+    font-family: 'AvenirNext Medium';
+    font-size: 16px;
+  }
+
   @media (max-width: 930px) {
     padding: 0px 20px 120px 20px;
     display: flex;
