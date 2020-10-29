@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Slide } from '@material-ui/core';
+import CarouselSlide from '../../components/slider';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Container } from "../../styles";
 import {
   BlockContainer,
@@ -7,15 +10,36 @@ import {
   BlockSecond,
   CircleIcon,
   ContentContainer,
+  BlockContainerThird
 } from "./style";
 import Header from "../../components/header";
 import Button from "../../components/button";
 import SideMenu from "../../components/sidemenu";
 import * as Types from "../../state/types";
+import HomePageFooter from '../../components/homepagefooter'
+
+function Arrow(props) {
+  const { direction, clickFunction } = props;
+  const icon = direction === 'left' ? <FaChevronLeft /> : <FaChevronRight />;
+  const clsname = direction === 'left' ? "leftArrowBtn" : "rightArrowBtn"
+  return <div className={clsname} onClick={clickFunction}>{icon}</div>;
+}
 
 function HomePage() {
+  const SLIDE_INFO = [
+    { title: 'Slide 1' },
+    { title: 'Slide 2' },
+    { title: 'Slide 3' },
+    { title: 'Slide 4' },
+    { title: 'Slide 5' },
+];
   const dispatch = useDispatch();
   const storeData = useSelector((store) => store.data);
+  const [index, setIndex] = useState(0);
+  const [slideIn, setSlideIn] = useState(true);
+  const [slideDirection, setSlideDirection] = useState('right');
+  const content = SLIDE_INFO[index];
+  const numSlides = SLIDE_INFO.length;
   const [value, setValue] = useState({
     ...storeData,
   });
@@ -27,6 +51,22 @@ function HomePage() {
   const toggleMenu = (data) => {
     dispatch({ type: Types.SET_DATA, payload: { ...data } });
   };
+
+  const onArrowClick = (direction) => {
+    const increment = direction === 'left' ? -1 : 1;
+    const newIndex = (index + increment + numSlides) % numSlides;
+
+    const oppDirection = direction === 'left' ? 'right' : 'left';
+    setSlideDirection(direction);
+    setSlideIn(false);
+
+    setTimeout(() => {
+        setIndex(newIndex);
+        setSlideDirection(oppDirection);
+        setSlideIn(true);
+    }, 500);
+  };
+
   return (
     <Container>
       <Header toggleMenu={toggleMenu} />
@@ -34,9 +74,7 @@ function HomePage() {
       <ContentContainer>
         <BlockContainer className="header">
           <div className="title">
-            Apply for a mortgage or a refinancing of a mortgage that you already
-            have and receive a multitude of proposals from various private
-            entities.
+            The 1st platform for mortgage calculator in U.S. Start with our mortgage calculator to get the best options. Mortgage Calculator
           </div>
         </BlockContainer>
         <BlockContainer className="first-block">
@@ -114,6 +152,22 @@ function HomePage() {
             </BlockSecond>
           </div>
         </BlockContainerSecond>
+        <BlockContainerThird>
+              <Arrow
+                  direction='left'
+                  clickFunction={() => onArrowClick('left')}
+              />
+              <Slide in={slideIn} direction={slideDirection} className="SliderContainer">
+                  <div>
+                      <CarouselSlide content={content} />
+                  </div>
+              </Slide>
+              <Arrow
+                  direction='right'
+                  clickFunction={() => onArrowClick('right')}
+              />
+        </BlockContainerThird>
+        <HomePageFooter />
       </ContentContainer>
     </Container>
   );
