@@ -5,6 +5,8 @@ import QuoteDetailSecond from "../pages/quotedetailsecond/quotedetailsecond";
 import ProcessBar from "../pages/processbar/processbar";
 import HomePage from "../pages/homepage.js";
 import Login from "../pages/login";
+import PrivacyPage from '../pages/privacypage';
+
 function Routes() {
   return (
       <Switch>
@@ -27,11 +29,16 @@ function Routes() {
           exact
           path={`/homepage`}
           component={HomePage}
-        />
+        />    
         <Route
           exact
           path={`/login`}
           component={Login}
+        />    
+        <Route
+          exact
+          path={`/privacy`}
+          component={PrivacyPage}
         />
         <Redirect from="/" to='quotedetailfirst' />
       </Switch>

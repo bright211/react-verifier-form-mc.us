@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 23px 0px;
+    padding: 0px 0px;
   }
 
   @media (max-width: 930px) {
@@ -21,8 +21,7 @@ export const ContentContainer = styled.div`
   @media (max-width: 700px) {
     padding-top: 60px;
     & .header {
-      display: none;
-      
+      display: none;      
     }
   }
 `;

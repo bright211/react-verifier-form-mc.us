@@ -15,7 +15,7 @@ body {
   height: 100vh;
   margin: 0;
   text-align: center;
-  background-color: #EFF7F9 !important;
+  background-color: #fff !important;
   font-family: "AvenirNext-Medium";
 }
 
@@ -30,7 +30,8 @@ body {
 }
 
 .btn {
-  border-color: #b7b7b7 !important;
+  border-color: #e6e6e6 !important;
+  background-color: #e6e6e6;
   color: black
 }
 
@@ -40,11 +41,11 @@ body {
 
 
 .btn:hover {
-  background-color: #00556A !important;
+  background-color: #000 !important;
 }
 
 .active {
-  background-color: #00556A !important;
+  background-color: #000 !important;
 }
 
 svg {

@@ -7,7 +7,7 @@ function BtnGroup(props) {
     secondHome:valueSeond
   })
 
-  // 
+  
   const toggleActive = () => {
     setValue({ ...value, firstHome: true, secondHome:false })
     setData({ [validate]: false, [id]: true,[id+`Second`]: false });    
