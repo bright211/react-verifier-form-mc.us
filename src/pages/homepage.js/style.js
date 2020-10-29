@@ -21,8 +21,7 @@ export const ContentContainer = styled.div`
   @media (max-width: 700px) {
     padding-top: 60px;
     & .header {
-      display: none;
-      
+      display: none;      
     }
   }
 `;

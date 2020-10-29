@@ -47,6 +47,7 @@ function HomePage() {
   useEffect(()=>{
     setValue({...storeData})
   },[storeData])
+  
   const buttonClicked = () => {};
   const toggleMenu = (data) => {
     dispatch({ type: Types.SET_DATA, payload: { ...data } });
