@@ -4,6 +4,7 @@ import QuoteDetailFirst from "../pages/quotedetailfirst/quotedetailfirst";
 import QuoteDetailSecond from "../pages/quotedetailsecond/quotedetailsecond";
 import ProcessBar from "../pages/processbar/processbar";
 import HomePage from "../pages/homepage.js";
+import Login from "../pages/login";
 function Routes() {
   return (
       <Switch>
@@ -26,6 +27,11 @@ function Routes() {
           exact
           path={`/homepage`}
           component={HomePage}
+        />
+        <Route
+          exact
+          path={`/login`}
+          component={Login}
         />
         <Redirect from="/" to='quotedetailfirst' />
       </Switch>
