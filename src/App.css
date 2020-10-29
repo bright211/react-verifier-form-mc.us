@@ -48,5 +48,76 @@ body {
   background-color: #000 !important;
 }
 
+svg {
+  height: 30px;
+  cursor: pointer;
+}
 
+.sldiercontainer{
+  display: flex;
+  max-width: 530px;
+}
 
+.sldierTitle{
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.sldierDescription{
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.sliderAvatar{
+  background-color: #b7b7b7;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.sliderText{
+  max-width: 470px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+@media (max-width: 930px){
+  .sldiercontainer{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .sliderText{
+    padding: 30px 0 0 0;
+
+  }
+}
+
+.makeStyles-card-8{
+  margin: 0px 0px !important;
+}
+.makeStyles-card-16{
+  margin: 0px 0px !important;
+}
+.makeStyles-card-24{
+  margin: 0px 0px !important;
+}
+.makeStyles-card-32{
+  margin: 0px 0px !important;
+}
+.makeStyles-card-40{
+  margin: 0px 0px !important;
+}
+.makeStyles-card-48{
+  margin: 0px 0px !important;
+}
