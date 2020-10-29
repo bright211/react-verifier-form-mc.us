@@ -9,6 +9,7 @@ header {
   align-items: center;
   padding: 0 100px;
   justify-content: space-between;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .my-dropdown-toggle::after {
@@ -54,7 +55,7 @@ code {
 .form-control:focus {
   box-shadow: 0 0 0 0.1rem #EFF7F9 !important;
   background-color: #FCFCFC !important;
-  border:1px solid #00566B !important;
+  border: solid 1px #000000 !important;
 }
 
 .form-control {

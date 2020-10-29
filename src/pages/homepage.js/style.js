@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 160px;
+    padding: 0px 0px;
   }
 
   @media (max-width: 930px) {
@@ -21,8 +21,7 @@ export const ContentContainer = styled.div`
   @media (max-width: 700px) {
     padding-top: 60px;
     & .header {
-      display: none;
-      
+      display: none;      
     }
   }
 `;
@@ -30,7 +29,7 @@ export const ContentContainer = styled.div`
 export const BlockContainer = styled.div.attrs((props) => ({
   
 }))`
-  padding: 60px 160px 120px 160px;
+  padding: 97px 160px 120px 160px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -39,13 +38,16 @@ export const BlockContainer = styled.div.attrs((props) => ({
   
 
   & .title {
-    max-width: 920px;
-    font-size: 38px;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   & .block {
     width: 35vw;
-    // height: 35vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,6 +60,11 @@ export const BlockContainer = styled.div.attrs((props) => ({
       display: flex;
       text-align: left;
       padding:0;
+    }
+
+    & .blockImg{
+      width: 100%;
+      height: 100%;
     }
 
     & .block-title {
@@ -98,7 +105,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
   }
 
   @media (max-width: 1260px) {
-    padding: 60px 120px 120px 120px;
+    padding: 97px 120px 120px 120px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -183,7 +190,8 @@ export const BlockContainer = styled.div.attrs((props) => ({
 
 export const BlockContainerSecond = styled.div`
   padding: 94px 100px;
-  background-color: #E6E6E6;
+  background-color: #000000;
+  color: white;
 
   .first-row {
       width: 60vw;
@@ -300,3 +308,37 @@ export const CircleIcon = styled.div`
     height: 45px;
   }
 `;
+
+export const BlockContainerThird = styled.div`
+  position: relative;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding:60px 100px;
+
+  & .SliderContainer{
+    width: 99%;
+    display: 'flex',
+    justifyContent: 'center',
+  }
+  
+  @media (max-width: 930px){
+    padding:60px 0px;
+    
+    & .leftArrowBtn{
+      top: 30px;
+      right:66px;
+      position: absolute;
+    }
+
+    & .rightArrowBtn{
+      top: 30px;
+      right:20px;
+      position: absolute;
+    }
+  }
+`;
+
