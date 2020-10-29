@@ -5,7 +5,7 @@ import { Container } from "../../styles";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/header";
 import SideMenu from "../../components/sidemenu";
-
+import HeaderBottom from "../../components/HeaderBottom"
 function Login(){
     const dispatch = useDispatch();
     const storeData = useSelector((store) => store.data);
@@ -20,9 +20,7 @@ function Login(){
         <Container>
         <Header toggleMenu={toggleMenu} />
         <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
-            <div className="title">
-                The 1st platform for mortgage calculator in U.S. Start with our mortgage calculator to get the best options. Mortgage Calculator
-            </div>
+        <HeaderBottom />
       </Container>
     )
 }

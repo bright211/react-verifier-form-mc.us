@@ -78,6 +78,16 @@ svg {
   color: #000000;
 }
 
+.sldierSmDescription{
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #7f7f7f;
+}
+
 .sliderAvatar{
   background-color: #b7b7b7;
   width: 30px;

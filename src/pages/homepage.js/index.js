@@ -17,6 +17,7 @@ import Header from "../../components/header";
 import Button from "../../components/button";
 import SideMenu from "../../components/sidemenu";
 import * as Types from "../../state/types";
+import HeaderBottom from "../../components/HeaderBottom";
 import HomePageFooter from '../../components/homepagefooter'
 
 function Arrow(props) {
@@ -75,9 +76,7 @@ function HomePage() {
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
       <ContentContainer>
         <BlockContainer className="header">
-          <div className="title">
-            The 1st platform for mortgage calculator in U.S. Start with our mortgage calculator to get the best options. Mortgage Calculator
-          </div>
+        <HeaderBottom />
         </BlockContainer>
         <BlockContainer className="first-block">
           <div className="block">

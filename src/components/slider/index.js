@@ -27,7 +27,7 @@ function CarouselSlide(props) {
                 <div className="sliderText">
                     <p className="sldierTitle">They gived me the best proposal.</p>
                     <p className="sldierDescription">Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down.</p>
-                    <p className="sldierDescription">Anne Marie Yohäns</p>
+                    <p className="sldierSmDescription">Anne Marie Yohäns</p>
                 </div>
 
             </div>
