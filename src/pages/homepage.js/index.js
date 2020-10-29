@@ -4,6 +4,7 @@ import { Slide } from '@material-ui/core';
 import CarouselSlide from '../../components/slider';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Container } from "../../styles";
+import { siderImg1 } from "../../assets/index";
 import {
   BlockContainer,
   BlockContainerSecond,
@@ -79,7 +80,9 @@ function HomePage() {
           </div>
         </BlockContainer>
         <BlockContainer className="first-block">
-          <div className="block first"></div>
+          <div className="block">
+            <img src={ siderImg1 } class="blockImg"/>
+          </div>
           <div className="block">
             <div className="block-title">
               Mortgage and refinancial has never been that easy.

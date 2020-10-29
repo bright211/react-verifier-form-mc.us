@@ -62,6 +62,11 @@ export const BlockContainer = styled.div.attrs((props) => ({
       padding:0;
     }
 
+    & .blockImg{
+      width: 100%;
+      height: 100%;
+    }
+
     & .block-title {
       font-size: 38px;
     }
