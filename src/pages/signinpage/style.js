@@ -51,10 +51,11 @@ export const ContentContainer = styled.div`
       padding: 30px 0 0 0;
     }
   }
-  @media(max-width: 990px){
+  @media(max-width: 900px){
     flex-wrap: wrap;
     padding: 0 20px 60px 20px;
     & .block {
+      padding-top: 20px;
       width:100%;
     }
 
