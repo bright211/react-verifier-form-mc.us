@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Slide } from '@material-ui/core';
 import CarouselSlide from '../../components/slider';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { ReactComponent as ArrowLeft } from "../../assets/images/ARROW-LEFT.svg";
+import { ReactComponent as ArrowRight } from "../../assets/images/ARROW-RIGHT.svg";
 import { Container } from "../../styles";
 import { siderImg1 } from "../../assets/index";
 import ModalDialog from "../../components/modal";
@@ -23,7 +24,7 @@ import HomePageFooter from '../../components/homepagefooter'
 
 function Arrow(props) {
   const { direction, clickFunction } = props;
-  const icon = direction === 'left' ? <FaChevronLeft /> : <FaChevronRight />;
+  const icon = direction === 'left' ? <ArrowLeft /> : <ArrowRight />;
   const clsname = direction === 'left' ? "leftArrowBtn" : "rightArrowBtn"
   return <div className={clsname} onClick={clickFunction}>{icon}</div>;
 }
