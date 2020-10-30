@@ -9,7 +9,10 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
     marginRight: theme.spacing(2),
+    marginLeft: theme.spacing(2),
     textTransform: "none",
     fontFamily: "AvenirNext Regular",
     fontSize: "16px",

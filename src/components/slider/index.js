@@ -9,7 +9,7 @@ function CarouselSlide(props) {
         card: {
             width: '100%',
             border: '0px',
-            margin: '0px 25px',
+            margin: '0px 0px',
             boxShadow: '0px 0px 0px white',
             display: 'flex',
             justifyContent: 'center',
@@ -27,7 +27,7 @@ function CarouselSlide(props) {
                 <div className="sliderText">
                     <p className="sldierTitle">They gived me the best proposal.</p>
                     <p className="sldierDescription">Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down.</p>
-                    <p className="sldierDescription">Anne Marie Yohäns</p>
+                    <p className="sldierSmDescription">Anne Marie Yohäns</p>
                 </div>
 
             </div>
