@@ -17,8 +17,8 @@ export const ModalContainer = styled.div`
     }
 
     & .modalDialogImg{
-        height:300px;
-        background-color: gray;
+        width:100%;
+        height:270px;
     }
 
     & .btn-group{

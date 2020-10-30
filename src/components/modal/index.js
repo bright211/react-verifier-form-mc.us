@@ -1,36 +1,10 @@
 import React, { useEffect } from "react";
 import Dialog from '@material-ui/core/Dialog';
 
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { closeBtn } from '../../assets/';
+import { closeBtn, popupImg } from '../../assets/';
 import { ModalContainer } from './style';
 
 import Button from "../../components/button";
-
-// const useStyles = makeStyles((theme) => ({
-//     margin: {
-//         textTransform: 'none',
-//         fontFamily:'AvenirNext Regular',
-//         fontSize: '16px',
-//         fontWeight: 500,
-//         width:"198px",
-//         height:"55px",
-//         margin: "7.5px 20px",
-//         justifyContent:"space-between",
-//         '&:hover': {
-//         backgroundColor: "#353535",
-//         },
-//         '&:focus': {
-//         outline: "none",
-//         },
-//     },
-// }));
-
-// const theme = createMuiTheme({
-//     palette: {
-//         primary: {main:"#000"}    
-//     }  
-// });
   
 export default function ModalDialog() {
     // const classes = useStyles()
@@ -66,6 +40,7 @@ export default function ModalDialog() {
                     Thanks for visit Mortgage Calculator. Please start to calculate you mortgage or your refinancing just clicking here!
                 </div>
                 <div className="modalDialogImg">
+                  <img class="popupimg" src={popupImg} />
                 </div>
                 <div className="btn-group">
                     <Button
