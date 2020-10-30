@@ -89,13 +89,13 @@ function QuoteDetailFirst() {
         })
         .then(async function (docRef) {
           dispatch({ type: Types.SET_DOC_ID, payload: { docId: docRef.id } });
-          console.log("Document written with ID: ", docRef.id);
+          // console.log("Document written with ID: ", docRef.id);
           const res = await Apis.sendEmail({
             email: value.Email,
             emailBody: toUserEmailTemplate,
             subject: "Welcome to Mortgage Calculator Us.",
           });
-          console.log(res);
+          // console.log(res);
           setData({ isLoading: false });
           history.push("/quotedetailsecond");
         })

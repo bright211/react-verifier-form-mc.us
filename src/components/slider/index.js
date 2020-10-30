@@ -9,7 +9,7 @@ function CarouselSlide(props) {
         card: {
             width: '100%',
             border: '0px',
-            margin: '0px 25px',
+            margin: '0px 0px',
             boxShadow: '0px 0px 0px white',
             display: 'flex',
             justifyContent: 'center',

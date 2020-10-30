@@ -15,7 +15,7 @@ function LabelInput(props) {
 
 
   const setValue = (val) => {
-    console.log(val);
+    // console.log(val);
     if (type === "numberic") {
       const re = /^[0-9.,\b]+$/;
       let value = val
@@ -24,7 +24,6 @@ function LabelInput(props) {
           .replace(",", "")
           .replace(",", "")
           .replace(".", "");
-        console.log(value);
 
       if (re.test(val)) {        
         setData({ [validate]: false, [id]: parseInt(value) });
@@ -55,14 +54,24 @@ function LabelInput(props) {
           <label className="error">{`(Please complete this field)`}</label>
         )}
       </label>
-
-      {type === "numberic" ? (
-        <input
+      {type === "numberic" || type === "password" ? (
+        type === "numberic" ? (
+          <input
           value={value?Dinero({ amount: parseInt(value) }).toFormat("0,0.00"):''}
           placeholder={placeHolder}
           className={`input-box form-control`}
           onChange={(e) => setValue(e.target.value)}
         ></input>
+        ):(
+          <input
+            value={value}
+            placeholder={placeHolder}
+            className={`input-box form-control`}
+            onChange={(e) => setValue(e.target.value)}
+            type="password"
+          ></input>
+        )
+        
       ) : (
         <input
           value={value}

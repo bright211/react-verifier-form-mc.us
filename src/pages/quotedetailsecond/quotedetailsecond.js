@@ -145,7 +145,7 @@ function QuoteDetailSecond() {
     }
 
     setValue({ ...value, ...temp });
-    console.log(temp);
+    // console.log(temp);
     if (Object.keys(temp).length > 0) {
       return 0;
     } else {
@@ -185,7 +185,7 @@ function QuoteDetailSecond() {
             emailBody: toAdimnEmailHeader + email + toAdimnEmailFooter,
             subject: "You’ve recieved a new lead.",
           });
-          console.log("Document written with ID: ", docRef);
+          // console.log("Document written with ID: ", docRef);
           setData({ isLoading: false });
           history.push("/processbar");
         })

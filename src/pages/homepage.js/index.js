@@ -5,6 +5,7 @@ import CarouselSlide from '../../components/slider';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Container } from "../../styles";
 import { siderImg1 } from "../../assets/index";
+import ModalDialog from "../../components/modal";
 import {
   BlockContainer,
   BlockContainerSecond,
@@ -78,6 +79,7 @@ function HomePage() {
         <BlockContainer className="header">
         <HeaderBottom />
         </BlockContainer>
+        <ModalDialog />
         <BlockContainer className="first-block">
           <div className="block">
             <img src={ siderImg1 } class="blockImg"/>
