@@ -38,7 +38,7 @@ export default function ModalDialog() {
     useEffect(() => {
         const timer = setTimeout(() => {
           setOpen(true);
-        }, 1000);
+        }, 10000);
         return () => clearTimeout(timer);
       }, []);
 
