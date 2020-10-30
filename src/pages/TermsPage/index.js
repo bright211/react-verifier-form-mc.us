@@ -74,6 +74,38 @@ function TermsPage() {
             for this website are confidential and you must also maintain
             confidentiality.
           </div>
+          <div className="sub-title">Content.</div>
+          <div className="content">
+            Your content must be yours and must not invade the rights of third
+            parties. Mortgage Calculator reserves the right to remove its
+            content from this website at any time without notice.
+          </div>
+          <div className="sub-title">Limitation of liability.</div>
+          <div className="content">
+            Mortgage Calculator, including its officers, directors and employees
+            shall not be liable for any indirect, consequential or special
+            liability arising out of or in any way related to your use of this
+            website.
+          </div>
+          <div className="sub-title">Divisibility.</div>
+          <div className="content">
+            If any provision of these Terms is determined to be invalid under
+            applicable law, those provisions will be removed without affecting
+            the remaining provisions hereof.
+          </div>
+          <div className="sub-title">Variation of terms.</div>
+          <div className="content">
+            Mortgage Calculator may review these Terms at any time it deems
+            appropriate, and by using this website you are expected to review
+            them periodically.
+          </div>
+          <div className="sub-title">Assignment.</div>
+          <div className="content">
+            Mortgage Calculator may assign, transfer and subcontract your rights
+            and / or obligations under these Terms without notice. However, you
+            are not allowed to assign, transfer or subcontract any of your
+            rights and / or obligations under these Terms.
+          </div>
         </BlockContainer>
         <HomePageFooter />
       </ContentContainer>
