@@ -30,6 +30,15 @@ handlers:
   - url: /homepage
     static_files: build/index.html
     upload: build/index.html
+  - url: /signin
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /privacy
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /termsandcondition
+    static_files: build/index.html
+    upload: build/index.html
   - url: /
     static_dir: build
 
