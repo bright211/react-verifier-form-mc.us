@@ -4,6 +4,7 @@ import QuoteDetailFirst from "../pages/quotedetailfirst/quotedetailfirst";
 import QuoteDetailSecond from "../pages/quotedetailsecond/quotedetailsecond";
 import ProcessBar from "../pages/processbar/processbar";
 import HomePage from "../pages/homepage.js";
+
 import SignInPage from "../pages/signinpage";
 import PrivacyPage from '../pages/privacypage';
 
@@ -40,8 +41,10 @@ function Routes() {
           path={`/privacy`}
           component={PrivacyPage}
         />
+        <Route exact path={`/termsandcondition`} component={TermsPage} />
         <Redirect from="/" to='quotedetailfirst' />
       </Switch>
+
   );
 }
 
