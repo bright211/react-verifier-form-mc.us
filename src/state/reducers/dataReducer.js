@@ -28,7 +28,11 @@ const INITIAL_STATE = {
   secondCheckValidation:false,
   docId:'',
   isLoading: false,
-  drawMenu: false
+  drawMenu: false,
+  LoginEmail: '',
+  LoginPassword: '',
+  LoginEmailValidation:false,
+  LoginPasswordValidation:false,
 };
 
 export default (state = INITIAL_STATE, action) => {

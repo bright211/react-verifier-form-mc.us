@@ -5,7 +5,7 @@ function Select(props) {
 
   const setValue = (val) => {
     if (val !== "0") {
-      console.log(val);
+      // console.log(val);
       setData({ [validate]: false, [id]: val });
     } else {
       // console.log(val)

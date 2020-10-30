@@ -14,13 +14,13 @@ function Header({toggleMenu}) {
     if(window.innerWidth<=900){
       setValue({...value, show:true})
     } else {
-      setValue({...value, show:false})
+      setValue({...value, show:true})
     }
     function handleResize() {
       if(window.innerWidth<=900){
         setValue({...value, show:true})
       } else {
-        setValue({...value, show:false})
+        setValue({...value, show:true})
       }
     }
 
