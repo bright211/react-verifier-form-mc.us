@@ -33,7 +33,6 @@ function Header({toggleMenu}) {
       {(value.show || location.pathname==='/homepage' || location.pathname==='/privacy') && (
         <MenuIconBtn  onClick={()=>toggleMenu({drawMenu:true})}>
           <Menu />
-          {/* <img src={menuIcon} alt="menu icon"/> */}
         </MenuIconBtn>
       )}
     </header>

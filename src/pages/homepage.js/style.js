@@ -114,6 +114,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
     background-color: #eff7f9;
   }
 
+
   @media (max-width: 1260px) {
     padding: 97px 120px 120px 120px;
     display: flex;
@@ -148,7 +149,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
   }
 
   @media (max-width: 990px) {
-    padding: 20px 20px 120px 20px;
+    padding: 0px 20px 120px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
