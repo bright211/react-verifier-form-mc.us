@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
-  // flex: 1;
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 16px;
   width: 100%;
-  padding: 120px 160px;
-  height: 100%;
+  padding: 90px 160px;
   & .block {
     width: 35vw;
     text-align: left;

@@ -25,14 +25,13 @@ export const ModalContainer = styled.div`
         padding: 30px 0 0 0;
     }
 
-    @media(min-width: 930px){
+    @media(min-width: 760px){
         & .btnClose{
             display: none;
         }
     }
 
-    @media(max-width: 930px){
-        max-width: 300px;
+    @media(max-width: 760px){
         padding: 0px 15px;
         & .btnClose{
             padding-top:13px;
