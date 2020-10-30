@@ -14,11 +14,9 @@ export const ContentContainer = styled.div`
     padding: 0px 0px;
   }
 
-  @media (max-width: 930px) {
-    overflow: scroll;
-  }
 
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
+    overflow: scroll;
     padding-top: 60px;
     & .header {
       display: none;      
@@ -312,8 +310,6 @@ export const BlockSecond = styled.div`
 `;
 
 export const CircleIcon = styled.div`
-  margin-top: 10px;
-  margin-left: -10px;
   width: 50px;
   height: 50px;
   border-radius: 50px;

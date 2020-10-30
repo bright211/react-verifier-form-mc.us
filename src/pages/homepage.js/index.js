@@ -132,7 +132,7 @@ function HomePage() {
           <div className="second-row">
             <BlockSecond>
               <CircleIcon>
-                <AvatarFirst />
+                <AvatarFirst style={{   width: '100%',height: '100%'}}/>
               </CircleIcon>
               <div className="content-container">
                 <div className="title">Get a online mortgage experience.</div>
@@ -147,7 +147,7 @@ function HomePage() {
             </BlockSecond>
             <BlockSecond>
               <CircleIcon>
-                <AvatarSecond/>
+                <AvatarSecond style={{   width: '100%',height: '100%'}}/>
               </CircleIcon>
               <div className="content-container">
                 <div className="title">
