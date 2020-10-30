@@ -73,5 +73,10 @@ export const BlockContainer = styled.div`
 
   @media (max-width: 930px) {
     padding: 120px 20px;
+
+    & .title {
+      
+      line-height: 36px;
+    }
   }
 `;

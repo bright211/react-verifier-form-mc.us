@@ -1,19 +1,24 @@
 import React from 'react';
+import {useHistory} from 'react-router-dom'
 import {
     Footer
 } from "./style";
 
 function HomePageFooter() {
+    const history = useHistory()
+    const goLink = (link) => {
+        history.push(link)
+    }
     return (
     <Footer>
         <div className="left">
             <div className="footerlink">
             Mortgage Calculator | All rights reserved 2020
             </div>
-            <div className="footerlink">
+            <div className="footerlink"  onClick={()=>goLink("/termsandcondition")}>
             Terms & Conditions
             </div>
-            <div className="footerlink">
+            <div className="footerlink" onClick={()=>goLink("/privacy")}>
             Privacy Policy
             </div>
             <div className="footerlink">

@@ -4,7 +4,7 @@ import QuoteDetailFirst from "../pages/quotedetailfirst/quotedetailfirst";
 import QuoteDetailSecond from "../pages/quotedetailsecond/quotedetailsecond";
 import ProcessBar from "../pages/processbar/processbar";
 import HomePage from "../pages/homepage.js";
-
+import TermsPage from '../pages/TermsPage'
 import SignInPage from "../pages/signinpage";
 import PrivacyPage from '../pages/privacypage';
 
