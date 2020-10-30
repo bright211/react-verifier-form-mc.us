@@ -21,11 +21,13 @@ export const ModalContainer = styled.div`
         height:270px;
     }
 
-    & .btn-group{
-        padding: 30px 0 0 0;
-    }
-
     @media(min-width: 760px){
+        & .btn-group{
+            padding:30px 0 0 0;
+            width: 426px;
+            justify-content: space-between;
+        }
+
         & .btnClose{
             display: none;
         }
@@ -57,7 +59,7 @@ export const ModalContainer = styled.div`
             background-color: #64ffca;
         }
         & .btn-group{
-            padding: 30px 0 45px 0;
+            padding: 20px 0 45px 0;
             display: block;
         }
     }

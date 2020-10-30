@@ -7,7 +7,6 @@ import { ModalContainer } from './style';
 import Button from "../../components/button";
   
 export default function ModalDialog() {
-    // const classes = useStyles()
     const [open, setOpen] = React.useState(false);
     useEffect(() => {
         const timer = setTimeout(() => {

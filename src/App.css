@@ -18,7 +18,9 @@ body {
   background-color: #fff !important;
   font-family: "AvenirNext-Medium";
 }
-
+header{
+  z-index: 1000;
+}
 .error {
   color: #EC0011 !important;
   font-family: 'AvenirNext Regular' !important;
@@ -49,7 +51,7 @@ body {
 }
 
 svg {
-  height: 30px;
+  height: 37px;
   cursor: pointer;
 }
 
@@ -59,6 +61,7 @@ svg {
 }
 
 .sldierTitle{
+  font-family: "AvenirNext Medium";
   font-size: 24px;
   font-weight: 500;
   font-stretch: normal;
@@ -90,8 +93,8 @@ svg {
 
 .sliderAvatar{
   background-color: #b7b7b7;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 30px;
 }
 

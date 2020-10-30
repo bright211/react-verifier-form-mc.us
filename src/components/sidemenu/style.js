@@ -11,9 +11,6 @@ export const SiderBarHeader = styled.div`
             width: 20px;
             height: 20px;
         }
-        & .logoImg{
-            margin-top: 10px;
-        }
     }
 
     @media (min-width: 930px){
@@ -46,6 +43,7 @@ export const SiderBarBody = styled.div`
         }
 
         & .group{
+            cursor: pointer;
             display: flex;
             flex-direction: row;
             padding-top: 60px;
@@ -89,6 +87,7 @@ export const SiderBarBody = styled.div`
         }
 
         & .group{
+            cursor: pointer;
             display: flex;
             flex-direction: column;
             padding-top: 30px;

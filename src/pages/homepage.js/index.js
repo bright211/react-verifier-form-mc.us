@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Slide } from '@material-ui/core';
-import CarouselSlide from '../../components/slider';
+import { Slide } from "@material-ui/core";
+import CarouselSlide from "../../components/slider";
 import { ReactComponent as ArrowLeft } from "../../assets/images/ARROW-LEFT.svg";
 import { ReactComponent as ArrowRight } from "../../assets/images/ARROW-RIGHT.svg";
+import { ReactComponent as AvatarFirst } from "../../assets/images/MORTGAGE.svg";
+import { ReactComponent as AvatarSecond } from "../../assets/images/REFINANCING.svg";
 import { Container } from "../../styles";
 import { siderImg1 } from "../../assets/index";
 import ModalDialog from "../../components/modal";
@@ -13,62 +15,66 @@ import {
   BlockSecond,
   CircleIcon,
   ContentContainer,
-  BlockContainerThird
+  BlockContainerThird,
 } from "./style";
 import Header from "../../components/header";
 import Button from "../../components/button";
 import SideMenu from "../../components/sidemenu";
 import * as Types from "../../state/types";
 import HeaderBottom from "../../components/HeaderBottom";
-import HomePageFooter from '../../components/homepagefooter'
+import HomePageFooter from "../../components/homepagefooter";
 
 function Arrow(props) {
   const { direction, clickFunction } = props;
-  const icon = direction === 'left' ? <ArrowLeft /> : <ArrowRight />;
-  const clsname = direction === 'left' ? "leftArrowBtn" : "rightArrowBtn"
-  return <div className={clsname} onClick={clickFunction}>{icon}</div>;
+  const icon = direction === "left" ? <ArrowLeft /> : <ArrowRight />;
+  const clsname = direction === "left" ? "leftArrowBtn" : "rightArrowBtn";
+  return (
+    <div className={clsname} onClick={clickFunction}>
+      {icon}
+    </div>
+  );
 }
 
 function HomePage() {
   const SLIDE_INFO = [
-    { title: 'Slide 1' },
-    { title: 'Slide 2' },
-    { title: 'Slide 3' },
-    { title: 'Slide 4' },
-    { title: 'Slide 5' },
-];
+    { title: "Slide 1" },
+    { title: "Slide 2" },
+    { title: "Slide 3" },
+    { title: "Slide 4" },
+    { title: "Slide 5" },
+  ];
   const dispatch = useDispatch();
   const storeData = useSelector((store) => store.data);
   const [index, setIndex] = useState(0);
   const [slideIn, setSlideIn] = useState(true);
-  const [slideDirection, setSlideDirection] = useState('right');
+  const [slideDirection, setSlideDirection] = useState("right");
   const content = SLIDE_INFO[index];
   const numSlides = SLIDE_INFO.length;
   const [value, setValue] = useState({
     ...storeData,
   });
 
-  useEffect(()=>{
-    setValue({...storeData})
-  },[storeData])
-  
+  useEffect(() => {
+    setValue({ ...storeData });
+  }, [storeData]);
+
   const buttonClicked = () => {};
   const toggleMenu = (data) => {
     dispatch({ type: Types.SET_DATA, payload: { ...data } });
   };
 
   const onArrowClick = (direction) => {
-    const increment = direction === 'left' ? -1 : 1;
+    const increment = direction === "left" ? -1 : 1;
     const newIndex = (index + increment + numSlides) % numSlides;
 
-    const oppDirection = direction === 'left' ? 'right' : 'left';
+    const oppDirection = direction === "left" ? "right" : "left";
     setSlideDirection(direction);
     setSlideIn(false);
 
     setTimeout(() => {
-        setIndex(newIndex);
-        setSlideDirection(oppDirection);
-        setSlideIn(true);
+      setIndex(newIndex);
+      setSlideDirection(oppDirection);
+      setSlideIn(true);
     }, 500);
   };
 
@@ -78,12 +84,12 @@ function HomePage() {
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
       <ContentContainer>
         <BlockContainer className="header">
-        <HeaderBottom />
+          <HeaderBottom />
         </BlockContainer>
         <ModalDialog />
         <BlockContainer className="first-block">
           <div className="block">
-            <img src={ siderImg1 } class="blockImg"/>
+            <img src={siderImg1} class="blockImg" />
           </div>
           <div className="block">
             <div className="block-title">
@@ -129,7 +135,9 @@ function HomePage() {
           </div>
           <div className="second-row">
             <BlockSecond>
-              <CircleIcon></CircleIcon>
+              <CircleIcon>
+                <AvatarFirst style={{ width: "100%", height: "100%" }} />
+              </CircleIcon>
               <div className="content-container">
                 <div className="title">Get a online mortgage experience.</div>
                 <div className="content">
@@ -142,7 +150,9 @@ function HomePage() {
               </div>
             </BlockSecond>
             <BlockSecond>
-              <CircleIcon></CircleIcon>
+              <CircleIcon>
+                <AvatarSecond style={{ width: "100%", height: "100%" }} />
+              </CircleIcon>
               <div className="content-container">
                 <div className="title">
                   Get a online refinancial experience.
@@ -159,19 +169,20 @@ function HomePage() {
           </div>
         </BlockContainerSecond>
         <BlockContainerThird>
-              <Arrow
-                  direction='left'
-                  clickFunction={() => onArrowClick('left')}
-              />
-              <Slide in={slideIn} direction={slideDirection} className="SliderContainer">
-                  <div>
-                      <CarouselSlide content={content} />
-                  </div>
-              </Slide>
-              <Arrow
-                  direction='right'
-                  clickFunction={() => onArrowClick('right')}
-              />
+          <Arrow direction="left" clickFunction={() => onArrowClick("left")} />
+          <Slide
+            in={slideIn}
+            direction={slideDirection}
+            className="SliderContainer"
+          >
+            <div>
+              <CarouselSlide content={content} />
+            </div>
+          </Slide>
+          <Arrow
+            direction="right"
+            clickFunction={() => onArrowClick("right")}
+          />
         </BlockContainerThird>
         <HomePageFooter />
       </ContentContainer>
