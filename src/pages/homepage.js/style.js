@@ -52,10 +52,19 @@ export const BlockContainer = styled.div.attrs((props) => ({
     flex-direction: column;
     justify-content: space-between;
 
-    & .block-title,
+    & .block-title{
+      color: #000000;
+      font-size: 24px;
+      font-weight: 500;
+      font-family: "AvenirNext Medium";
+      display: flex;
+      text-align: left;
+      padding:0;
+    }
+
     .block-content,
     .block-sub-content {
-      color: #37383c;
+      color: #000000;
       font-family: "AvenirNext Regular";
       display: flex;
       text-align: left;
@@ -85,7 +94,8 @@ export const BlockContainer = styled.div.attrs((props) => ({
     & .block-btn-group {
       display: flex;
       margin-top: 66px;
-
+      width: 426px;
+      justify-content: space-between;
       & .home-btn {
         width: 198px;
         height: 56px;
@@ -138,7 +148,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
   }
 
   @media (max-width: 990px) {
-    padding: 0px 20px 120px 20px;
+    padding: 20px 20px 120px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -271,7 +281,10 @@ export const BlockSecond = styled.div`
       line-height: 2rem;
     }
 
-    
+    .avatarIcon{
+      width: 41px;
+      height: 37px;
+    }
   }
 
   @media (max-width: 930px) {
@@ -298,10 +311,11 @@ export const BlockSecond = styled.div`
 `;
 
 export const CircleIcon = styled.div`
+  margin-top: 10px;
+  margin-left: -10px;
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  background-color: #fcfcfc;
 
   @media (max-width: 930px) {
     width: 45px;

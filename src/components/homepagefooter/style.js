@@ -10,14 +10,12 @@ export const Footer = styled.div`
   padding: 23px 20px;
   justify-content: space-between;
 
-  // position: fixed;
-  // bottom:0;
-
   & .left {
     float: left;
     display: flex;
     flex-direction: row;
   }
+  
   & .right {
     float: right;
     display: flex;
@@ -27,6 +25,12 @@ export const Footer = styled.div`
   & .footerlink {
     padding: 0 10px;
     font-size: 10px;
+    color: #ffffff;
+  }
+
+  & .footerlinkfirst {
+    font-size: 10px;
+    font-weight: 500;
     color: #ffffff;
   }
 
@@ -46,17 +50,25 @@ export const Footer = styled.div`
       height: 66%;
       justify-content: space-around;
     }
+
     & .right {
       display: flex;
       flex-direction: column;
       height: 34%;
       justify-content: space-around;
     }
+
     & .footerlink {
       padding: 15px 0px;
       font-size: 10px;
       color: #ffffff;
       padding: 0;
+    }
+
+    & .footerlinkfirst {
+      font-size: 10px;
+      font-weight: 500;
+      color: #ffffff;
     }
   }
 `;

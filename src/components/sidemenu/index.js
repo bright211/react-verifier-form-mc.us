@@ -3,15 +3,8 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
-import { closeBtn, siderImg1, siderImg3} from "../../assets";
-// import Button from "@material-ui/core/Button";
-// import List from "@material-ui/core/List";
-// import Divider from "@material-ui/core/Divider";
-// import ListItem from "@material-ui/core/ListItem";
-// import ListItemIcon from "@material-ui/core/ListItemIcon";
-// import ListItemText from "@material-ui/core/ListItemText";
-// import InboxIcon from "@material-ui/icons/MoveToInbox";
-// import MailIcon from "@material-ui/icons/Mail";
+import { ReactComponent as CloseBtn } from "../../assets/images/closebtn.svg"
+import { siderImg1, siderImg3 } from "../../assets";
 import { SiderBarHeader, SiderBarBody } from './style';
 
 const useStyles = makeStyles({
@@ -65,15 +58,15 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
     >
       <SiderBarHeader>
         <Logo className="logoImg" />
-        <img className="closeBtn" src={closeBtn} alt="menu icon" onClick={toggleDrawer(anchor, false)}/>
+        <CloseBtn className="closeBtn" onClick={toggleDrawer(anchor, false)} />
       </SiderBarHeader>
       <SiderBarBody>
         <div className="title">
           Welcome to Mortgage Calculator.   A new way to get a Mortgage & Refinancing.
         </div>
-        <div className="group">
+        <div className="group" onClick={toggleDrawer(anchor, false)}>
           <div className="bannerImg">
-            <img src={siderImg1} onClick={toggleDrawer(anchor, false)} className="banner"/>
+            <img src={siderImg1} className="banner"/>
           </div>
           <div className="text">
             <div className="subscribe1">
@@ -84,9 +77,9 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
             </div>
           </div>
         </div>
-        <div className="group">
+        <div className="group" onClick={toggleDrawer(anchor, false)}>
           <div className="bannerImg">
-            <img src={siderImg3} onClick={toggleDrawer(anchor, false)} className="banner"/>
+            <img src={siderImg3}  className="banner"/>
           </div>
           <div className="text">
           <div className="subscribe1">
@@ -97,7 +90,6 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
             </div>
           </div>
         </div>
-        
       </SiderBarBody>
     </div>
   );
@@ -105,7 +97,6 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
   return (
     <div>
       <React.Fragment>
-        {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
         <SwipeableDrawer
           anchor={"right"}
           open={state["right"]}

@@ -4,6 +4,8 @@ import { Slide } from '@material-ui/core';
 import CarouselSlide from '../../components/slider';
 import { ReactComponent as ArrowLeft } from "../../assets/images/ARROW-LEFT.svg";
 import { ReactComponent as ArrowRight } from "../../assets/images/ARROW-RIGHT.svg";
+import { ReactComponent as AvatarFirst } from "../../assets/images/MORTGAGE.svg";
+import { ReactComponent as AvatarSecond } from "../../assets/images/REFINANCING.svg";
 import { Container } from "../../styles";
 import { siderImg1 } from "../../assets/index";
 import ModalDialog from "../../components/modal";
@@ -129,7 +131,9 @@ function HomePage() {
           </div>
           <div className="second-row">
             <BlockSecond>
-              <CircleIcon></CircleIcon>
+              <CircleIcon>
+                <AvatarFirst />
+              </CircleIcon>
               <div className="content-container">
                 <div className="title">Get a online mortgage experience.</div>
                 <div className="content">
@@ -142,7 +146,9 @@ function HomePage() {
               </div>
             </BlockSecond>
             <BlockSecond>
-              <CircleIcon></CircleIcon>
+              <CircleIcon>
+                <AvatarSecond/>
+              </CircleIcon>
               <div className="content-container">
                 <div className="title">
                   Get a online refinancial experience.

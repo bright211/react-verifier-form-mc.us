@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
+import { ReactComponent as Menu } from "../../assets/images/MENU.svg";
 import { menuIcon } from "../../assets";
 import { MenuIconBtn } from './style';
 
@@ -31,7 +32,8 @@ function Header({toggleMenu}) {
       <Logo />
       {(value.show || location.pathname==='/homepage' || location.pathname==='/privacy') && (
         <MenuIconBtn  onClick={()=>toggleMenu({drawMenu:true})}>
-          <img src={menuIcon} alt="menu icon"/>
+          <Menu />
+          {/* <img src={menuIcon} alt="menu icon"/> */}
         </MenuIconBtn>
       )}
     </header>
