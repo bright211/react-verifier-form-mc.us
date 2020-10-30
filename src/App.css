@@ -111,5 +111,11 @@ svg {
     padding: 30px 0 0 0;
 
   }
+  @media(max-width: 930px){
+    .MuiDialog-paper{
+      margin: 20px !important;
+    }
+
+  }
 }
 
