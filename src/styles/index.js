@@ -4,9 +4,11 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-
   @media (max-width: 930px) {
     height: fit-content;
+  }
+  media (max-width: 445px){
+    width:200px;
   }
 `;
 

@@ -5,7 +5,7 @@ export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 16px;
-  width: 100%;
+  width:100% !important;
 
   & .header {
     display: flex;
@@ -17,6 +17,9 @@ export const ContentContainer = styled.div`
 
   @media (max-width: 900px) {
     overflow: scroll;
+    // align-items: center;
+    // justify-content: center;
+    // padding: 0px 0px;
     padding-top: 60px;
     & .header {
       display: none;      
@@ -89,6 +92,11 @@ export const BlockContainer = styled.div.attrs((props) => ({
       margin-top: 42px;
     }
 
+    @media(max-width: 400px){
+      & .block-btn-group {
+        width: fit-content !important;
+      }  
+    }
     & .block-btn-group {
       display: flex;
       margin-top: 66px;

@@ -3,7 +3,11 @@ import { siderImg1, siderImg3 } from "../../assets";
 
 export const SiderBarHeader = styled.div`
     @media (max-width: 930px){
-        padding: 25.4px 18px 0 22.2px;
+        min-height: 50px;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        padding: 15px 18px 15px 22.2px;
         display: flex;
         justify-content: space-between;
 
@@ -35,7 +39,6 @@ export const SiderBarHeader = styled.div`
 `;
 
 export const SiderBarBody = styled.div`
-    font-family: AvenirNext-Regular;
 
     @media (min-width: 930px){
         padding-right: 60px;
@@ -45,6 +48,7 @@ export const SiderBarBody = styled.div`
         & .title{
             padding-top: 71px;
             font-size: 38px;    
+            font-family: AvenirNext Medium;
         }
 
         & .group{
@@ -73,6 +77,7 @@ export const SiderBarBody = styled.div`
                 flex-direction: column;
 
                 & .subscribe1{
+                    font-family: AvenirNext Medium;
                     padding-left: 30px;
                     text-align: left;
                     font-size: 24px;
@@ -87,9 +92,10 @@ export const SiderBarBody = styled.div`
         }
     }
     @media (max-width: 930px){
-        padding:0 20px 0 20px;
+        padding:50px 20px 0 20px;
 
         & .title{
+            font-family: AvenirNext Medium;
             padding-top: 40.6px;
             font-size: 24px;    
             text-align: left;
@@ -109,6 +115,7 @@ export const SiderBarBody = styled.div`
             }
 
             & .subscribe1{
+                font-family: AvenirNext Medium;
                 padding-top: 15px;
                 text-align: left;
                 font-size: 18px;
