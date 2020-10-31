@@ -8,6 +8,7 @@ export const ContentContainer = styled.div`
   font-size: 16px;
   width: 100%;
   padding: 90px 160px;
+  
   & .block {
     width: 35vw;
     text-align: left;
