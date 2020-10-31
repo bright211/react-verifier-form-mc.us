@@ -12,7 +12,7 @@ function HomePageFooter() {
     return (
     <Footer>
         <div className="left">
-            <div className="footerlinkfirst">
+            <div className="footerlinkfirst" id="bold">
             Mortgage Calculator | All rights reserved 2020
             </div>
             <div className="footerlink"  onClick={()=>goLink("/termsandcondition")}>

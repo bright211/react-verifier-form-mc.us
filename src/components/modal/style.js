@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
     max-width: 600px;
-    padding: 60px 50px;
+    padding: 30px 50px;
 
     & .modalDialogTitle{
         font-size: 35px;
@@ -28,9 +28,6 @@ export const ModalContainer = styled.div`
             justify-content: space-between;
         }
 
-        & .btnClose{
-            display: none;
-        }
     }
 
     @media(max-width: 760px){
@@ -45,7 +42,7 @@ export const ModalContainer = styled.div`
             height: 23px;
         }
         & .modalDialogTitle{
-            padding: 60px 0 30px 0;
+            padding: 30px 0 30px 0;
             font-size: 18px;
             font-weight: 500;
             font-stretch: normal;

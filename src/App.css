@@ -109,6 +109,26 @@ svg {
   height: 100%;
 }
 
+.MuiButton-label{
+  font-family: "AvenirNext Medium";
+}
+
+.sideMenuBtnClose{
+  padding: 20px 20px 0 20px;
+}
+.sideMenuBtnImg:hover{
+  opacity: 0.5;
+}
+.sideMenuBtnImg{
+  cursor: pointer;
+  float: right;
+  width: 23px;
+}
+
+.BtnLogo :hover{
+  opacity: 0.5;
+}
+
 @media (max-width: 930px){
   .sldiercontainer{
     padding: 0 20px;

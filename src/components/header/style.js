@@ -6,4 +6,7 @@ export const Logo = styled.image`
 ` 
 export const MenuIconBtn = styled.div`
     cursor: pointer;
+    :hover{
+        opacity: 0.5;
+    }
 `;

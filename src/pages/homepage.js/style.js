@@ -70,8 +70,8 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
 
     & .blockImg{
-      width: 100%;
-      height: 100%;
+      width: 500px;
+      height: 500px;
     }
 
     & .block-title {
@@ -79,7 +79,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
 
     & .block-content {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 2rem;
       margin-top: 47px;
     }
@@ -146,7 +146,14 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
   }
 
-  @media (max-width: 990px) {
+  @media (max-width: 1175px){
+    padding: 97px 80px 120px 80px;
+  }
+  @media (max-width: 1070px){
+    padding: 97px 40px 120px 40px;
+  }
+
+  @media (max-width: 930px) {
     padding: 0px 20px 120px 20px;
     display: flex;
     flex-wrap: wrap;
@@ -167,7 +174,6 @@ export const BlockContainer = styled.div.attrs((props) => ({
 
       & .block-content {
         font-size: 16px;
-        // padding-bottom: 20px;
       }
 
       & .block-sub-content {
@@ -183,6 +189,11 @@ export const BlockContainer = styled.div.attrs((props) => ({
           margin-bottom: 10px;
         }
       }
+    }
+
+    & .blockImg{
+      width: 100% !important;
+      height: 100% !important;
     }
 
     & .first {
@@ -276,7 +287,7 @@ export const BlockSecond = styled.div`
     }
 
     & .content {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 2rem;
     }
 
@@ -336,6 +347,13 @@ export const BlockContainerThird = styled.div`
     justifyContent: 'center',
   }
   
+  // & .leftArrowBtn :hover{
+  //   opacity:0.8
+  // }
+  // & .rightArrowBtn :hover{
+  //   opacity:0.8
+  // }
+
   @media (max-width: 930px){
     padding:60px 0px;
     
@@ -344,7 +362,7 @@ export const BlockContainerThird = styled.div`
       right:66px;
       position: absolute;
     }
-
+  
     & .rightArrowBtn{
       top: 30px;
       right:20px;

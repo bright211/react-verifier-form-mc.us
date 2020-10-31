@@ -55,7 +55,11 @@ function HomePage() {
   });
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      onArrowClick("right")
+    }, 10000);
     setValue({ ...storeData });
+    
   }, [storeData]);
 
   const buttonClicked = () => {};

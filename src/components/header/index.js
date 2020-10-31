@@ -29,7 +29,9 @@ function Header({toggleMenu}) {
   },[]);
   return (
     <header>
-      <Logo />
+      <div className="BtnLogo">
+        <Logo/>
+      </div>
       {(value.show || location.pathname==='/homepage' || location.pathname==='/privacy') && (
         <MenuIconBtn  onClick={()=>toggleMenu({drawMenu:true})}>
           <Menu />

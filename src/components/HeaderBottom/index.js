@@ -11,7 +11,11 @@ const Container = styled.div`
   color: white;
 
   & .link {
+    font-family: AvenirNext Medium;
     text-decoration: underline;
+    :hover{
+      opacity: 0.5;
+    }
   }
 
   & .link:hover {

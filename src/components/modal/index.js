@@ -30,11 +30,11 @@ export default function ModalDialog() {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
           maxWidth="sm"
-        >
+      >
+            <div className="sideMenuBtnClose">
+                <img className="sideMenuBtnImg" src={closeBtn} onClick={() => handleClose()} />
+            </div>
             <ModalContainer>
-                <div className="btnClose">
-                    <img className="imgCls" src={closeBtn} onClick={() => handleClose()} />
-                </div>
                 <div className="modalDialogTitle">
                     Thanks for visit Mortgage Calculator. Please start to calculate you mortgage or your refinancing just clicking here!
                 </div>

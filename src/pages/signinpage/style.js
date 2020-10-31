@@ -26,8 +26,8 @@ export const ContentContainer = styled.div`
     }
 
     & .blockImg{
-      width: 100%;
-      height: 100%;
+      width: 500px;
+      height: 500px;
     }
 
     & .title{
@@ -53,10 +53,15 @@ export const ContentContainer = styled.div`
   }
   @media(max-width: 900px){
     flex-wrap: wrap;
-    padding: 0 20px 60px 20px;
+    padding: 0 20px 60px 20px !important;
     & .block {
       padding-top: 20px;
       width:100%;
+    }
+
+    & .blockImg{
+      width: 100% !important;
+      height: 100% !important;
     }
 
     & .title{
@@ -66,5 +71,11 @@ export const ContentContainer = styled.div`
     & .LoginBtn{
       padding: 60px 0 0 0 !important;
     }
+  }
+  @media (max-width: 1300px){
+    padding: 97px 80px 120px 80px;
+  }
+  @media (max-width: 1170px){
+    padding: 97px 40px 120px 40px;
   }
 `;

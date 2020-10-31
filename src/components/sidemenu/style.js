@@ -9,7 +9,9 @@ export const SiderBarHeader = styled.div`
 
         & .closeBtn{
             width: 20px;
-            height: 20px;
+            : hover{
+                opacity: 0.5;
+            }
         }
     }
 
@@ -25,6 +27,9 @@ export const SiderBarHeader = styled.div`
             height: 30px;
             cursor: pointer;
             float: right;
+            : hover{
+                opacity: 0.5;
+            }
         }
     }
 `;
@@ -47,6 +52,10 @@ export const SiderBarBody = styled.div`
             display: flex;
             flex-direction: row;
             padding-top: 60px;
+
+            :hover{
+                opacity: 0.5;
+            }
 
             & .bannerImg{
                 border: 0px;

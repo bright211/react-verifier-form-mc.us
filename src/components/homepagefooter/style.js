@@ -34,8 +34,16 @@ export const Footer = styled.div`
     color: #ffffff;
   }
 
+  & #bold{
+    font-family: AvenirNext Medium;
+    cursor: pointer;
+    : hover{
+      opacity: 0.5;
+    }
+  }
   & .footerlink:hover {
     cursor: pointer;
+    opacity: 0.5;
   }
 
   @media (max-width: 930px) {
