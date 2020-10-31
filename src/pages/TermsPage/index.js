@@ -8,6 +8,8 @@ import Header from "../../components/header";
 import HeaderBottom from "../../components/HeaderBottom";
 import HomePageFooter from "../../components/homepagefooter";
 
+import { animateScroll as scroll } from "react-scroll";
+
 function TermsPage() {
   const dispatch = useDispatch();
   const storeData = useSelector((store) => store.data);
@@ -15,6 +17,7 @@ function TermsPage() {
     ...storeData,
   });
   useEffect(() => {
+    scroll.scrollToTop();
     setValue({ ...storeData });
   }, [storeData]);
   const toggleMenu = (data) => {

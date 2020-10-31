@@ -125,7 +125,7 @@ svg {
   width: 23px;
 }
 
-.BtnLogo :hover{
+.BtnLogo:hover{
   opacity: 0.5;
 }
 
