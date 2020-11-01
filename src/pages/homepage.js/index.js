@@ -56,9 +56,8 @@ function HomePage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("I am useEffect!!!");
       onArrowClick("right")
-    }, 7000);
+    }, 10000);
     setValue({ ...storeData });
   }, [storeData]);
   const buttonClicked = () => {};
@@ -91,30 +90,32 @@ function HomePage() {
         </BlockContainer>
         <ModalDialog />
         <BlockContainer className="first-block">
-          <div className="block">
-            <img src={siderImg1} class="blockImg" />
-          </div>
-          <div className="block">
-            <div className="block-title">
-              Mortgage and refinancial has never been that easy.
+          <div className="group">
+            <div className="block">
+              <img src={siderImg1} class="blockImg" />
             </div>
-            <div className="block-content">
-            Now from Mortgage Calculator you can calculate for free what the cost of your mortgage will be.  
-            Also you’ll receive personal attention for your mortgage or refinancing. Choose the best offer!
-            </div>
-            <div className="block-sub-content">
-            * Please, to calculate your mortgage and receive proposals, 
-            fill out the Mortgage Calculator or Refinancing Calculator form below.
-            </div>
-            <div className="block-btn-group">
-              <Button
-                text="Mortgage Calculator"
-                buttonClicked={buttonClicked}
-              />
-              <Button
-                text="Refinancial Calculator"
-                buttonClicked={buttonClicked}
-              />
+            <div className="block">
+              <div className="block-title">
+                Mortgage and refinancial has never been that easy.
+              </div>
+              <div className="block-content">
+              Now from Mortgage Calculator you can calculate for free what the cost of your mortgage will be.  
+              Also you’ll receive personal attention for your mortgage or refinancing. Choose the best offer!
+              </div>
+              <div className="block-sub-content">
+              * Please, to calculate your mortgage and receive proposals, 
+              fill out the Mortgage Calculator or Refinancing Calculator form below.
+              </div>
+              <div className="block-btn-group">
+                <Button
+                  text="Mortgage Calculator"
+                  buttonClicked={buttonClicked}
+                />
+                <Button
+                  text="Refinancial Calculator"
+                  buttonClicked={buttonClicked}
+                />
+              </div>
             </div>
           </div>
         </BlockContainer>

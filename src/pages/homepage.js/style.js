@@ -30,14 +30,15 @@ export const ContentContainer = styled.div`
 export const BlockContainer = styled.div.attrs((props) => ({
   
 }))`
-  padding: 97px 160px 120px 160px;
+  padding: 97px 0 120px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #fcfcfc;
-
-  
-
+  & .group{
+    width:100%;
+    height:100%;
+  }
   & .title {
     background-color: #000000;
     color: white;
@@ -46,9 +47,9 @@ export const BlockContainer = styled.div.attrs((props) => ({
     padding-top: 12px;
     padding-bottom: 12px;
   }
-
   & .block {
-    width: 35vw;
+    margin: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,11 +71,6 @@ export const BlockContainer = styled.div.attrs((props) => ({
       display: flex;
       text-align: left;
       padding:0;
-    }
-
-    & .blockImg{
-      width: 500px;
-      height: 500px;
     }
 
     & .block-title {
@@ -120,84 +116,56 @@ export const BlockContainer = styled.div.attrs((props) => ({
     background-color: #eff7f9;
   }
 
-
-  @media (max-width: 1260px) {
-    padding: 97px 120px 120px 120px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    & .block {
-      width: 34vw;
-      display: flex;
-      flex-direction: column;
+  @media (min-width: 1250px) {
+    & .group{
+      margin:auto;
+      width:1250px;
+      display:flex;
       justify-content: space-between;
-
-      & .block-title {
-        font-size: 24px;
-      }
-
-      & .block-sub-content {
-        font-size: 14px;
-      }
-
-      & .block-btn-group {
-        width: 406px;
-        & .home-btn {
-          margin-bottom: 10px;
-        }
-      }
     }
 
-    & .first {
-      background-color: #eff7f9;
+    & .blockImg{
+      width: 500px;
+      height: 500px;
     }
   }
-  @media (max-width: 1140px){
-    padding: 97px 120px 120px 90px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    & .block {
-      width: 34vw;
-      display: flex;
-      flex-direction: column;
+  
+  @media (max-width: 1250px) {
+    & .group{
+      margin:auto;
+      width:950px;
+      display:flex;
       justify-content: space-between;
+    }
+
+    & .blockImg{
+      width: 400px;
+      height: 400px;
+    }
+    & .block{
+      width: 390px;
 
       & .block-title {
-        font-size: 20px;
+        font-size: 30px;
       }
-
-      & .block-sub-content {
-        font-size: 8px;
-      }
-
-      & .block-btn-group {
-        & .home-btn {
-          margin-bottom: 10px;
-        }
-      }
-
+  
       & .block-content {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 2rem;
-        margin-top: 17px;
+        margin-top: 20px;
       }
-
+  
       & .block-sub-content {
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 20px;
       }
 
-      & .blockImg{
-        width: 400px;
-        height: 400px;
+      & .block-btn-group {
+        display: flex;
+        margin-top: 40px;
+        width: 406px;
+        justify-content: space-between;
       }
-    }
-
-    & .first {
-      background-color: #eff7f9;
     }
   }
 
@@ -206,7 +174,13 @@ export const BlockContainer = styled.div.attrs((props) => ({
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    & .group{
+      margin:auto;
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+    
     & .block {
       width: 100%;
       height: 100%;
@@ -238,7 +212,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
         }
       }
     }
-
+  }
     & .blockImg{
       width: 100% !important;
       height: 100% !important;

@@ -80,40 +80,42 @@ function SignInPage() {
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
       <HeaderBottom />
       <ContentContainer>
-        <div className="block">
-          <img src={bannerImg4} className='blockImg'/>
-        </div>
-        <div className="block">
-          <div className="title">
-            Please login to your account.
+        <div className="group">
+          <div className="block">
+            <img src={bannerImg4} className='blockImg'/>
           </div>
-          <div className='desc'>
-            Please access your personal account on MC.US. Do not share your account access information with anyone.
+          <div className="block">
+            <div className="title">
+              Please login to your account.
+            </div>
+            <div className='desc'>
+              Please access your personal account on MC.US. Do not share your account access information with anyone.
+            </div>
+            <LabelInput
+                    label="Email*"
+                    placeHolder="Your email…"
+                    setData={setData}
+                    id="LoginEmail"
+                    validate="LoginEmailValidation"
+                    willValidation={value.LoginEmailValidation}
+                  />
+            <LabelInput className="LabelInput"
+                    label="Password*"
+                    placeHolder="Your password…"
+                    setData={setData}
+                    id="LoginPassword"
+                    validate="LoginPasswordValidation"
+                    type="password"
+                    willValidation={value.LoginPasswordValidation}
+                  />
+                  <div className="LoginBtn">
+                    <ThemeProvider theme={theme}>
+                      <Button variant="contained" color="primary" className={classes.margin} onClick={() => login()}>
+                      Login
+                      </Button>
+                    </ThemeProvider>
+                  </div>
           </div>
-          <LabelInput
-                  label="Email*"
-                  placeHolder="Your email…"
-                  setData={setData}
-                  id="LoginEmail"
-                  validate="LoginEmailValidation"
-                  willValidation={value.LoginEmailValidation}
-                />
-          <LabelInput className="LabelInput"
-                  label="Password*"
-                  placeHolder="Your password…"
-                  setData={setData}
-                  id="LoginPassword"
-                  validate="LoginPasswordValidation"
-                  type="password"
-                  willValidation={value.LoginPasswordValidation}
-                />
-                <div className="LoginBtn">
-                  <ThemeProvider theme={theme}>
-                    <Button variant="contained" color="primary" className={classes.margin} onClick={() => login()}>
-                    Login
-                    </Button>
-                  </ThemeProvider>
-                </div>
         </div>
       </ContentContainer>
     </Container>
