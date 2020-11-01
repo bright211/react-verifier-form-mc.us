@@ -17,9 +17,6 @@ export const ContentContainer = styled.div`
 
   @media (max-width: 900px) {
     overflow: scroll;
-    // align-items: center;
-    // justify-content: center;
-    // padding: 0px 0px;
     padding-top: 60px;
     & .header {
       display: none;      
@@ -57,7 +54,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
       }
 
       & .block-title{
-        color: black;
+        color: #000000;
         font-size: 38px;
         font-weight: 500;
         font-family: "AvenirNext Medium";
@@ -68,7 +65,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
 
       & .block-content,
       & .block-sub-content {
-        color: black;
+        color: #000000;
         font-family: "AvenirNext Regular";
         display: flex;
         text-align: left;
@@ -252,7 +249,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
 
 export const BlockContainerSecond = styled.div`
   padding: 94px 100px;
-  background-color: black;
+  background-color: #000000;
   color: white;
 
   .first-row {

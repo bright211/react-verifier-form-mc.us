@@ -11,7 +11,7 @@ export const ModalContainer = styled.div`
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: black;
+        color: #000000;
         padding:0px 0px 30px 0px;
         text-align: left;
     }
@@ -49,7 +49,7 @@ export const ModalContainer = styled.div`
             font-style: normal;
             line-height: normal;
             letter-spacing: normal;
-            color: black;
+            color: #000000;
         }
         & .modalDialogImg{
             height:125px;

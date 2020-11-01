@@ -100,10 +100,10 @@ select {
 
 #nextbutton {
   float: right;
-  background-color: black;
+  background-color: #000000;
 }
 .exit-btn {
-  color: black !important;
+  color: #000000 !important;
   text-decoration: underline !important;
   font-family: "AvenirNext Regular" !important;
 }

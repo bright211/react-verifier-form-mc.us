@@ -6,7 +6,7 @@ export const Footer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: black;
+  background-color: #000000;
   padding: 23px 20px;
   justify-content: space-between;
 

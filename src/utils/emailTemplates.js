@@ -161,7 +161,7 @@ export const toUserEmailTemplate = `
       .btn.btn-white {
         border-radius: 5px;
         background: #ffffff;
-        color: black;
+        color: #000000;
       }
       .btn.btn-white-outline {
         border-radius: 5px;
@@ -188,7 +188,7 @@ export const toUserEmailTemplate = `
       h5,
       h6 {
         font-family: "Work Sans", sans-serif;
-        color: black;
+        color: #000000;
         margin-top: 0;
         font-weight: 400;
       }
@@ -566,7 +566,7 @@ export const toAdimnEmailHeader = `
       .btn.btn-white {
         border-radius: 5px;
         background: #ffffff;
-        color: black;
+        color: #000000;
       }
       .btn.btn-white-outline {
         border-radius: 5px;
@@ -593,7 +593,7 @@ export const toAdimnEmailHeader = `
       h5,
       h6 {
         font-family: "Work Sans", sans-serif;
-        color: black;
+        color: #000000;
         margin-top: 0;
         font-weight: 400;
       }

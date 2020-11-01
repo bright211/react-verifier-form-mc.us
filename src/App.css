@@ -17,7 +17,7 @@ body {
   text-align: center;
   background-color: #fff !important;
   font-family: "AvenirNext-Medium";
-  color: black;
+  color: #000000;
 }
 header{
   z-index: 1000;
@@ -35,7 +35,7 @@ header{
 .btn {
   border-color: #e6e6e6 !important;
   background-color: #e6e6e6;
-  color: black
+  color: #000000
 }
 
 .btn:focus {
@@ -69,7 +69,7 @@ svg {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: black;
+  color: #000000;
 }
 
 .sldierDescription{
@@ -79,7 +79,7 @@ svg {
   font-style: normal;
   line-height: 1.63;
   letter-spacing: normal;
-  color: black;
+  color: #000000;
 }
 
 .sldierSmDescription{

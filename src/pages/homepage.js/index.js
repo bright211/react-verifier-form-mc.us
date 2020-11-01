@@ -59,7 +59,7 @@ function HomePage() {
   const jTimer = () => {
     setTimeout(() => {
       jTimer();
-      onArrowClick("left");
+      onArrowClick("right");
     }, 20000)
   }
 

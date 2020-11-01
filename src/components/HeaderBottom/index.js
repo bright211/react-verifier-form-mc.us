@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  background-color: black;
+  background-color: #000000;
   height: 40px;
   display: flex;
   align-items: center;
@@ -20,6 +20,10 @@ const Container = styled.div`
 
   & .link:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+    display:none;
   }
 `;
 
