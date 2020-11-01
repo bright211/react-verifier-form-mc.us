@@ -88,7 +88,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
 
     & .block-sub-content {
-      font-size: 10px;
+      font-size: 12px;
       margin-top: 42px;
     }
 
@@ -128,8 +128,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
     justify-content: space-between;
 
     & .block {
-      width: 37vw;
-      // height: 100%;
+      width: 34vw;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -139,10 +138,11 @@ export const BlockContainer = styled.div.attrs((props) => ({
       }
 
       & .block-sub-content {
-        font-size: 10px;
+        font-size: 14px;
       }
 
       & .block-btn-group {
+        width: 406px;
         & .home-btn {
           margin-bottom: 10px;
         }
@@ -153,12 +153,52 @@ export const BlockContainer = styled.div.attrs((props) => ({
       background-color: #eff7f9;
     }
   }
+  @media (max-width: 1140px){
+    padding: 97px 120px 120px 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  @media (max-width: 1175px){
-    padding: 97px 80px 120px 80px;
-  }
-  @media (max-width: 1070px){
-    padding: 97px 40px 120px 40px;
+    & .block {
+      width: 34vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      & .block-title {
+        font-size: 20px;
+      }
+
+      & .block-sub-content {
+        font-size: 8px;
+      }
+
+      & .block-btn-group {
+        & .home-btn {
+          margin-bottom: 10px;
+        }
+      }
+
+      & .block-content {
+        font-size: 12px;
+        line-height: 2rem;
+        margin-top: 17px;
+      }
+
+      & .block-sub-content {
+        font-size: 10px;
+        margin-top: 20px;
+      }
+
+      & .blockImg{
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    & .first {
+      background-color: #eff7f9;
+    }
   }
 
   @media (max-width: 930px) {

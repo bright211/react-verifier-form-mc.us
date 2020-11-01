@@ -56,12 +56,11 @@ function HomePage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      console.log("I am useEffect!!!");
       onArrowClick("right")
-    }, 10000);
+    }, 7000);
     setValue({ ...storeData });
-    
   }, [storeData]);
-
   const buttonClicked = () => {};
   const toggleMenu = (data) => {
     dispatch({ type: Types.SET_DATA, payload: { ...data } });
@@ -100,17 +99,12 @@ function HomePage() {
               Mortgage and refinancial has never been that easy.
             </div>
             <div className="block-content">
-              Zero pioneered the first modern banking experience to combine
-              debit-style functionality with credit card rewards. Powered by a
-              mobile app and Zerocard, a credit card that offered rewards of up
-              to 3.0% cash back, Zero was featured in the New York Times and
-              served tens of thousands of customers before closing to new
-              customers in March 2020.*
+            Now from Mortgage Calculator you can calculate for free what the cost of your mortgage will be.  
+            Also you’ll receive personal attention for your mortgage or refinancing. Choose the best offer!
             </div>
             <div className="block-sub-content">
-              *For the time being, information about the original Zero offering
-              appears below and throughout this website. Zero closed to new
-              customers in March 2020.
+            * Please, to calculate your mortgage and receive proposals, 
+            fill out the Mortgage Calculator or Refinancing Calculator form below.
             </div>
             <div className="block-btn-group">
               <Button
