@@ -92,7 +92,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
       margin-top: 42px;
     }
 
-    @media(max-width: 400px){
+    @media(max-width: 500px){
       & .block-btn-group {
         width: fit-content !important;
       }  
