@@ -81,6 +81,7 @@ function HomePage() {
   };
 
   return (
+
     <Container>
       <Header toggleMenu={toggleMenu} />
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
@@ -90,11 +91,41 @@ function HomePage() {
         </BlockContainer>
         <ModalDialog />
         <BlockContainer className="first-block">
-          <div className="group">
-            <div className="block">
-              <img src={siderImg1} class="blockImg" />
+            <div class="group">
+              <div class="block">
+                <img src={siderImg1} class="blockImg" />
+              </div>
             </div>
-            <div className="block">
+            <div class="group" id="secondgroup">
+              <div class="block" id="secondblock">
+                <div className="block-title">
+                  Mortgage and refinancial has never been that easy.
+                </div>
+                <div className="block-content">
+                  Now from Mortgage Calculator you can calculate for free what the cost of your mortgage will be.  
+                  Also you’ll receive personal attention for your mortgage or refinancing. Choose the best offer!
+                </div>
+                <div className="block-sub-content">
+                * Please, to calculate your mortgage and receive proposals, 
+                fill out the Mortgage Calculator or Refinancing Calculator form below.
+                </div>
+                <div className="block-btn-group">
+                <Button className="btnSelect"
+                  text="Mortgage Calculator"
+                  buttonClicked={buttonClicked}
+                />
+                <Button className="btnSelect"
+                  text="Refinancial Calculator"
+                  buttonClicked={buttonClicked}
+                />
+              </div>
+                {/* <img src={siderImg1} class="blockImg" /> */}
+              </div>
+            </div>
+            {/* <div className="block"> */}
+              {/* <img src={siderImg1} class="blockImg" /> */}
+            {/* </div> */}
+            {/* <div className="block">
               <div className="block-title">
                 Mortgage and refinancial has never been that easy.
               </div>
@@ -116,8 +147,7 @@ function HomePage() {
                   buttonClicked={buttonClicked}
                 />
               </div>
-            </div>
-          </div>
+            </div> */}
         </BlockContainer>
         <BlockContainerSecond>
           <div className="first-row">
