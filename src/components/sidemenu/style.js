@@ -41,13 +41,13 @@ export const SiderBarHeader = styled.div`
 export const SiderBarBody = styled.div`
 
     @media (min-width: 930px){
-        padding-right: 60px;
-        padding-left: 60px;
+        padding-right: 30px;
+        padding-left: 30px;
         text-align: left;
 
         & .title{
             padding-top: 71px;
-            font-size: 38px;    
+            font-size: 24px;    
             font-family: AvenirNext Medium;
         }
 
@@ -80,7 +80,7 @@ export const SiderBarBody = styled.div`
                     font-family: AvenirNext Medium;
                     padding-left: 30px;
                     text-align: left;
-                    font-size: 24px;
+                    font-size: 20px;
                 }
                 & .subscribe2{
                     padding-left: 30px;

@@ -34,6 +34,7 @@ export const ContentContainer = styled.div`
     & .title{
       text-align: left;
       font-size: 38px;
+      font-family: "AvenirNext Medium";
       font-weight: 500;
     }
 
@@ -90,7 +91,8 @@ export const ContentContainer = styled.div`
 
         & .title{
           text-align: left;
-          font-size: 38px;
+          font-size: 24px;
+          font-family: "AvenirNext Medium";
           font-weight: 500;
         }
     
@@ -139,12 +141,5 @@ export const ContentContainer = styled.div`
         padding: 60px 0 0 0 !important;
       }
     }
-    }
-    
-  // @media (max-width: 1300px){
-  //   padding: 97px 80px 120px 80px;
-  // }
-  // @media (max-width: 1170px){
-  //   padding: 97px 40px 120px 40px;
-  // }
+  }
 `;

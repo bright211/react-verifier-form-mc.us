@@ -9,7 +9,7 @@ export const sliderBody = styled.div`
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #000000;
+        color: black;
     }
 
     & .sldierDescription{
@@ -19,6 +19,6 @@ export const sliderBody = styled.div`
         font-style: normal;
         line-height: 1.63;
         letter-spacing: normal;
-        color: #000000;
+        color: black;
     }
 `;

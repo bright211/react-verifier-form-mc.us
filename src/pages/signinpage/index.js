@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   margin: {
     marginRight: theme.spacing(2),
     textTransform: "none",
-    fontFamily: "AvenirNext Regular",
+    fontFamily: "AvenirNext Medium",
     fontSize: "16px",
     "&:hover": {
       backgroundColor: "#353535",

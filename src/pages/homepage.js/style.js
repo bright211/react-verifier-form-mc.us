@@ -46,10 +46,6 @@ export const BlockContainer = styled.div.attrs((props) => ({
       padding-bottom: 100%;
     }
 
-    & #secondblock{
-      height: 50%;
-    }
-
     & .block {
       position: absolute;
       width: 100%;
@@ -61,7 +57,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
       }
 
       & .block-title{
-        color: #000000;
+        color: black;
         font-size: 38px;
         font-weight: 500;
         font-family: "AvenirNext Medium";
@@ -72,7 +68,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
 
       & .block-content,
       & .block-sub-content {
-        color: #000000;
+        color: black;
         font-family: "AvenirNext Regular";
         display: flex;
         text-align: left;
@@ -238,7 +234,15 @@ export const BlockContainer = styled.div.attrs((props) => ({
       }
     } 
   }
-
+  @media (max-width: 450px){
+    & .group{
+      & .block{
+        & .block-btn-group {
+          width: 150px;
+        }    
+      }
+    }
+  }
   @media (max-width: 350px){
     & #secondgroup{
       margin-bottom: 120px;
@@ -248,7 +252,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
 
 export const BlockContainerSecond = styled.div`
   padding: 94px 100px;
-  background-color: #000000;
+  background-color: black;
   color: white;
 
   .first-row {

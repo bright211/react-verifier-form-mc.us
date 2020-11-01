@@ -23,6 +23,7 @@ import SideMenu from "../../components/sidemenu";
 import * as Types from "../../state/types";
 import HeaderBottom from "../../components/HeaderBottom";
 import HomePageFooter from "../../components/homepagefooter";
+import { Timer } from "@material-ui/icons";
 
 function Arrow(props) {
   const { direction, clickFunction } = props;
@@ -53,11 +54,17 @@ function HomePage() {
   const [value, setValue] = useState({
     ...storeData,
   });
+  var interval = '';
+
+  const jTimer = () => {
+    setTimeout(() => {
+      jTimer();
+      onArrowClick("left");
+    }, 20000)
+  }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      onArrowClick("right")
-    }, 10000);
+    jTimer();
     setValue({ ...storeData });
   }, [storeData]);
   const buttonClicked = () => {};
@@ -119,35 +126,8 @@ function HomePage() {
                   buttonClicked={buttonClicked}
                 />
               </div>
-                {/* <img src={siderImg1} class="blockImg" /> */}
               </div>
             </div>
-            {/* <div className="block"> */}
-              {/* <img src={siderImg1} class="blockImg" /> */}
-            {/* </div> */}
-            {/* <div className="block">
-              <div className="block-title">
-                Mortgage and refinancial has never been that easy.
-              </div>
-              <div className="block-content">
-              Now from Mortgage Calculator you can calculate for free what the cost of your mortgage will be.  
-              Also you’ll receive personal attention for your mortgage or refinancing. Choose the best offer!
-              </div>
-              <div className="block-sub-content">
-              * Please, to calculate your mortgage and receive proposals, 
-              fill out the Mortgage Calculator or Refinancing Calculator form below.
-              </div>
-              <div className="block-btn-group">
-                <Button
-                  text="Mortgage Calculator"
-                  buttonClicked={buttonClicked}
-                />
-                <Button
-                  text="Refinancial Calculator"
-                  buttonClicked={buttonClicked}
-                />
-              </div>
-            </div> */}
         </BlockContainer>
         <BlockContainerSecond>
           <div className="first-row">
@@ -198,7 +178,7 @@ function HomePage() {
           </div>
         </BlockContainerSecond>
         <BlockContainerThird>
-          <Arrow direction="left" clickFunction={() => onArrowClick("left")} />
+          <Arrow direction="left" clickFunction={() => onArrowClick("right")} />
           <Slide
             in={slideIn}
             direction={slideDirection}
@@ -210,7 +190,7 @@ function HomePage() {
           </Slide>
           <Arrow
             direction="right"
-            clickFunction={() => onArrowClick("right")}
+            clickFunction={() => onArrowClick("left")}
           />
         </BlockContainerThird>
         <HomePageFooter />

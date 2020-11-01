@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     zIndex: 6000,
   },
   list: {
-    width: window.innerWidth/2,
+    width: "600px",
     
     '@media (max-width: 930px)': {
         width: window.innerWidth
