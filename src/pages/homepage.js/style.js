@@ -232,9 +232,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
     } 
   }
   @media (max-width: 600px){
-    & #secondgroup{
-      margin-bottom: 10vh;
-    }
+    
     & .group{
       & .block{
         & .block-btn-group {
@@ -270,14 +268,14 @@ export const BlockContainer = styled.div.attrs((props) => ({
       }
     }
   }
-  @media (max-width: 350px){
+  @media (max-width: 400px){
     & #secondgroup{
-      margin-bottom: 20vh;
+      margin-bottom: 180px;
     }
   }
-  @media (max-width: 300px){
+  @media (max-width: 350px){
     & #secondgroup{
-      margin-bottom: 20vh;
+      margin-bottom: 250px;
     }
   }
 `;
