@@ -54,9 +54,9 @@ function HomePage() {
   const [value, setValue] = useState({
     ...storeData,
   });
-  var interval = '';
-
+  const[flag, setFlag] = useState(false);
   const jTimer = () => {
+    setFlag(true);
     setTimeout(() => {
       jTimer();
       onArrowClick("right");
@@ -64,7 +64,9 @@ function HomePage() {
   }
 
   useEffect(() => {
-    jTimer();
+    if(!flag){
+      jTimer();
+    }
     setValue({ ...storeData });
   }, [storeData]);
   const buttonClicked = () => {};
@@ -178,7 +180,7 @@ function HomePage() {
           </div>
         </BlockContainerSecond>
         <BlockContainerThird>
-          <Arrow direction="left" clickFunction={() => onArrowClick("right")} />
+          <Arrow direction="left" clickFunction={() => onArrowClick("left")} />
           <Slide
             in={slideIn}
             direction={slideDirection}
@@ -190,7 +192,7 @@ function HomePage() {
           </Slide>
           <Arrow
             direction="right"
-            clickFunction={() => onArrowClick("left")}
+            clickFunction={() => onArrowClick("right")}
           />
         </BlockContainerThird>
         <HomePageFooter />

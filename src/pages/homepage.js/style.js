@@ -231,18 +231,53 @@ export const BlockContainer = styled.div.attrs((props) => ({
       }
     } 
   }
-  @media (max-width: 450px){
+  @media (max-width: 600px){
+    & #secondgroup{
+      margin-bottom: 10vh;
+    }
     & .group{
       & .block{
         & .block-btn-group {
+          padding-top: 60px;
           width: 150px;
         }    
+
+        & .block-title {
+          padding: 30px 0 0 0;
+          font-size: 24px;
+        }
+  
+        & .block-content {
+          padding: 30px 0 0 0;
+          font-size: 16px;
+        }
+  
+        & .block-sub-content {
+          padding: 30px 0 0 0;
+          font-size: 10px;
+        }
+  
+        & .block-btn-group {
+          padding: 60px 0 0 0;
+          height: 100%;
+          flex-direction: column;
+          justify-content: space-between;
+  
+          & .home-btn {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }
   @media (max-width: 350px){
     & #secondgroup{
-      margin-bottom: 120px;
+      margin-bottom: 20vh;
+    }
+  }
+  @media (max-width: 300px){
+    & #secondgroup{
+      margin-bottom: 20vh;
     }
   }
 `;
