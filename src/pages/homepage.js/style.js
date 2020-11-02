@@ -31,6 +31,41 @@ export const BlockContainer = styled.div.attrs((props) => ({
   padding:90px 70px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+
+  & .group2{
+    width: 37vw;
+
+    & .block-title{
+      color: #000000;
+      font-size: 38px;
+      font-weight: 500;
+      font-family: "AvenirNext Medium";
+      display: flex;
+      text-align: left;
+      padding:0;
+    }
+
+    & .block-content,
+    & .block-sub-content {
+      color: #000000;
+      font-family: "AvenirNext Regular";
+      display: flex;
+      text-align: left;
+      padding:60px 0 0 0;
+    }
+
+    & .block-sub-content {
+      font-size: 10px;
+    }
+    & .block-btn-group{
+      padding: 60px 0 0 0;
+      float: left;
+      display: flex;
+      justify-content: space-between;
+      width: 426px;
+    }
+  }
 
   & .group {
     position: relative;
@@ -85,9 +120,9 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
   }
 
-
   @media(min-width: 1400px){
-    & .group {  
+
+    & .group2 {  
       & .block {
         & .block-title{
           font-size: 38px;
@@ -116,7 +151,11 @@ export const BlockContainer = styled.div.attrs((props) => ({
   }
 
   @media(max-width: 1250px){
-    & .group {  
+    & .group2 {  
+      
+      margin-left: 30px;
+      margin-right: 30px;
+
       & .block {
         & .block-title{
           font-size: 28px;
@@ -144,8 +183,10 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
   }
   
-  @media(max-width: 1000px){
-    & .group {  
+  @media(max-width: 1024px){
+    padding:90px 90px;
+
+    & .group2 {  
       & .block {
         & .block-title{
           font-size: 28px;
@@ -169,17 +210,21 @@ export const BlockContainer = styled.div.attrs((props) => ({
           justify-content: space-between;
           width: 406px;
         }
+
+        & #btnSelect{
+          display: none;
+        }
       }
     }
   }
   
   @media (max-width: 930px) {
-    padding: 0px 20px 120px 20px;
+    padding: 0px 20px 60px 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    & .group{
+    & .group2, .group{
       width: 100%;
       margin:0;
 
@@ -197,21 +242,21 @@ export const BlockContainer = styled.div.attrs((props) => ({
         }
   
         & .block-content {
+          padding: 30px 0 0 0;
           font-size: 16px;
         }
   
         & .block-sub-content {
+          padding: 30px 0 0 0;
           font-size: 10px;
         }
   
         & .block-btn-group {
-          height: 140px;
+          width: fit-content;
+          padding: 60px 0 0 0;
+          height: 100%;
           flex-direction: column;
           justify-content: space-between;
-  
-          & .home-btn {
-            margin-bottom: 10px;
-          }
         }
       }
   
@@ -230,53 +275,6 @@ export const BlockContainer = styled.div.attrs((props) => ({
         padding-bottom: 100%;
       }
     } 
-  }
-  @media (max-width: 600px){
-    
-    & .group{
-      & .block{
-        & .block-btn-group {
-          padding-top: 60px;
-          width: 150px;
-        }    
-
-        & .block-title {
-          padding: 30px 0 0 0;
-          font-size: 24px;
-        }
-  
-        & .block-content {
-          padding: 30px 0 0 0;
-          font-size: 16px;
-        }
-  
-        & .block-sub-content {
-          padding: 30px 0 0 0;
-          font-size: 10px;
-        }
-  
-        & .block-btn-group {
-          padding: 60px 0 0 0;
-          height: 100%;
-          flex-direction: column;
-          justify-content: space-between;
-  
-          & .home-btn {
-            margin-bottom: 10px;
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 400px){
-    & #secondgroup{
-      margin-bottom: 180px;
-    }
-  }
-  @media (max-width: 350px){
-    & #secondgroup{
-      margin-bottom: 250px;
-    }
   }
 `;
 

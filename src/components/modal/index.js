@@ -29,7 +29,7 @@ export default function ModalDialog() {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
-          maxWidth="sm"
+          maxWidth="700px"
       >
             <div className="sideMenuBtnClose">
                 <img className="sideMenuBtnImg" src={closeBtn} onClick={() => handleClose()} />

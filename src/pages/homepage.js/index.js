@@ -105,7 +105,7 @@ function HomePage() {
                 <img src={siderImg1} class="blockImg" />
               </div>
             </div>
-            <div class="group" id="secondgroup">
+            <div class="group2">
               <div class="block" id="secondblock">
                 <div className="block-title">
                   Mortgage and refinancial has never been that easy.
@@ -119,11 +119,11 @@ function HomePage() {
                 fill out the Mortgage Calculator or Refinancing Calculator form below.
                 </div>
                 <div className="block-btn-group">
-                <Button className="btnSelect"
+                <Button id="btnSelect"
                   text="Mortgage Calculator"
                   buttonClicked={buttonClicked}
                 />
-                <Button className="btnSelect"
+                <Button id="btnSelect"
                   text="Refinancial Calculator"
                   buttonClicked={buttonClicked}
                 />

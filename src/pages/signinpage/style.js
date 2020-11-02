@@ -72,21 +72,22 @@ export const ContentContainer = styled.div`
   }
   @media (max-width: 1150px) {
     & .group{
+      padding: 0 40px 0 40px;
       margin:auto;
       width:950px;
       display:flex;
       justify-content: space-between;
 
       & .block {
-        width: 450px;
+        width: 400px;
         text-align: left;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         & .blockImg{
-          width: 450px;
-          height: 450px;
+          width: 400px;
+          height: 400px;
         }
 
         & .title{
@@ -113,18 +114,65 @@ export const ContentContainer = styled.div`
       }
     }
   }
+
+  @media(max-width: 970px){
+    & .group{
+      padding: 0 40px 0 40px;
+      margin:auto;
+      width:900px;
+      display:flex;
+      justify-content: space-between;
+
+      & .block {
+        width: 380px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .blockImg{
+          width: 380px;
+          height: 380px;
+        }
+
+        & .title{
+          text-align: left;
+          font-size: 24px;
+          font-family: "AvenirNext Medium";
+          font-weight: 500;
+        }
+    
+        & .desc{
+          padding: 20px 0 0 0;
+          line-height: 1.63;
+          font-size: 16px;
+          text-align: left;
+        }
+    
+        & .label_input{
+          padding: 20px 0 0 0;
+        }
+    
+        & .LoginBtn{
+          padding: 20px 0 0 0;
+        }
+      }
+    }
+  }
+
   @media(max-width: 900px){
     flex-wrap: wrap;
     padding: 0 20px 60px 20px !important;
 
     & .group{
+      padding: 0 0 0 0;
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       & .block {
-        padding-top: 20px;
+        padding-top: 60px;
         width:100%;
       }
   

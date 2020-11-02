@@ -5,7 +5,9 @@ export const ModalContainer = styled.div`
     padding: 30px 50px;
 
     & .modalDialogTitle{
-        font-size: 35px;
+        font-family: AvenirNext Medium;
+        font-size: 24px;
+        font-family: 
         font-weight: 500;
         font-stretch: normal;
         font-style: normal;
@@ -18,7 +20,7 @@ export const ModalContainer = styled.div`
 
     & .modalDialogImg{
         width:100%;
-        height:270px;
+        height:100%;
     }
 
     @media(min-width: 760px){
@@ -42,6 +44,7 @@ export const ModalContainer = styled.div`
             height: 23px;
         }
         & .modalDialogTitle{
+            font-family: AvenirNext Medium;
             padding: 30px 0 30px 0;
             font-size: 18px;
             font-weight: 500;
@@ -52,12 +55,16 @@ export const ModalContainer = styled.div`
             color: #000000;
         }
         & .modalDialogImg{
-            height:125px;
+            // height:125px;
             background-color: #64ffca;
         }
         & .btn-group{
             padding: 20px 0 45px 0;
-            display: block;
+            display: flex;
+            flex-direction: column;
+        }
+        & button{
+            margin: 15px auto auto auto;
         }
     }
 `
