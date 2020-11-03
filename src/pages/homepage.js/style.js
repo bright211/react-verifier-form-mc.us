@@ -37,6 +37,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
   background-size: cover;
 
   .block{
+    max-width: 500px;
     width: 47%;
     float: left;
     text-align: left;
@@ -71,12 +72,33 @@ export const BlockContainer = styled.div.attrs((props) => ({
   }
 
   @media(max-width: 930px){
-    padding: 172px 20px;
-  }
+  
+    padding: 134px 20px;
 
-  @media(max-width: 470px){
-    .btn-group{
-      flex-direction: column;
+    .block{
+      .title{
+        font-family: AvenirNext DemiBold;
+        font-size: 20px;
+        font-weight: 600;
+      }
+  
+      .content{
+        padding:15px 0;
+        font-family: AvenirNext Regular;
+        font-size: 16px;
+      }
+  
+      .btn-group{
+        padding-top: 0px;
+      }
+  
+      .privacy{
+        display:none;
+      }
+
+      .btn-group{
+        flex-direction: column;
+      }
     }
   }
 `;
@@ -87,6 +109,7 @@ export const BlockContainerSecond = styled.div`
   background-color: #d4d4d4;
 
   .block{
+    max-width: 500px;
     width: 47%;
     float: left;
     text-align: left;
@@ -105,7 +128,19 @@ export const BlockContainerSecond = styled.div`
     .block{
       width: 100%;
     }
-    padding: 90px 20px 0 20px;
+  
+    padding: 60px 20px 0px 20px;
+
+    .block{
+      .title{
+        font-size: 18px;
+      }
+  
+      .content{
+        padding-top: 17px;
+        font-size: 16px;
+      }
+    }
   }
 `;
 
@@ -115,8 +150,8 @@ export const BlockContainerThird = styled.div`
     display: flex;
     justify-content: space-between;
     background-color: #d4d4d4;
-
     .block{
+      max-width: 500px;
       width: 47%;
       float: left;
       text-align: left;
@@ -140,7 +175,19 @@ export const BlockContainerThird = styled.div`
       }
     }
     @media(max-width: 930px){
-      padding: 90px 20px 90px 20px;
+
+      padding: 0px 20px 0px 20px;
+      .block{
+        padding-top:60px;
+        .title{
+          padding:23px 0 0 0;
+          font-size: 18px;
+        }
+
+        #contentId{
+          padding-bottom: 60px;
+        }
+      }
     }
 `;
 

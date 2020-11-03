@@ -78,8 +78,8 @@ function HomePage() {
         </BlockContainer>
         <BlockContainerSecond>
           <div className="block">
-            <div className="title">Simplicity of a debit card.</div>
-            <div className="title">Cash back of a credit card.</div>
+            <div className="title">Simplicity of mortgage credit.</div>
+            <div className="title">Simplicity of refinancial.</div>
             <div className="content">
               With a debit card, it’s easy to know how much money you have, but you usually don’t get cash back. 
               With a credit card, you can get great cash back, but it’s a chore to track things so you may spend more.
@@ -89,7 +89,7 @@ function HomePage() {
         <BlockContainerThird>
           <div className="block">
             <CircleIcon>
-              <AvatarSecond style={{ width: "25px", height: "25px" }} />
+              <AvatarFirst style={{ width: "25px", height: "25px" }} />
             </CircleIcon>
             <div className="title">Get A Online Mortgage Experience.</div>
             <div className="content">
@@ -99,10 +99,10 @@ function HomePage() {
           </div>
           <div className="block">
             <CircleIcon>
-              <AvatarFirst style={{ width: "25px", height: "25px" }} />
+              <AvatarSecond style={{ width: "25px", height: "25px" }} />
             </CircleIcon>
             <div className="title">Get A Online Mortgage Experience.</div>
-            <div className="content">
+            <div className="content" id="contentId">
               Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down. 
               Purchases are reflected right away and our unique features help you avoid spending more than your balance or running up monthly bills that you have to worry about manually paying.
             </div>

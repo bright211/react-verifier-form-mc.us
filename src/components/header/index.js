@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
+import { ReactComponent as Logo } from "../../assets/images/LOGO-MORTGAGE-CALCULATOR - black.svg";
 import { useHistory } from "react-router-dom";
 
 function Header({toggleMenu}) {
