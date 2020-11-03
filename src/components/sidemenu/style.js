@@ -27,8 +27,8 @@ export const SiderBarHeader = styled.div`
         }
 
         & .closeBtn{
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             cursor: pointer;
             float: right;
             : hover{
@@ -40,91 +40,35 @@ export const SiderBarHeader = styled.div`
 
 export const SiderBarBody = styled.div`
 
-    @media (min-width: 930px){
-        padding-right: 30px;
-        padding-left: 30px;
+    .block{
+        cursor: pointer;
+        padding:30px 30px;
+        width: 100%;
+        float: left;
         text-align: left;
 
-        & .title{
-            padding-top: 71px;
-            font-size: 24px;    
+        .title{
+            padding: 15px 0 0 0;
             font-family: AvenirNext Medium;
+            font-size: 20px;
+            font-weight: 600;
         }
 
-        & .group{
-            cursor: pointer;
-            display: flex;
-            flex-direction: row;
-            padding-top: 60px;
-
-            :hover{
-                opacity: 0.5;
-            }
-
-            & .bannerImg{
-                border: 0px;
-            }
-
-            & .banner{
-                cursor: pointer;
-                float: left;
-                width: 150px;
-                height: 150px;
-                
-            }
-            & .text{
-                display: flex;
-                flex-direction: column;
-
-                & .subscribe1{
-                    font-family: AvenirNext Medium;
-                    padding-left: 30px;
-                    text-align: left;
-                    font-size: 20px;
-                }
-                & .subscribe2{
-                    padding-left: 30px;
-                    padding-top: 15px;
-                    text-align: left;
-                    font-size: 16px;
-                }
-            }
+        .content{
+            padding:15px 0 0 0;
+            font-family: AvenirNext Regular;
+            font-size: 16px;
         }
     }
-    @media (max-width: 930px){
-        padding:50px 20px 0 20px;
 
-        & .title{
-            font-family: AvenirNext Medium;
-            padding-top: 40.6px;
-            font-size: 24px;    
-            text-align: left;
-        }
-
-        & .group{
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            padding-top: 30px;
-        
-            & .banner{
-                float: left;
-                width: 75px;
-                height: 75px;
-                cursor: pointer;
-            }
-
-            & .subscribe1{
-                font-family: AvenirNext Medium;
-                padding-top: 15px;
-                text-align: left;
-                font-size: 18px;
-            }
-            & .subscribe2{
-                padding-top: 15px;
-                text-align: left;
-                font-size: 16px;
-            }
-        }
+    .block:hover{
+        opacity: 0.5;
     }
+    #secondblock{
+        padding-top: 34px;
+    }
+`;
+
+export const CircleIcon = styled.div`
+  border-radius: 50px;
 `;

@@ -31,7 +31,7 @@ function Routes() {
           path={`/homepage`}
           component={HomePage}
         />    
-        <Route
+        {/* <Route
           exact
           path={`/signin`}
           component={SignInPage}
@@ -41,7 +41,7 @@ function Routes() {
           path={`/privacy`}
           component={PrivacyPage}
         />
-        <Route exact path={`/termsandcondition`} component={TermsPage} />
+        <Route exact path={`/termsandcondition`} component={TermsPage} /> */}
         <Redirect from="/" to='quotedetailfirst' />
       </Switch>
 

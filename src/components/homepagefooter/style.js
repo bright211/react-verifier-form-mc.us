@@ -7,7 +7,7 @@ export const Footer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   background-color: #000000;
-  padding: 23px 20px;
+  padding: 21px 208px;
   justify-content: space-between;
 
   & .left {
@@ -55,14 +55,14 @@ export const Footer = styled.div`
     & .left {
       display: flex;
       flex-direction: column;
-      height: 66%;
+      height: 25%;
       justify-content: space-around;
     }
 
     & .right {
       display: flex;
       flex-direction: column;
-      height: 34%;
+      height: 75%;
       justify-content: space-around;
     }
 

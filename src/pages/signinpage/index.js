@@ -6,7 +6,7 @@ import SideMenu from "../../components/sidemenu";
 import { ContentContainer } from "./style";
 import Header from "../../components/header";
 import HeaderBottom from '../../components/HeaderBottom'
-import { bannerImg4 } from '../../assets';
+// import { bannerImg4 } from '../../assets';
 import LabelInput from "../../components/labelinput";
 
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
@@ -82,7 +82,7 @@ function SignInPage() {
       <ContentContainer>
         <div className="group">
           <div className="block">
-            <img src={bannerImg4} className='blockImg'/>
+            {/* <img src={bannerImg4} className='blockImg'/> */}
           </div>
           <div className="block">
             <div className="title">

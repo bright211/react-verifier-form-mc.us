@@ -1,12 +1,26 @@
 import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
-    max-width: 600px;
-    padding: 30px 50px;
+    max-width: 450px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    .sideMenuBtnClose{
+        padding:23px 14px 0 0; 
+        .closeBtn{
+            float: right;
+            width: 20px;
+            height: 20px;
+        }
+        .closeBtn:hover{
+            opacity: 0.5;
+        }
+    }
 
-    & .modalDialogTitle{
+    .modalDialogTitle{
+        padding: 30px 30px 0 30px !important;
         font-family: AvenirNext Medium;
-        font-size: 24px;
+        font-size: 20px;
         font-family: 
         font-weight: 500;
         font-stretch: normal;
@@ -15,56 +29,21 @@ export const ModalContainer = styled.div`
         letter-spacing: normal;
         color: #000000;
         padding:0px 0px 30px 0px;
-        text-align: left;
     }
 
-    & .modalDialogImg{
-        width:100%;
-        height:100%;
+    .modalcontent{
+        font-family: AvenirNext Regular;
+        font-size: 16px;
+        padding:15px 30px 0 30px;
     }
 
-    @media(min-width: 760px){
-        & .btn-group{
-            padding:30px 0 0 0;
-            width: 426px;
-            justify-content: space-between;
-        }
-
+    .modalinput{
+        padding:15px 30px 0 30px;
+        font-size: 16px;
+        font-family: AvenirNext Regular;
     }
 
-    @media(max-width: 760px){
-        padding: 0px 15px;
-        & .btnClose{
-            padding-top:13px;
-            float: right;
-        }
-
-        & .imgCls{
-            width: 23px;
-            height: 23px;
-        }
-        & .modalDialogTitle{
-            font-family: AvenirNext Medium;
-            padding: 30px 0 30px 0;
-            font-size: 18px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            color: #000000;
-        }
-        & .modalDialogImg{
-            // height:125px;
-            background-color: #64ffca;
-        }
-        & .btn-group{
-            padding: 20px 0 45px 0;
-            display: flex;
-            flex-direction: column;
-        }
-        & button{
-            margin: 15px auto auto auto;
-        }
+    .confirmBtn{
+        padding: 30px 30px 60px 30px;
     }
 `

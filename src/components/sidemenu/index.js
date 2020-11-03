@@ -4,19 +4,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
 import { ReactComponent as CloseBtn } from "../../assets/images/closebtn.svg"
-import { siderImg1, siderImg3 } from "../../assets";
 import { SiderBarHeader, SiderBarBody } from './style';
+import { ReactComponent as AvatarFirst } from "../../assets/images/MORTGAGE.svg";
+import { ReactComponent as AvatarSecond } from "../../assets/images/REFINANCING.svg";
+import { CircleIcon } from './style';
 
 const useStyles = makeStyles({
   main: {
     zIndex: 6000,
   },
   list: {
-    width: "600px",
-    
-    '@media (max-width: 930px)': {
-        width: window.innerWidth
-    }
+    width: "449px",
   },
   fullList: {
     width: "auto",
@@ -61,35 +59,26 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
         <CloseBtn className="closeBtn" onClick={toggleDrawer(anchor, false)} />
       </SiderBarHeader>
       <SiderBarBody>
-        <div className="title">
-          Welcome to Mortgage Calculator.   A new way to get a Mortgage & Refinancing.
-        </div>
-        <div className="group" onClick={toggleDrawer(anchor, false)}>
-          <div className="bannerImg">
-            <img src={siderImg1} className="banner"/>
-          </div>
-          <div className="text">
-            <div className="subscribe1">
-              Simplicity of a debit card. Cash back of a credit card.
-            </div>
-            <div className="subscribe2">
-              Pioneers in the process of requesting a new mortgage. Receive several offers and choose the best option.
+        <div className="block" onClick={toggleDrawer(anchor, false)} >
+            <CircleIcon>
+              <AvatarFirst style={{ width: "25px", height: "25px" }} />
+            </CircleIcon>
+            <div className="title">Get A Online Mortgage Experience.</div>
+            <div className="content">
+              Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down. 
+              Purchases are reflected right away and our unique features help you avoid spending more than your balance or running up monthly bills that you have to worry about manually paying.
             </div>
           </div>
-        </div>
-        <div className="group" onClick={toggleDrawer(anchor, false)}>
-          <div className="bannerImg">
-            <img src={siderImg3}  className="banner"/>
-          </div>
-          <div className="text">
-          <div className="subscribe1">
-              Start using Refinancing Calculator to get some mortgage options.
-            </div>
-            <div className="subscribe2">
-              Pioneers in the process of requesting a new refinancing. Receive several offers and choose the best option.
+        <div className="block" id="secondblock" onClick={toggleDrawer(anchor, false)} >
+            <CircleIcon>
+              <AvatarSecond style={{ width: "25px", height: "25px" }} />
+            </CircleIcon>
+            <div className="title">Get A Online Mortgage Experience.</div>
+            <div className="content">
+              Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down. 
+              Purchases are reflected right away and our unique features help you avoid spending more than your balance or running up monthly bills that you have to worry about manually paying.
             </div>
           </div>
-        </div>
       </SiderBarBody>
     </div>
   );

@@ -9,21 +9,20 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
+    padding: theme.spacing(1),
+    marginRight: theme.spacing(2),
     textTransform: "none",
     color: '#ffffff',
-    fontFamily: "AvenirNext Medium",
-    fontSize: "16px",
+    fontFamily: "AvenirNext",
+    fontSize: "14px",
     "&:hover": {
       backgroundColor: "#353535",
     },
     "&:focus": {
       outline: "none",
     },
-    width: '198px',
+    minWidth: '55%',
     height: '55px',
-    padding:0,
   },
 }));
 
