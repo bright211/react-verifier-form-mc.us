@@ -21,11 +21,12 @@ import Button from "../../components/button";
 import SideMenu from "../../components/sidemenu";
 import * as Types from "../../state/types";
 import HomePageFooter from "../../components/homepagefooter";
-
+import { useHistory } from "react-router-dom";
 
 function HomePage() {
 
   const dispatch = useDispatch();
+  const history = useHistory();
   const storeData = useSelector((store) => store.data);
   const [index, setIndex] = useState(0);
   const [value, setValue] = useState({
@@ -36,7 +37,9 @@ function HomePage() {
   useEffect(() => {
     setValue({ ...storeData });
   }, [storeData]);
-  const buttonClicked = () => {};
+  const buttonClicked = () => {
+    history.push("/quotedetailfirst");
+  };
   const toggleMenu = (data) => {
     dispatch({ type: Types.SET_DATA, payload: { ...data } });
   };

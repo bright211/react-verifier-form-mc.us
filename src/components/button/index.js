@@ -6,10 +6,13 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import { Media } from "reactstrap";
+import { MaximizeTwoTone } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
     padding: theme.spacing(1),
+    marginTop:theme.spacing(2),
     marginRight: theme.spacing(2),
     textTransform: "none",
     color: '#ffffff',

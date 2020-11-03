@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
-import { ReactComponent as Menu } from "../../assets/images/MENU.svg";
-import { menuIcon } from "../../assets";
-import { MenuIconBtn } from './style';
+import { useHistory } from "react-router-dom";
 
 function Header({toggleMenu}) {
   const location = useLocation();
+  const history = useHistory();
   const [value, setValue] = useState({
     show: false
   })
+
+  const onClicked = () => {
+    history.push("/homepage");
+  }
 
   React.useEffect(() => {
     if(window.innerWidth<=900){
@@ -30,7 +33,7 @@ function Header({toggleMenu}) {
   return (
     <header>
       <div className="BtnLogo">
-        <Logo/>
+        <Logo onClick={onClicked}/> 
       </div>
       {/* {(value.show || location.pathname==='/homepage' || location.pathname==='/privacy') && (
         <MenuIconBtn  onClick={()=>toggleMenu({drawMenu:true})}>

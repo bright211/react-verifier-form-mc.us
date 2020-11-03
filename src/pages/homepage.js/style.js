@@ -54,7 +54,7 @@ export const BlockContainer = styled.div.attrs((props) => ({
     }
 
     .btn-group{
-      padding-top: 30px;
+      padding-top: 0px;
     }
 
     .privacy{
@@ -69,8 +69,15 @@ export const BlockContainer = styled.div.attrs((props) => ({
       width: 100%
     }
   }
+
   @media(max-width: 930px){
     padding: 172px 20px;
+  }
+
+  @media(max-width: 470px){
+    .btn-group{
+      flex-direction: column;
+    }
   }
 `;
 

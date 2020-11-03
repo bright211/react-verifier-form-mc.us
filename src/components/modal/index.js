@@ -32,11 +32,14 @@ export default function ModalDialog() {
         primary: {main:"#000"}    
       }  
     });
+
     const [open, setOpen] = React.useState(false);
+    const [inputvalue, setData] = React.useState('');
+
     useEffect(() => {
         const timer = setTimeout(() => {
           setOpen(true);
-        }, 10000);
+        }, 1000);
         return () => clearTimeout(timer);
       }, []);
 
@@ -44,9 +47,21 @@ export default function ModalDialog() {
       setOpen(false);
     };
     
-    const buttonClicked = () => {
-
+    const setValue = (val) => {
+      if(!val)
+        setData('');
+      const re = /^[0-9.,\b]+$/;
+      let value = val
+          .replace(",", "")
+          .replace(",", "")
+          .replace(",", "")
+          .replace(",", "")
+          .replace(".", "");
+      if (re.test(val)) {        
+        setData(value);
+      }
     }
+
     return (
       <div>
         <Dialog
@@ -69,9 +84,11 @@ export default function ModalDialog() {
             </div>
             <div className="modalinput">
               <input
+                value={inputvalue}
                 placeholder="Your phone number…"
                 className="input-box form-control"
                 type="text"
+                onChange={(e) => setValue(e.target.value)}
               />
             </div>
             <div className="confirmBtn">

@@ -21,6 +21,12 @@ body {
 header{
   z-index: 1000;
 }
+
+/* .homepageheader{
+  box-shadow:"none" !important;
+  background-color:"rgba(0, 0, 0, 0)" !important;
+} */
+
 .error {
   color: #EC0011 !important;
   font-family: 'AvenirNext Regular' !important;
@@ -121,7 +127,9 @@ svg {
 .BtnLogo:hover{
   opacity: 0.5;
 }
-
+.MuiPaper-rounded{
+  border-radius: 3px !important;
+}
 @media (max-width: 930px){
   .sldiercontainer{
     padding: 0 20px;

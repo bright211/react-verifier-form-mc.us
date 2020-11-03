@@ -24,12 +24,12 @@ export const Footer = styled.div`
 
   & .footerlink {
     padding: 0 10px;
-    font-size: 10px;
+    font-size: 14px;
     color: #ffffff;
   }
 
   & .footerlinkfirst {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 500;
     color: #ffffff;
   }
@@ -45,7 +45,9 @@ export const Footer = styled.div`
     cursor: pointer;
     opacity: 0.5;
   }
-
+  @media (max-width: 1200px){
+    padding: 21px 20px;
+  }
   @media (max-width: 930px) {
     text-align: left;
     flex-direction: column;
@@ -68,13 +70,13 @@ export const Footer = styled.div`
 
     & .footerlink {
       padding: 15px 0px;
-      font-size: 10px;
+      font-size: 14px;
       color: #ffffff;
       padding: 0;
     }
 
     & .footerlinkfirst {
-      font-size: 10px;
+      font-size: 14px;
       font-weight: 500;
       color: #ffffff;
     }

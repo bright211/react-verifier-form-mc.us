@@ -15,6 +15,10 @@ const useStyles = makeStyles({
   },
   list: {
     width: "449px",
+
+    '@media (max-width: 650px)': {
+      width: window.innerWidth
+    }
   },
   fullList: {
     width: "auto",
@@ -55,11 +59,11 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <SiderBarHeader>
-        <Logo className="logoImg" />
+        {/* <Logo className="logoImg" /> */}
         <CloseBtn className="closeBtn" onClick={toggleDrawer(anchor, false)} />
       </SiderBarHeader>
       <SiderBarBody>
-        <div className="block" onClick={toggleDrawer(anchor, false)} >
+        <div className="block" id="firstblock" onClick={toggleDrawer(anchor, false)} >
             <CircleIcon>
               <AvatarFirst style={{ width: "25px", height: "25px" }} />
             </CircleIcon>
