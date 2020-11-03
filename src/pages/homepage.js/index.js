@@ -46,7 +46,7 @@ function HomePage() {
     <Container>
       <Header toggleMenu={toggleMenu} />
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
-      <ContentContainer>
+      <ContentContainer id="backcolor">
         <ModalDialog />
         <BlockContainer>
           <div className="block">

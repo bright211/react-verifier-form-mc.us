@@ -13,10 +13,10 @@ body {
   height: 100vh;
   margin: 0;
   text-align: center;
-  background-color: #d4d4d4;
   font-family: "AvenirNext-Medium";
   color: #000000;
 }
+
 header{
   z-index: 1000;
 }
@@ -141,4 +141,8 @@ svg {
 
 .DdgXK{
   max-width: 450px !important;
+}
+
+#backcolor{
+  background-color: #d4d4d4;
 }

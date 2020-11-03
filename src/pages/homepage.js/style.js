@@ -8,6 +8,7 @@ export const ContentContainer = styled.div`
   font-size: 16px;
   width:100% !important;
 
+
   & .header {
     display: flex;
     align-items: center;
