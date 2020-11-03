@@ -16,7 +16,7 @@ import {
   ContentContainer,
   BlockContainerThird,
 } from "./style";
-import Header from "../../components/header";
+import Header from "../../components/homepageheader";
 import Button from "../../components/button";
 import SideMenu from "../../components/sidemenu";
 import * as Types from "../../state/types";
