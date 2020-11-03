@@ -32,11 +32,11 @@ function Header({toggleMenu}) {
       <div className="BtnLogo">
         <Logo/>
       </div>
-      {(value.show || location.pathname==='/homepage' || location.pathname==='/privacy') && (
+      {/* {(value.show || location.pathname==='/homepage' || location.pathname==='/privacy') && (
         <MenuIconBtn  onClick={()=>toggleMenu({drawMenu:true})}>
           <Menu />
         </MenuIconBtn>
-      )}
+      )} */}
     </header>
   );
 }
