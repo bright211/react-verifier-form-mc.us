@@ -24,7 +24,6 @@ import HomePageFooter from "../../components/homepagefooter";
 import { useHistory } from "react-router-dom";
 
 function HomePage() {
-
   const dispatch = useDispatch();
   const history = useHistory();
   const storeData = useSelector((store) => store.data);
@@ -32,7 +31,7 @@ function HomePage() {
   const [value, setValue] = useState({
     ...storeData,
   });
-  const[flag, setFlag] = useState(false);
+  const [flag, setFlag] = useState(false);
 
   useEffect(() => {
     setValue({ ...storeData });
@@ -45,7 +44,6 @@ function HomePage() {
   };
 
   return (
-
     <Container>
       <Header toggleMenu={toggleMenu} />
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
@@ -54,35 +52,39 @@ function HomePage() {
         <BlockContainer>
           <div className="block">
             <div className="title">
-              Mortgage and Refinancial has never been that easy.
+              The 1st platform for mortgage and refinancing calculator in the
+              U.S
             </div>
             <div className="content">
-              Now from Mortgage Calculator you can calculate for free what the cost of your mortgage will be.
-              Also you’ll receive personal attention for your mortgage or refinancing. Choose the best offer!
+              Now from Mortgage Calculator, get your personalized mortgage or
+              refinancing proposal for free. All 100% online. Fill in your
+              application and receive the best proposal.
             </div>
             <div className="btn-group">
-                  <Button
-                      text="Calculate Mortgage"
-                      buttonClicked={buttonClicked}
-                  />
-                  <Button
-                      text="Calculate Refinancing"
-                      buttonClicked={buttonClicked}
-                  />
-              </div>
+              <Button
+                text="Mortgage Calculator"
+                buttonClicked={buttonClicked}
+              />
+              <Button
+                text="Refinancing Calculator"
+                buttonClicked={buttonClicked}
+              />
+            </div>
             <div className="privacy">
-              * Please, to calculate your mortgage and receive proposals, 
-              fill out the Mortgage Calculator or Refinancing Calculator form below.
+              *Please complete the Mortgage Calculator or Refinance Calculator
+              form below to calculate your mortgage and receive the best
+              proposal.
             </div>
           </div>
         </BlockContainer>
         <BlockContainerSecond>
           <div className="block">
-            <div className="title">Simplicity of mortgage credit.</div>
-            <div className="title">Simplicity of refinancial.</div>
+            <div className="title">Easy and simple.</div>
+            <div className="title">Receive your personalized proposal.</div>
             <div className="content">
-              With a debit card, it’s easy to know how much money you have, but you usually don’t get cash back. 
-              With a credit card, you can get great cash back, but it’s a chore to track things so you may spend more.
+              At Mortgage Calculator we help you find and manage the best
+              mortgage or refinancing proposal. You will receive your
+              personalized proposal quickly and 100% online.
             </div>
           </div>
         </BlockContainerSecond>
@@ -91,20 +93,22 @@ function HomePage() {
             <CircleIcon>
               <AvatarFirst style={{ width: "25px", height: "25px" }} />
             </CircleIcon>
-            <div className="title">Get A Online Mortgage Experience.</div>
+            <div className="title">Online Mortgage Experience.</div>
             <div className="content">
-              Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down. 
-              Purchases are reflected right away and our unique features help you avoid spending more than your balance or running up monthly bills that you have to worry about manually paying.
+              Get the best proposal for your mortgage through Mortgage
+              Calculator, 100% online. You will receive your proposal through
+              the best partner that suits your needs.
             </div>
           </div>
           <div className="block">
             <CircleIcon>
               <AvatarSecond style={{ width: "25px", height: "25px" }} />
             </CircleIcon>
-            <div className="title">Get A Online Mortgage Experience.</div>
+            <div className="title">Online Refinancing Experience.</div>
             <div className="content" id="contentId">
-              Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down. 
-              Purchases are reflected right away and our unique features help you avoid spending more than your balance or running up monthly bills that you have to worry about manually paying.
+              Get the best proposal for refinancing through Mortgage Calculator,
+              100% online. You will receive your proposal through the best
+              partner that suits your needs.
             </div>
           </div>
         </BlockContainerThird>
