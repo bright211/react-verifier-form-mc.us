@@ -39,6 +39,10 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
   }, [value]);
 
   const toggleDrawer = (anchor, open) => (event) => {
+    var ele = document.getElementsByClassName("menuIconSmBtn");
+    if(ele.length){
+      ele[0].style.opacity = 1;
+    }
     if (
       event &&
       event.type === "keydown" &&

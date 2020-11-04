@@ -17,10 +17,10 @@ function HomePageFooter() {
             </div>
         </div>
         <div className="right">
-            <div className="footerlink">
+            <div className="footerlink" onClick={()=>goLink("/termsandcondition")}>
                 Terms & Conditions
                 </div>
-                <div className="footerlink">
+                <div className="footerlink" onClick={()=>goLink("/privacy")}>
                 Privacy Policy
                 </div>
                 <div className="footerlink">

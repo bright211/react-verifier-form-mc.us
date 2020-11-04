@@ -3,191 +3,93 @@ import styled from "styled-components";
 export const ContentContainer = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   font-size: 16px;
-  padding: 90px 0;
-  margin: auto;
+  padding: 90px 208px;
+  width: 100%;
+  color: #000000;
+  background-color: #d4d4d4;
 
-  & .block {
-    width: 35vw;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+  & .content {
+    padding: 0 0 60px 0;
     justify-content: space-between;
+    display: flex;
+    text-align: left;
 
-    & .block-title,
-    .block-content,
-    .block-sub-content {
-      color: #37383c;
-      font-family: "AvenirNext Regular";
-      display: flex;
-      text-align: left;
-      padding:0;
-    }
+    & .block{
+      max-width: 500px;
+      width: 47%;
 
-    & .blockImg{
-      width: 500px;
-      height: 500px;
-    }
-
-    & .title{
-      text-align: left;
-      font-size: 38px;
-      font-family: "AvenirNext Medium";
-      font-weight: 500;
-    }
-
-    & .desc{
-      padding: 30px 0 0 0;
-      line-height: 1.63;
-      font-size: 16px;
-      text-align: left;
-    }
-
-    & .label_input{
-      padding: 30px 0 0 0;
-    }
-
-    & .LoginBtn{
-      padding: 30px 0 0 0;
-    }
-  }
-
-  @media (min-width: 1100px) {
-    & .group{
-      margin:auto;
-      width:1100px;
-      display:flex;
-      justify-content: space-between;
-
-      & .block {
-        width: 500px;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      .title{
+        font-size: 56px;
+        color: #a8a8a8;
+        font-family: AvenirNext Bold;
       }
-    }
-  }
-  @media (max-width: 1150px) {
-    & .group{
-      padding: 0 40px 0 40px;
-      margin:auto;
-      width:950px;
-      display:flex;
-      justify-content: space-between;
 
-      & .block {
-        width: 400px;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        & .blockImg{
-          width: 400px;
-          height: 400px;
-        }
-
-        & .title{
-          text-align: left;
-          font-size: 24px;
-          font-family: "AvenirNext Medium";
-          font-weight: 500;
-        }
-    
-        & .desc{
-          padding: 20px 0 0 0;
-          line-height: 1.63;
-          font-size: 16px;
-          text-align: left;
-        }
-    
-        & .label_input{
-          padding: 20px 0 0 0;
-        }
-    
-        & .LoginBtn{
-          padding: 20px 0 0 0;
-        }
+      .smtitle{
+        font-size: 20px;
+        font-family: AvenirNext Medium;
       }
-    }
-  }
 
-  @media(max-width: 970px){
-    & .group{
-      padding: 0 40px 0 40px;
-      margin:auto;
-      width:900px;
-      display:flex;
-      justify-content: space-between;
-
-      & .block {
-        width: 380px;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        & .blockImg{
-          width: 380px;
-          height: 380px;
-        }
-
-        & .title{
-          text-align: left;
-          font-size: 24px;
-          font-family: "AvenirNext Medium";
-          font-weight: 500;
-        }
-    
-        & .desc{
-          padding: 20px 0 0 0;
-          line-height: 1.63;
-          font-size: 16px;
-          text-align: left;
-        }
-    
-        & .label_input{
-          padding: 20px 0 0 0;
-        }
-    
-        & .LoginBtn{
-          padding: 20px 0 0 0;
-        }
+      .textcontent{
+        padding:15px 0 30px 0;
+        font-size: 16px;
+        font-family: AvenirNext Regular;
       }
-    }
-  }
-
-  @media(max-width: 900px){
-    flex-wrap: wrap;
-    padding: 0 20px 60px 20px !important;
-
-    & .group{
-      padding: 0 0 0 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      & .block {
-        padding-top: 60px;
-        width:100%;
-      }
-  
-      & .blockImg{
-        width: 100% !important;
-        height: 100% !important;
-      }
-  
-      & .title{
+      
+      .labelinput{
         padding-top: 30px;
       }
-  
-      & .LoginBtn{
-        padding: 60px 0 0 0 !important;
+
+      .loginBtn{
+        padding-top: 60px;
       }
     }
+  }  
+
+  @media(max-width: 930px){
+    flex-direction: column;
+    padding: 90px 20px;
+  
+    & .content {
+      padding: 0 0 60px 0;
+      justify-content: space-between;
+      display: block;
+      text-align: left;
+  
+      & .block{
+        max-width: 900px;
+        width: 100%;
+        .title{
+          font-size: 40px;
+          color: #a8a8a8;
+          font-family: AvenirNext Bold;
+        }
+  
+        .smtitle{
+          font-size: 20px;
+          font-family: AvenirNext Medium;
+        }
+  
+        .textcontent{
+          padding:15px 0 30px 0;
+          font-size: 16px;
+          font-family: AvenirNext Regular;
+        }
+        
+        .labelinput{
+          padding-top: 30px;
+        }
+  
+        .loginBtn{
+          margin-bottom: -60px;
+          padding-top: 60px;
+        }
+      }
+  }
+
+  @media (max-width: 900px) {
+    padding: 150px 20px;
   }
 `;

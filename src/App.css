@@ -22,11 +22,6 @@ header{
   z-index: 1000;
 }
 
-/* .homepageheader{
-  box-shadow:"none" !important;
-  background-color:"rgba(0, 0, 0, 0)" !important;
-} */
-
 .error {
   color: #EC0011 !important;
   font-family: 'AvenirNext Regular' !important;
@@ -150,8 +145,4 @@ svg {
 
 .DdgXK{
   max-width: 450px !important;
-}
-
-#backcolor{
-  background-color: #d4d4d4;
 }

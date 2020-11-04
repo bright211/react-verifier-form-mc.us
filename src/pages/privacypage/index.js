@@ -25,9 +25,8 @@ function PrivacyPage() {
   };
   return (
     <Container>
-      <Header toggleMenu={toggleMenu} />
+      <Header clsName ='paddingsm' toggleMenu={toggleMenu} />
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
-      <HeaderBottom />
       <ContentContainer>
         <BlockContainer>
           <div className="title">Privacy Policy</div>

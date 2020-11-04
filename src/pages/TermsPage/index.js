@@ -5,7 +5,6 @@ import * as Types from "../../state/types";
 import SideMenu from "../../components/sidemenu";
 import { ContentContainer, BlockContainer } from "./style";
 import Header from "../../components/header";
-import HeaderBottom from "../../components/HeaderBottom";
 import HomePageFooter from "../../components/homepagefooter";
 
 import { animateScroll as scroll } from "react-scroll";
@@ -25,9 +24,8 @@ function TermsPage() {
   };
   return (
     <Container>
-      <Header toggleMenu={toggleMenu} />
+      <Header clsName ='paddingsm' toggleMenu={toggleMenu} />
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
-      <HeaderBottom />
       <ContentContainer>
         <BlockContainer>
           <div className="title">Terms and Conditions</div>

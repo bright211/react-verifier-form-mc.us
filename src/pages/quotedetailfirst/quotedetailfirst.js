@@ -25,6 +25,8 @@ function QuoteDetailFirst() {
   });
 
   useEffect(() => {
+    var ele = document.getElementsByTagName("body");
+    ele[0].style.backgroundColor = "#ffffff"
     setValue({ ...storeData });
   }, [storeData]);
 

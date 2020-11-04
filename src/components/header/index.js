@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/images/LOGO-MORTGAGE-CALCULATOR - black.svg";
+import { ReactComponent as Menu } from "../../assets/images/MENU - Black.svg";
 import { useHistory } from "react-router-dom";
+import { MenuIconBtn } from './style';
 
-function Header({toggleMenu}) {
+function Header({clsName, toggleMenu}) {
   const location = useLocation();
+  const cls = clsName;
   const history = useHistory();
   const [value, setValue] = useState({
     show: false
@@ -31,15 +34,15 @@ function Header({toggleMenu}) {
     window.addEventListener("resize", handleResize);
   },[]);
   return (
-    <header>
+    <header className={ cls }>
       <div className="BtnLogo">
         <Logo onClick={onClicked}/> 
       </div>
-      {/* {(value.show || location.pathname==='/homepage' || location.pathname==='/privacy') && (
-        <MenuIconBtn  onClick={()=>toggleMenu({drawMenu:true})}>
+      {(location.pathname==='/login' || location.pathname==='/termsandcondition' || location.pathname==='/privacy') && (
+        <MenuIconBtn className="menuIconSmBtn"  onClick={()=>toggleMenu({drawMenu:true})}>
           <Menu />
         </MenuIconBtn>
-      )} */}
+      )}
     </header>
   );
 }

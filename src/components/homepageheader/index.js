@@ -37,7 +37,7 @@ function Header({toggleMenu}) {
         <div className="BtnLogo">
           <Logo onClick={onClicked}/>
         </div>
-        <MenuIconBtn  onClick={()=>toggleMenu({drawMenu:true})}>
+        <MenuIconBtn className="menuIconSmBtn" onClick={()=>toggleMenu({drawMenu:true})}>
           <Menu />
         </MenuIconBtn>
       {/* </div> */}
