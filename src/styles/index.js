@@ -30,7 +30,7 @@ export const ContentContainer = styled.div`
   font-size: 16px;
   width: 100%;
   
-  padding-bottom: 77px;
+  // padding-bottom: 77px;
 
   @media (max-width: 930px) {
     overflow: scroll;
@@ -45,23 +45,38 @@ export const ContentContainer = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-  padding: 60px 100px 0 100px;
+  padding: 90px 208px 0 208px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
 
   & .label {
     float: left;
-    font-size: 38px;
+    font-size: 24px;
     text-align: left;
-    width: 40%;
+    max-width: 482px;
+    // width: 40%;
+    font-family: 'AvenirNext Medium' !important;
+    font-weight: 600;
+    margin:0;
+  }
+
+  & .content {
+    float: left;
+    font-size: 16px;
+    text-align: left;
+    max-width: 482px;
+    padding-top:15px;
     font-family: 'AvenirNext Regular' !important;
+    margin:0;
   }
 
   @media (max-width: 930px) {
     padding: 64px 20px 0 20px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
 
     & .label {

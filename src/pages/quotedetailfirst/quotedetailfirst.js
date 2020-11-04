@@ -14,7 +14,7 @@ import { Apis } from "../../api";
 import { toUserEmailTemplate } from "../../utils";
 import Loading from "../../components/loading";
 import moment from "moment-timezone";
-import SideMenu from "../../components/sidemenu"
+import SideMenu from "../../components/sidemenu";
 
 function QuoteDetailFirst() {
   const storeData = useSelector((store) => store.data);
@@ -26,7 +26,7 @@ function QuoteDetailFirst() {
 
   useEffect(() => {
     var ele = document.getElementsByTagName("body");
-    ele[0].style.backgroundColor = "#ffffff"
+    ele[0].style.backgroundColor = "#ffffff";
     setValue({ ...storeData });
   }, [storeData]);
 
@@ -110,7 +110,7 @@ function QuoteDetailFirst() {
 
   const toggleMenu = (data) => {
     dispatch({ type: Types.SET_DATA, payload: { ...data } });
-  }
+  };
 
   return (
     <Container>
@@ -118,12 +118,18 @@ function QuoteDetailFirst() {
         <Loading />
       ) : (
         <>
-          <Header toggleMenu={toggleMenu}/>
-          <SideMenu value={value.drawMenu} toggleMenu={toggleMenu}/>
+          <Header toggleMenu={toggleMenu} />
+          <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
           <ContentContainer>
             <TitleContainer>
               <label className="label">
-                Mortgage and refinancial has never been that easy.
+                The 1st platform for mortgage and refinancing calculator in the
+                U.S
+              </label>
+              <label className="content">
+                Now from Mortgage Calculator, get your personalized mortgage or
+                refinancing proposal for free. All 100% online. Fill in your
+                application and receive the best proposal.
               </label>
             </TitleContainer>
             <BlockContainer>
@@ -190,7 +196,7 @@ function QuoteDetailFirst() {
                   validate="firstCheckValidation"
                   setData={setData}
                   willValidation={value.firstCheckValidation}
-                  label="By clicking the submit button below, I hereby agree to and accept the following terms and conditions. Visit Terms and Conditions page if needed."
+                  label="By clicking the submit button below, I hereby agree to and accept the following terms and conditions. Visit Terms and Conditions page if needed. "
                 />
               </div>
             </BlockContainer>

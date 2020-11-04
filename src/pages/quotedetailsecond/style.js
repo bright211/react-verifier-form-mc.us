@@ -1,7 +1,7 @@
  import styled from "styled-components";
 
 export const BlockContainer = styled.div`
-  padding: 0 100px 30px 100px;
+  padding: 60px 207px 0 207px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;   
@@ -12,7 +12,6 @@ export const BlockContainer = styled.div`
 
     & .label_input {
       margin-bottom: 30px;
-      margin-top: 2vw;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -26,13 +25,12 @@ export const BlockContainer = styled.div`
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-top: 2vw;
       margin-bottom: 30px;
     }
   }
 
   @media (max-width: 930px) {
-    padding: 10px 20px 60px 20px;
+    padding: 60px 20px 60px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
