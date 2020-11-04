@@ -24,7 +24,7 @@ function TermsPage() {
   };
   return (
     <Container>
-      <Header clsName ='paddingsm' toggleMenu={toggleMenu} />
+      <Header clsName="paddingsm" toggleMenu={toggleMenu} />
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
       <ContentContainer>
         <BlockContainer>
