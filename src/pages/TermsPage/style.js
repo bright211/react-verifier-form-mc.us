@@ -27,7 +27,7 @@ export const ContentContainer = styled.div`
 
 
 export const BlockContainer = styled.div`
-  padding: 120px 208px;
+  padding: 90px 208px 90px 208px;
   
   background-color: #fcfcfc;
   
@@ -72,7 +72,7 @@ export const BlockContainer = styled.div`
   }
 
   @media (max-width: 930px) {
-    padding: 120px 20px;
+    padding: 150px 20px 90px 20px;
 
     & .title {
       
