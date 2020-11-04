@@ -36,6 +36,11 @@ export const ContentContainer = styled.div`
         padding:15px 0 30px 0;
         font-size: 16px;
         font-family: AvenirNext Regular;
+
+        & a {
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
       
       .labelinput{

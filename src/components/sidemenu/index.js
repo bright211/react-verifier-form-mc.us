@@ -3,11 +3,11 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
-import { ReactComponent as CloseBtn } from "../../assets/images/closebtn.svg"
-import { SiderBarHeader, SiderBarBody } from './style';
+import { ReactComponent as CloseBtn } from "../../assets/images/closebtn.svg";
+import { SiderBarHeader, SiderBarBody } from "./style";
 import { ReactComponent as AvatarFirst } from "../../assets/images/MORTGAGE.svg";
 import { ReactComponent as AvatarSecond } from "../../assets/images/REFINANCING.svg";
-import { CircleIcon } from './style';
+import { CircleIcon } from "./style";
 
 const useStyles = makeStyles({
   main: {
@@ -16,9 +16,9 @@ const useStyles = makeStyles({
   list: {
     width: "449px",
 
-    '@media (max-width: 650px)': {
-      width: window.innerWidth
-    }
+    "@media (max-width: 650px)": {
+      width: window.innerWidth,
+    },
   },
   fullList: {
     width: "auto",
@@ -40,7 +40,7 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
 
   const toggleDrawer = (anchor, open) => (event) => {
     var ele = document.getElementsByClassName("menuIconSmBtn");
-    if(ele.length){
+    if (ele.length) {
       ele[0].style.opacity = 1;
     }
     if (
@@ -67,26 +67,36 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
         <CloseBtn className="closeBtn" onClick={toggleDrawer(anchor, false)} />
       </SiderBarHeader>
       <SiderBarBody>
-        <div className="block" id="firstblock" onClick={toggleDrawer(anchor, false)} >
-            <CircleIcon>
-              <AvatarFirst style={{ width: "25px", height: "25px" }} />
-            </CircleIcon>
-            <div className="title">Get A Online Mortgage Experience.</div>
-            <div className="content">
-              Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down. 
-              Purchases are reflected right away and our unique features help you avoid spending more than your balance or running up monthly bills that you have to worry about manually paying.
-            </div>
+        <div
+          className="block"
+          id="firstblock"
+          onClick={toggleDrawer(anchor, false)}
+        >
+          <CircleIcon>
+            <AvatarFirst style={{ width: "25px", height: "25px" }} />
+          </CircleIcon>
+          <div className="title">Online Mortgage Experience.</div>
+          <div className="content">
+            Get the best proposal for your mortgage through Mortgage Calculator,
+            100% online. You will receive your proposal through the best partner
+            that suits your needs.
           </div>
-        <div className="block" id="secondblock" onClick={toggleDrawer(anchor, false)} >
-            <CircleIcon>
-              <AvatarSecond style={{ width: "25px", height: "25px" }} />
-            </CircleIcon>
-            <div className="title">Get A Online Mortgage Experience.</div>
-            <div className="content">
-              Make deposits and your balance in the Zero app goes up, spend on your Zerocard and your balance goes down. 
-              Purchases are reflected right away and our unique features help you avoid spending more than your balance or running up monthly bills that you have to worry about manually paying.
-            </div>
+        </div>
+        <div
+          className="block"
+          id="secondblock"
+          onClick={toggleDrawer(anchor, false)}
+        >
+          <CircleIcon>
+            <AvatarSecond style={{ width: "25px", height: "25px" }} />
+          </CircleIcon>
+          <div className="title">Online Refinancing Experience.</div>
+          <div className="content">
+            Get the best proposal for refinancing through Mortgage Calculator,
+            100% online. You will receive your proposal through the best partner
+            that suits your needs.
           </div>
+        </div>
       </SiderBarBody>
     </div>
   );
