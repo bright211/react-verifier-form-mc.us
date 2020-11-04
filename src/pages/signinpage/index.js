@@ -5,33 +5,37 @@ import * as Types from "../../state/types";
 import SideMenu from "../../components/sidemenu";
 import { ContentContainer } from "./style";
 import Header from "../../components/header";
-import HeaderBottom from '../../components/HeaderBottom'
-import { bannerImg4 } from '../../assets';
+import HeaderBottom from "../../components/HeaderBottom";
+// import { bannerImg4 } from '../../assets';
 import LabelInput from "../../components/labelinput";
-
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import HomePageFooter from "../../components/homepagefooter";
+import {
+  createMuiTheme,
+  withStyles,
+  makeStyles,
+  ThemeProvider,
+} from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
-    marginRight: theme.spacing(2),
     textTransform: "none",
-    fontFamily: "AvenirNext Medium",
-    fontSize: "16px",
+    fontFamily: "AvenirNext Regular",
+    fontSize: "14px",
     "&:hover": {
       backgroundColor: "#353535",
     },
     "&:focus": {
       outline: "none",
     },
-    width: '198px',
-    height: '55px',
-    padding:0,
+    width: "198px",
+    height: "55px",
+    padding: 0,
   },
 }));
 
 function SignInPage() {
-  const classes = useStyles()
+  const classes = useStyles();
   const dispatch = useDispatch();
   const storeData = useSelector((store) => store.data);
   const [value, setValue] = useState({
@@ -40,10 +44,12 @@ function SignInPage() {
 
   const theme = createMuiTheme({
     palette: {
-      primary: {main:"#000"}    
-    }  
+      primary: { main: "#000" },
+    },
   });
   useEffect(() => {
+    var ele = document.getElementsByTagName("body");
+    ele[0].style.backgroundColor = "#d4d4d4";
     setValue({ ...storeData });
   }, [storeData]);
 
@@ -68,21 +74,79 @@ function SignInPage() {
     } else {
       return 1;
     }
-  }
-  const login = () =>{
+  };
+  const login = () => {
     if (checkValidation()) {
-      alert('You are right!!');
+      alert("You are right!!");
     }
-  }
+  };
   return (
     <Container>
-      <Header toggleMenu={toggleMenu} />
+      <Header clsName="paddingsm" toggleMenu={toggleMenu} />
       <SideMenu value={value.drawMenu} toggleMenu={toggleMenu} />
-      <HeaderBottom />
       <ContentContainer>
-        <div className="group">
+        <div className="content">
           <div className="block">
-            <img src={bannerImg4} className='blockImg'/>
+            <div className="title">WELCOME PARTNER.</div>
+          </div>
+        </div>
+        <div className="content">
+          <div className="block">
+            <div className="smtitle">
+              Welcome! Now you can login to your partner account with Mortgage
+              Calculator.
+            </div>
+            <div className="textcontent">
+              Now you can access your private area in Mortgage Calculator. If
+              you are a partner and you still do not have access to your private
+              area, please, contact us.
+            </div>
+            <div className="smtitle">Become a partner.</div>
+            <div className="textcontent">
+              Do you want to be part of Mortgage Calculator? If you are a credit
+              financial institution, you can contact us at
+              <a>{` business@mortgagecalculator.us`}</a>
+            </div>
+          </div>
+          <div className="block">
+            <div className="labelinput">
+              <LabelInput
+                label="Email*"
+                placeHolder="Your email…"
+                setData={setData}
+                id="LoginEmail"
+                validate="LoginEmailValidation"
+                willValidation={value.LoginEmailValidation}
+              />
+            </div>
+            <div className="labelinput">
+              <LabelInput
+                className="LabelInput"
+                label="Password*"
+                placeHolder="Your password…"
+                setData={setData}
+                id="LoginPassword"
+                validate="LoginPasswordValidation"
+                type="password"
+                willValidation={value.LoginPasswordValidation}
+              />
+            </div>
+            <div className="loginBtn">
+              <ThemeProvider theme={theme}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.margin}
+                  onClick={() => login()}
+                >
+                  Login
+                </Button>
+              </ThemeProvider>
+            </div>
+          </div>
+        </div>
+        {/* <div className="group">
+          <div className="block">
           </div>
           <div className="block">
             <div className="title">
@@ -108,16 +172,19 @@ function SignInPage() {
                     type="password"
                     willValidation={value.LoginPasswordValidation}
                   />
-                  <div className="LoginBtn">
-                    <ThemeProvider theme={theme}>
-                      <Button variant="contained" color="primary" className={classes.margin} onClick={() => login()}>
-                      Login
-                      </Button>
-                    </ThemeProvider>
-                  </div>
+            <div className="LoginBtn">
+              <ThemeProvider theme={theme}>
+                <Button variant="contained" color="primary" className={classes.margin} onClick={() => login()}>
+                Login
+                </Button>
+              </ThemeProvider>
+            </div>
           </div>
-        </div>
+        </div> */}
       </ContentContainer>
+      <div className="bottom-fix">
+        <HomePageFooter />
+      </div>
     </Container>
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { backImg } from "../../assets";
 
 export const ContentContainer = styled.div`
   flex: 1;
@@ -6,6 +7,7 @@ export const ContentContainer = styled.div`
   flex-direction: column;
   font-size: 16px;
   width:100% !important;
+
 
   & .header {
     display: flex;
@@ -25,283 +27,168 @@ export const ContentContainer = styled.div`
 `;
 
 export const BlockContainer = styled.div.attrs((props) => ({
-  
+
 }))`
+  margin-top: -60px;
+  padding: 172px 208px;
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)),url(${backImg});
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  padding:90px 70px;
-  display: flex;
-  justify-content: space-between;
+  .block{
+    max-width: 500px;
+    width: 47%;
+    float: left;
+    text-align: left;
 
-  & .group {
-    position: relative;
-    width: 37vw;
-    margin-left: 30px;
-    margin-right: 30px;
-    :after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
+    .title{
+      font-family: AvenirNext Medium;
+      font-size: 24px;
+      font-weight: 600;
     }
 
-    & .block {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+    .content{
+      padding:15px 0;
+      font-family: AvenirNext Regular;
+      font-size: 16px;
+    }
 
-      & .blockImg{
-        width: 100%;
-        height: 100%;
-      }
+    .btn-group{
+      padding-top: 0px;
+    }
 
-      & .block-title{
-        color: #000000;
-        font-size: 38px;
-        font-weight: 500;
-        font-family: "AvenirNext Medium";
-        display: flex;
-        text-align: left;
-        padding:0;
-      }
-
-      & .block-content,
-      & .block-sub-content {
-        color: #000000;
-        font-family: "AvenirNext Regular";
-        display: flex;
-        text-align: left;
-        padding:60px 0 0 0;
-      }
-
-      & .block-sub-content {
-        font-size: 10px;
-      }
-      & .block-btn-group{
-        padding: 60px 0 0 0;
-        float: left;
-        display: flex;
-        justify-content: space-between;
-        width: 426px;
-      }
+    .privacy{
+      padding-top: 15px;
+      font-family: AvenirNext Regular;
+      font-size: 10px;
     }
   }
 
-
-  @media(min-width: 1400px){
-    & .group {  
-      & .block {
-        & .block-title{
-          font-size: 38px;
-        }
-
-        & .block-content,
-        & .block-sub-content {
-          padding:60px 0 0 0;
-        }
-  
-        & .block-sub-content {
-          font-size: 10px;
-        }
-
-        & .block-btn-group{
-          padding: 60px 0 0 0;
-        }
-
-        & .block-btn-group{
-          display: flex;
-          justify-content: space-between;
-          width: 426px;
-        }
-      }
+  @media(max-width: 1024px){
+    .block{
+      width: 100%
     }
   }
 
-  @media(max-width: 1250px){
-    & .group {  
-      & .block {
-        & .block-title{
-          font-size: 28px;
-        }
-
-        & .block-content,
-        & .block-sub-content {
-          padding:30px 0 0 0;
-        }
+  @media(max-width: 930px){
   
-        & .block-sub-content {
-          font-size: 10px;
-        }
+    padding: 134px 20px;
 
-        & .block-btn-group{
-          padding: 30px 0 0 0;
-        }
-
-        & .block-btn-group{
-          display: flex;
-          justify-content: space-between;
-          width: 426px;
-        }
+    .block{
+      .title{
+        font-family: AvenirNext DemiBold;
+        font-size: 20px;
+        font-weight: 600;
       }
-    }
-  }
   
-  @media(max-width: 1000px){
-    & .group {  
-      & .block {
-        & .block-title{
-          font-size: 28px;
-        }
-
-        & .block-content,
-        & .block-sub-content {
-          padding:20px 0 0 0;
-        }
-  
-        & .block-sub-content {
-          font-size: 10px;
-        }
-
-        & .block-btn-group{
-          padding: 20px 0 0 0;
-        }
-
-        & .block-btn-group{
-          display: flex;
-          justify-content: space-between;
-          width: 406px;
-        }
+      .content{
+        padding:15px 0;
+        font-family: AvenirNext Regular;
+        font-size: 16px;
       }
-    }
-  }
   
-  @media (max-width: 930px) {
-    padding: 0px 20px 120px 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    & .group{
-      width: 100%;
-      margin:0;
+      .btn-group{
+        padding-top: 0px;
+      }
+  
+      .privacy{
+        display:none;
+      }
 
-      & .block {
-        width: 100%;
-        height: 100%;
-        display: flex;
+      .btn-group{
         flex-direction: column;
-        justify-content: space-between;
-        padding-bottom: 0px;
-  
-        & .block-title {
-          padding: 30px 0 0 0;
-          font-size: 24px;
-        }
-  
-        & .block-content {
-          font-size: 16px;
-        }
-  
-        & .block-sub-content {
-          font-size: 10px;
-        }
-  
-        & .block-btn-group {
-          height: 140px;
-          flex-direction: column;
-          justify-content: space-between;
-  
-          & .home-btn {
-            margin-bottom: 10px;
-          }
-        }
       }
-  
-      & .blockImg{
-        width: 100% !important;
-        height: 100% !important;
-      }
-  
-      & .first {
-        width: 100%;
-      }
-  
-      & .first:after {
-        content: "";
-        display: block;
-        padding-bottom: 100%;
-      }
-    } 
-  }
-  @media (max-width: 450px){
-    & .group{
-      & .block{
-        & .block-btn-group {
-          width: 150px;
-        }    
-      }
-    }
-  }
-  @media (max-width: 350px){
-    & #secondgroup{
-      margin-bottom: 120px;
     }
   }
 `;
 
 export const BlockContainerSecond = styled.div`
-  padding: 94px 100px;
-  background-color: #000000;
-  color: white;
+  padding: 90px 208px;
+  color: #000000;
+  background-color: #d4d4d4;
 
-  .first-row {
-      width: 60vw;
+  .block{
+    max-width: 500px;
+    width: 47%;
+    float: left;
+    text-align: left;
 
-      & .title, .content {
-          text-align: left;
-      }
+    .title{
+      font-family: AvenirNext Medium;
+      font-size: 20px;
+    }
 
-      & .title {
-        font-size: 30px;
-        font-family: 'AvenirNext Medium';
-
-      }
-      & .content{
-          font-size: 18px;
-          padding 44px 0 0 0;
-      }
-      & .bottom {
-        padding-top:5px;
-      }
-
-      @media (max-width: 930px) {
-        width: 100%;
-
-        & .title {
-            font-size: 22px;
-            font-family: 'AvenirNext Medium'
-          }
-
-          & .content{
-            font-size: 16px;
-            padding: 45px 0 0 0;
-        }
-        & .bottom {
-          padding-top:30px;
-        }
+    .content{
+      padding-top: 15px;
+      font-size: 16px;
     }
   }
+  @media(max-width: 930px){
+    .block{
+      width: 100%;
+    }
+  
+    padding: 60px 20px 0px 20px;
 
-  .second-row {
-      display: flex;
-      justify-content: space-between;
-
-      @media (max-width: 930px) {
-          flex-wrap: wrap;
+    .block{
+      .title{
+        font-size: 18px;
       }
+  
+      .content{
+        padding-top: 17px;
+        font-size: 16px;
+      }
+    }
   }
+`;
 
-  @media (max-width: 930px) {
-    padding: 93px 20px;
-}
+export const BlockContainerThird = styled.div`
+    padding: 0px 208px 90px 208px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    background-color: #d4d4d4;
+    .block{
+      max-width: 500px;
+      width: 47%;
+      float: left;
+      text-align: left;
+
+      .title{
+        padding:23px 0;
+        font-family: AvenirNext Medium;
+        font-size: 20px;
+      }
+
+      .content{
+        padding-top: 15px;
+        font-size: 16px;
+      }
+    }
+    @media(max-width: 1024px){
+      flex-direction: column;
+      .block{
+        padding-top: 30px;
+        width: 100%
+      }
+    }
+    @media(max-width: 930px){
+
+      padding: 0px 20px 0px 20px;
+      .block{
+        padding-top:60px;
+        .title{
+          padding:23px 0 0 0;
+          font-size: 18px;
+        }
+
+        #contentId{
+          padding-bottom: 60px;
+        }
+      }
+    }
 `;
 
 export const BlockSecond = styled.div`
@@ -336,77 +223,12 @@ export const BlockSecond = styled.div`
     }
   }
 
-  @media (max-width: 930px) {
-    width: 100%;
-    flex-direction: column;
-
-    & .content-container {
-      width: 100%;
-      padding-left: 0;
-      padding-top: 33px;
-
-      & .title {
-        font-size: 20px;
-        font-family: "AvenirNext Medium";
-        padding-bottom: 20px;
-      }
-
-      & .content {
-        font-size: 16px;
-      }
-
-    }
-  }
 `;
 
 export const CircleIcon = styled.div`
-  width: 50px;
-  height: 50px;
   border-radius: 50px;
 
-  @media (max-width: 930px) {
-    width: 45px;
-    height: 45px;
-  }
 `;
 
-export const BlockContainerThird = styled.div`
-  position: relative;
-  text-align: center;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding:60px 100px;
 
-  & .SliderContainer{
-    width: 99%;
-    display: 'flex',
-    justifyContent: 'center',
-  }
-  
-  // & .leftArrowBtn :hover{
-  //   opacity:0.8
-  // }
-  // & .rightArrowBtn :hover{
-  //   opacity:0.8
-  // }
-
-  @media (max-width: 930px){
-    padding:60px 0px;
-    
-    & .leftArrowBtn{
-      top: 30px;
-      right:66px;
-      position: absolute;
-    }
-  
-    & .rightArrowBtn{
-      top: 30px;
-      right:20px;
-      position: absolute;
-    }
-  }
-`;
 

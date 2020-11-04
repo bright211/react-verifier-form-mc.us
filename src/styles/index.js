@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   @media (max-width: 930px) {
@@ -9,6 +8,18 @@ export const Container = styled.div`
   }
   media (max-width: 445px){
     width:200px;
+  }
+
+  .bottom-fix{
+    width:100%;
+    position: fixed;
+    bottom: 0px;
+  }
+
+  @media(max-width: 930px){
+    .bottom-fix{
+      position: inherit;
+    }
   }
 `;
 
@@ -22,14 +33,12 @@ export const ContentContainer = styled.div`
   padding-bottom: 77px;
 
   @media (max-width: 930px) {
-    // min-height: 350px;
     overflow: scroll;
     padding-top: 60px;
     padding-bottom: 77px;
   }
 
   @media (max-width: 700px) {
-    // display: block;
     padding-top: 60px;
     padding-bottom: 77px;
   }

@@ -33,7 +33,7 @@ function Routes() {
         />    
         <Route
           exact
-          path={`/signin`}
+          path={`/login`}
           component={SignInPage}
         />    
         <Route

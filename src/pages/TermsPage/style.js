@@ -27,14 +27,14 @@ export const ContentContainer = styled.div`
 
 
 export const BlockContainer = styled.div`
-  padding: 120px 270px;
+  padding: 90px 208px 90px 208px;
   
   background-color: #fcfcfc;
   
 
   & .title {
     font-family: 'AvenirNext Medium';
-    font-size: 38px;
+    font-size: 20px;
     padding-bottom: 30px;
     text-align: left;
     line-height: 26px;
@@ -72,7 +72,7 @@ export const BlockContainer = styled.div`
   }
 
   @media (max-width: 930px) {
-    padding: 120px 20px;
+    padding: 150px 20px 90px 20px;
 
     & .title {
       

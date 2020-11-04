@@ -21,7 +21,7 @@ import SideMenu from "../../components/sidemenu"
 
 const fillbodypaint = () => {
   var ele = document.getElementsByTagName("body");
-  ele[0].style.backgroundColor = "#D8D8D8";
+  ele[0].style.backgroundColor = "#ffffff";
 };
 
 function QuoteDetailSecond() {

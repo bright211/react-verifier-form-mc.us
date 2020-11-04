@@ -18,3 +18,16 @@
     font-weight: 100;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'AvenirNext DemiBold';
+    src: url('./assets/fonts/AvenirNextCyr-Demi.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirNext Bold';
+    src: url('./assets/fonts/AvenirNextCyr-Bold.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}

@@ -3,20 +3,22 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { ReactComponent as Logo } from "../../assets/images/MCUS-LOGO.svg";
-import { ReactComponent as CloseBtn } from "../../assets/images/closebtn.svg"
-import { siderImg1, siderImg3 } from "../../assets";
-import { SiderBarHeader, SiderBarBody } from './style';
+import { ReactComponent as CloseBtn } from "../../assets/images/closebtn.svg";
+import { SiderBarHeader, SiderBarBody } from "./style";
+import { ReactComponent as AvatarFirst } from "../../assets/images/MORTGAGE.svg";
+import { ReactComponent as AvatarSecond } from "../../assets/images/REFINANCING.svg";
+import { CircleIcon } from "./style";
 
 const useStyles = makeStyles({
   main: {
     zIndex: 6000,
   },
   list: {
-    width: "600px",
-    
-    '@media (max-width: 930px)': {
-        width: window.innerWidth
-    }
+    width: "449px",
+
+    "@media (max-width: 650px)": {
+      width: window.innerWidth,
+    },
   },
   fullList: {
     width: "auto",
@@ -37,6 +39,10 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
   }, [value]);
 
   const toggleDrawer = (anchor, open) => (event) => {
+    var ele = document.getElementsByClassName("menuIconSmBtn");
+    if (ele.length) {
+      ele[0].style.opacity = 1;
+    }
     if (
       event &&
       event.type === "keydown" &&
@@ -57,37 +63,38 @@ export default function SwipeableTemporaryDrawer({ value, toggleMenu }) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <SiderBarHeader>
-        <Logo className="logoImg" />
+        {/* <Logo className="logoImg" /> */}
         <CloseBtn className="closeBtn" onClick={toggleDrawer(anchor, false)} />
       </SiderBarHeader>
       <SiderBarBody>
-        <div className="title">
-          Welcome to Mortgage Calculator.   A new way to get a Mortgage & Refinancing.
+        <div
+          className="block"
+          id="firstblock"
+          onClick={toggleDrawer(anchor, false)}
+        >
+          <CircleIcon>
+            <AvatarFirst style={{ width: "25px", height: "25px" }} />
+          </CircleIcon>
+          <div className="title">Online Mortgage Experience.</div>
+          <div className="content">
+            Get the best proposal for your mortgage through Mortgage Calculator,
+            100% online. You will receive your proposal through the best partner
+            that suits your needs.
+          </div>
         </div>
-        <div className="group" onClick={toggleDrawer(anchor, false)}>
-          <div className="bannerImg">
-            <img src={siderImg1} className="banner"/>
-          </div>
-          <div className="text">
-            <div className="subscribe1">
-              Simplicity of a debit card. Cash back of a credit card.
-            </div>
-            <div className="subscribe2">
-              Pioneers in the process of requesting a new mortgage. Receive several offers and choose the best option.
-            </div>
-          </div>
-        </div>
-        <div className="group" onClick={toggleDrawer(anchor, false)}>
-          <div className="bannerImg">
-            <img src={siderImg3}  className="banner"/>
-          </div>
-          <div className="text">
-          <div className="subscribe1">
-              Start using Refinancing Calculator to get some mortgage options.
-            </div>
-            <div className="subscribe2">
-              Pioneers in the process of requesting a new refinancing. Receive several offers and choose the best option.
-            </div>
+        <div
+          className="block"
+          id="secondblock"
+          onClick={toggleDrawer(anchor, false)}
+        >
+          <CircleIcon>
+            <AvatarSecond style={{ width: "25px", height: "25px" }} />
+          </CircleIcon>
+          <div className="title">Online Refinancing Experience.</div>
+          <div className="content">
+            Get the best proposal for refinancing through Mortgage Calculator,
+            100% online. You will receive your proposal through the best partner
+            that suits your needs.
           </div>
         </div>
       </SiderBarBody>

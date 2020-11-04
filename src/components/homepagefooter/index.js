@@ -15,22 +15,16 @@ function HomePageFooter() {
             <div className="footerlinkfirst" id="bold">
             Mortgage Calculator | All rights reserved 2020
             </div>
-            <div className="footerlink"  onClick={()=>goLink("/termsandcondition")}>
-            Terms & Conditions
-            </div>
-            <div className="footerlink" onClick={()=>goLink("/privacy")}>
-            Privacy Policy
-            </div>
-            <div className="footerlink">
-            Partners Program
-            </div>
         </div>
         <div className="right">
-            <div className="footerlink">
-            Facebook
-            </div>
-            <div className="footerlink">
-            Instagram
+            <div className="footerlink" onClick={()=>goLink("/termsandcondition")}>
+                Terms & Conditions
+                </div>
+                <div className="footerlink" onClick={()=>goLink("/privacy")}>
+                Privacy Policy
+                </div>
+                <div className="footerlink">
+                Partners Program
             </div>
         </div>
     </Footer>
