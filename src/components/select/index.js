@@ -1,7 +1,8 @@
+import { database } from "firebase";
 import React from "react";
 
 function Select(props) {
-  const { label, setData, value, id, validate, willValidation } = props;
+  const { label, setData, value, id, validate, willValidation, data } = props;
 
   const setValue = (val) => {
     if (val !== "0") {
@@ -26,8 +27,10 @@ function Select(props) {
         <option selected value={0}>
           {props.option}
         </option>{" "}
-        <option value={ "California, CA"}> California, CA</option>      
-        <option value={ "Los Angeles"}> Los Angeles</option> 
+        {data.map((item, index)=>(
+          <option value={item.item} key={index}> {item.item}</option>      
+        ))}
+        
       </select>
       </div>
     </div>

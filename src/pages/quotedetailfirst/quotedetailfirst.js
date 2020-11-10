@@ -16,6 +16,29 @@ import Loading from "../../components/loading";
 import moment from "moment-timezone";
 import SideMenu from "../../components/sidemenu";
 
+const states = [
+  {item: "California"}
+]
+
+const cities = [
+  {item: "Anaheim"},
+  {item: "Downey"},
+  {item: "Fontana"},
+  {item: "Huntington Beach"},
+  {item: "Inglewood"},
+  {item: "Irvine"},
+  {item: "Lakewood"},
+  {item: "Long Beach"},
+  {item: "Los Angeles"},
+  {item: "Moreno Valley"},
+  {item: "Newport Beach"},
+  {item: "Ontario"},
+  {item: "Rancho Cucamonga"},
+  {item: "Riverside"},
+  {item: "Santa Ana"},
+  {item: "Torrance"}
+]
+
 function QuoteDetailFirst() {
   const storeData = useSelector((store) => store.data);
   const history = useHistory();
@@ -180,6 +203,7 @@ function QuoteDetailFirst() {
                   id="State"
                   validate="StateValidation"
                   willValidation={value.StateValidation}
+                  data = {states}
                 />
                 <Select
                   label="City*"
@@ -189,6 +213,7 @@ function QuoteDetailFirst() {
                   id="City"
                   validate="CityValidation"
                   willValidation={value.CityValidation}
+                  data={cities}
                 />
                 <Check
                   value={value.firstCheck}

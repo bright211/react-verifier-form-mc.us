@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BlockContainer = styled.div`
-  padding: 60px 207px 0 207px;
+  padding: 60px 207px 150px 207px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

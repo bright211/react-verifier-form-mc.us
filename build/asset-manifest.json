@@ -1,45 +1,19 @@
 {
   "files": {
-<<<<<<< HEAD
-    "main.css": "/static/css/main.ede9a44d.chunk.css",
-    "main.js": "/static/js/main.47ff3b04.chunk.js",
-    "main.js.map": "/static/js/main.47ff3b04.chunk.js.map",
+    "main.css": "/static/css/main.b5ce1ed4.chunk.css",
+    "main.js": "/static/js/main.b9d9fcfa.chunk.js",
+    "main.js.map": "/static/js/main.b9d9fcfa.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
     "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
     "static/css/2.2a86faee.chunk.css": "/static/css/2.2a86faee.chunk.css",
-    "static/js/2.ff711e3d.chunk.js": "/static/js/2.ff711e3d.chunk.js",
-    "static/js/2.ff711e3d.chunk.js.map": "/static/js/2.ff711e3d.chunk.js.map",
+    "static/js/2.78690be9.chunk.js": "/static/js/2.78690be9.chunk.js",
+    "static/js/2.78690be9.chunk.js.map": "/static/js/2.78690be9.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f2e0c1b87a2726673f6dfc11d46ceb9d.js": "/precache-manifest.f2e0c1b87a2726673f6dfc11d46ceb9d.js",
+    "precache-manifest.96fb73cfdce1feb5a246e5ad7a586fbd.js": "/precache-manifest.96fb73cfdce1feb5a246e5ad7a586fbd.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.2a86faee.chunk.css.map": "/static/css/2.2a86faee.chunk.css.map",
-    "static/css/main.ede9a44d.chunk.css.map": "/static/css/main.ede9a44d.chunk.css.map",
-    "static/js/2.ff711e3d.chunk.js.LICENSE.txt": "/static/js/2.ff711e3d.chunk.js.LICENSE.txt",
-    "static/media/ARROW-LEFT.4b3a2642.svg": "/static/media/ARROW-LEFT.4b3a2642.svg",
-    "static/media/ARROW-RIGHT.00c42adb.svg": "/static/media/ARROW-RIGHT.00c42adb.svg",
-    "static/media/BANNER1.jpg": "/static/media/BANNER1.f3dd0a68.jpg",
-    "static/media/BANNER3.jpg": "/static/media/BANNER3.b2d60444.jpg",
-    "static/media/BANNER4.jpg": "/static/media/BANNER4.68b40935.jpg",
-    "static/media/MCUS-LOGO.57af1f6f.svg": "/static/media/MCUS-LOGO.57af1f6f.svg",
-    "static/media/MENU.3317e4d9.svg": "/static/media/MENU.3317e4d9.svg",
-    "static/media/MORTGAGE.e89a5e61.svg": "/static/media/MORTGAGE.e89a5e61.svg",
-    "static/media/POPUP-1.jpg": "/static/media/POPUP-1.173c5d9b.jpg",
-    "static/media/REFINANCING.029951ed.svg": "/static/media/REFINANCING.029951ed.svg",
-=======
-    "main.css": "/static/css/main.6cc8ae63.chunk.css",
-    "main.js": "/static/js/main.640ba731.chunk.js",
-    "main.js.map": "/static/js/main.640ba731.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
-    "static/css/2.2a86faee.chunk.css": "/static/css/2.2a86faee.chunk.css",
-    "static/js/2.1332fba7.chunk.js": "/static/js/2.1332fba7.chunk.js",
-    "static/js/2.1332fba7.chunk.js.map": "/static/js/2.1332fba7.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.bb62fc7b4b52fc226efa7a6a33942ecf.js": "/precache-manifest.bb62fc7b4b52fc226efa7a6a33942ecf.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.2a86faee.chunk.css.map": "/static/css/2.2a86faee.chunk.css.map",
-    "static/css/main.6cc8ae63.chunk.css.map": "/static/css/main.6cc8ae63.chunk.css.map",
-    "static/js/2.1332fba7.chunk.js.LICENSE.txt": "/static/js/2.1332fba7.chunk.js.LICENSE.txt",
+    "static/css/main.b5ce1ed4.chunk.css.map": "/static/css/main.b5ce1ed4.chunk.css.map",
+    "static/js/2.78690be9.chunk.js.LICENSE.txt": "/static/js/2.78690be9.chunk.js.LICENSE.txt",
     "static/media/LOGO-MORTGAGE-CALCULATOR - black.92e9d717.svg": "/static/media/LOGO-MORTGAGE-CALCULATOR - black.92e9d717.svg",
     "static/media/LOGO-MORTGAGE-CALCULATOR.cb202e97.svg": "/static/media/LOGO-MORTGAGE-CALCULATOR.cb202e97.svg",
     "static/media/MCUS-LOGO.57af1f6f.svg": "/static/media/MCUS-LOGO.57af1f6f.svg",
@@ -48,21 +22,14 @@
     "static/media/MORTGAGE.fddf3801.svg": "/static/media/MORTGAGE.fddf3801.svg",
     "static/media/REFINANCING.cf08ecfc.svg": "/static/media/REFINANCING.cf08ecfc.svg",
     "static/media/banner-background.jpg": "/static/media/banner-background.381a174c.jpg",
->>>>>>> superstarDev/homepage
     "static/media/index.css": "/static/media/chevron-down.450bfd01.svg",
     "static/media/closebtn.965f4c63.svg": "/static/media/closebtn.965f4c63.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.83c3e0c4.js",
     "static/css/2.2a86faee.chunk.css",
-<<<<<<< HEAD
-    "static/js/2.ff711e3d.chunk.js",
-    "static/css/main.ede9a44d.chunk.css",
-    "static/js/main.47ff3b04.chunk.js"
-=======
-    "static/js/2.1332fba7.chunk.js",
-    "static/css/main.6cc8ae63.chunk.css",
-    "static/js/main.640ba731.chunk.js"
->>>>>>> superstarDev/homepage
+    "static/js/2.78690be9.chunk.js",
+    "static/css/main.b5ce1ed4.chunk.css",
+    "static/js/main.b9d9fcfa.chunk.js"
   ]
 }

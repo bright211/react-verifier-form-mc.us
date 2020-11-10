@@ -42,7 +42,7 @@ function Routes() {
           component={PrivacyPage}
         />
         <Route exact path={`/termsandcondition`} component={TermsPage} />
-        <Redirect from="/" to='quotedetailfirst' />
+        <Redirect from="/" to='homepage' />
       </Switch>
 
   );
